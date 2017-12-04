@@ -9,7 +9,17 @@ self.addEventListener('install', function (event) {
         '/',
         '/index.html',
         '/css/land.css',
-        'http://localhost:4000/'
+        '/css/doc.css',
+        '/css/responsive-nav.css',
+        '/js/lunr.min.js',
+        '/js/main.js',
+        '/js/responsive-nav.min.js',
+        '/js/search.js',          
+        'https://tray-desenvolvedores.github.io/',
+        'https://tray-desenvolvedores.github.io/frontend/',
+        'https://tray-desenvolvedores.github.io/frontend/console-tool/',
+        'https://tray-desenvolvedores.github.io/frontend/objetos/',
+        'https://tray-desenvolvedores.github.io/frontend/methods/'
       ]);
     })
   )
