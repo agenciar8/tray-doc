@@ -5,7 +5,7 @@
     "scope": "/",
     "display": "standalone",
     "start_url": "https://tray-desenvolvedores.github.io",
-    "short_name": "Tray Plataforma",
+    "short_name": "DevTray",
     "theme_color": "#0c8fcd",
     "orientation": "landscape",
     "background_color": "#0c8fcd",
