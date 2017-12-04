@@ -1,0 +1,61 @@
+# ----
+# Site
+
+title: Tray
+description: Documentação de ferramentas de desenvolvimento na plataforma
+url: https://example.com
+google_analytics_key:
+permalink: pretty
+
+collections:
+
+  console-tool:
+    name: console-tool
+    title: Console Tool
+    origem: /frontend/ 
+    position: 1
+  objetos:
+    name: objetos
+    title: Objetos
+    origem: /frontend/ 
+    position: 2
+  methods:
+    name: methods
+    title: Metodos
+    origem: /frontend/ 
+    position: 4
+
+
+gems:
+  - jekyll-sitemap
+  - jekyll-seo-tag
+  - jekyll-assets
+
+exclude:
+  - readme.md
+  - LICENCE
+
+defaults:
+  -
+    scope:
+      path: ""      
+      type: category
+    values:
+      layout: default
+
+types:
+  - get
+  - put
+  - delete
+  - post
+
+assets:
+  sources:
+    - css
+    - images
+    - javascripts
+    - fonts
+    - images
+    - js
+
+include: ["_pages"]

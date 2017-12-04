@@ -1,0 +1,896 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Documentação de Desenvolvimento Tray">
+    <meta name="author" content="Tray - Plataforma de E-commerce">
+
+    <title>Tray - Plataforma de E-commerce </title>
+
+    <link href="https://example.com/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+	<link rel="stylesheet" href="https://example.com/css/doc.css">
+    <link href="/../../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+</head>
+
+<body id="page-top" class="index">
+
+	    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom">
+        <div class="container">
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span> <i class="fa fa-bars"></i>
+                </button>
+            </div>
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="/frontend">Personalize seu Front-End</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="/aplicativos">Aplicativos</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+     <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 logo">
+                    <a href="https://example.com">
+                        <img class="img-responsive logo" src="https://example.com/images/logo-tray-2017-branca-svg.svg" alt="">
+                    </a>
+                </div>
+                <div class="col-sm-6">
+                    <form action="/search/" method="get">
+                        <input type="text" name="q" id="search-input" placeholder="Search">
+                        <input type="submit" value="Search" style="display: none;">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </header>
+
+        <div class="flexcontainer">
+            <div class="smallitem">
+                <div id="sidebar" class="sidebar">
+	
+	
+	
+	
+		
+	
+		
+	
+		
+	
+		
+	
+</div>
+
+
+            </div>
+            <div class="bigitem">
+             <div class="search-page">
+	<h2>Search Results</h2>
+	
+	<p><span id="search-process">Carregando</span> resultados <span id="search-query-container" style="display: none;">para "<strong id="search-query"></strong>"</span></p>
+	<ul id="search-results"></ul>
+</div>
+
+<script>
+	window.data = {
+		
+			
+				
+					
+						
+						
+						"console-tool-atualizando": {
+							"id": "console-tool-atualizando",
+							"title": "Atualização",
+							"category": "console-tool",
+							"description": "",
+		  				"type": "",
+							"url": "/frontend/console-tool/#update",
+							"content": "A atualização da Console Tool é recomendada para sempre manter compatível com os recursos do OpenCode.\n\nPara esta atualização, é necessário verificar a versão da GEM utilizada, pois caso utilize uma versão igual ou inferior a versão 0.1.2, é necessário desinstalar a GEM e realizar uma nova instalação"
+						}
+						
+					
+				
+			
+				
+					
+						,
+						
+						"console-tool-clean": {
+							"id": "console-tool-clean",
+							"title": "Cache no Tema",
+							"category": "console-tool",
+							"description": "",
+		  				"type": "",
+							"url": "/frontend/console-tool/#clean",
+							"content": "Esse comando é responsável por limpar o cache dos arquivos estáticos do tema."
+						}
+						
+					
+				
+			
+				
+					
+						,
+						
+						"console-tool-comandos": {
+							"id": "console-tool-comandos",
+							"title": "Comandos Disponiveis",
+							"category": "console-tool",
+							"description": "",
+		  				"type": "",
+							"url": "/frontend/console-tool/#commands",
+							"content": "Para saber quais comandos estão disponíveis digite o comando ao lado:"
+						}
+						
+					
+				
+			
+				
+					
+						,
+						
+						"console-tool-configure": {
+							"id": "console-tool-configure",
+							"title": "Configurar tema para edição",
+							"category": "console-tool",
+							"description": "",
+		  				"type": "",
+							"url": "/frontend/console-tool/#configure",
+							"content": "Esse comando é responsável por configurar o tema, é através dele que é gerado o arquivo config.yml, responsável pela sincronização do tema."
+						}
+						
+					
+				
+			
+				
+					
+						,
+						
+						"console-tool-desistalando": {
+							"id": "console-tool-desistalando",
+							"title": "Desinstalação",
+							"category": "console-tool",
+							"description": "",
+		  				"type": "",
+							"url": "/frontend/console-tool/#uninstall",
+							"content": "Caso utilize uma versão igual ou inferior a versão 0.1.2 será necessário realizar a desinstalação da GEM e a instalação para versão atual."
+						}
+						
+					
+				
+			
+				
+					
+						,
+						
+						"console-tool-download": {
+							"id": "console-tool-download",
+							"title": "Download dos arquivos do Tema",
+							"category": "console-tool",
+							"description": "",
+		  				"type": "",
+							"url": "/frontend/console-tool/#download",
+							"content": "Esse comando é responsavel por efetuar o download dos arquivos, ou de um arquivo especifico do tema."
+						}
+						
+					
+				
+			
+				
+					
+						,
+						
+						"console-tool-error": {
+							"id": "console-tool-error",
+							"title": "Erros",
+							"category": "console-tool",
+							"description": "",
+		  				"type": "",
+							"url": "/frontend/console-tool/#error",
+							"content": "Abaixo descrição dos possiveis erros exibidos na gem\n\n\n  \n    \n      Código\n      Descrição\n    \n  \n  \n    \n      00313\n      Extensão ou nome de arquivo invalido, verifique as regras aqui.\n    \n    \n      00314\n      Não é permitido o envio de arquivos para este diretórios veja a estrutura do tema aqui.\n    \n    \n      00401\n      Não é possivel editar o tema já publicado, saiba mais aqui"
+						}
+						
+					
+				
+			
+				
+					
+						,
+						
+						"console-tool-getting-started": {
+							"id": "console-tool-getting-started",
+							"title": "Instalação",
+							"category": "console-tool",
+							"description": "",
+		  				"type": "",
+							"url": "/frontend/console-tool/#install",
+							"content": "Crie, e customize os layouts de seus projetos de maneira simples e eficiente. Faça o upload de todos os seus arquivos de forma automática utilizando a nossa console tool.\n\nA console tool nada mais é do que uma gem escrita em Ruby onde é possivel realizar download e upload dos arquivos do tema de uma forma mais dinâmica permitindo um ambiente de alta produtividade, por isso é a nossa recomendação.\n\npré requisito: Ruby - versão igual ou superior á 2.1.7"
+						}
+						
+					
+				
+			
+				
+					
+						,
+						
+						"console-tool-help": {
+							"id": "console-tool-help",
+							"title": "Help de comandos",
+							"category": "console-tool",
+							"description": "",
+		  				"type": "",
+							"url": "/frontend/console-tool/#help",
+							"content": "Esse comando é responsavel por descrever um comando especifico."
+						}
+						
+					
+				
+			
+				
+					
+						,
+						
+						"console-tool-keys": {
+							"id": "console-tool-keys",
+							"title": "Chaves de desenvolvimento",
+							"category": "console-tool",
+							"description": "",
+		  				"type": "",
+							"url": "/frontend/console-tool/#keys",
+							"content": "As chaves API_KEY e PASSWORD necessarias para criação e manutenção de temas são geradas através do painel administrativo, na aba Minha Loja &gt; Design Da Loja , no canto superior direito, como mostra abaixo."
+						}
+						
+					
+				
+			
+				
+					
+						,
+						
+						"console-tool-list": {
+							"id": "console-tool-list",
+							"title": "Temas disponiveis",
+							"category": "console-tool",
+							"description": "",
+		  				"type": "",
+							"url": "/frontend/console-tool/#list",
+							"content": "Esse comando é responsavel por listar todos os temas da loja."
+						}
+						
+					
+				
+			
+				
+					
+						,
+						
+						"console-tool-new": {
+							"id": "console-tool-new",
+							"title": "Criar Tema",
+							"category": "console-tool",
+							"description": "",
+		  				"type": "",
+							"url": "/frontend/console-tool/#new",
+							"content": "Cria um novo tema com o nome informado.\n\nÉ possivel também informar um tema base para criação informando também o id do tema a ser utilizado.\n\nExperimente já!\n\nFicou curioso para saber como funciona? Experimente criar agora uma tema na nossa loja de teste…\n\nPara isso basta usar a API_KEY e o PASSWORD disponibilizados a baixo:\n\nAPI_KEY: 20a699301d454509691f3ea02c1cba4b\nPASSWORD: ea0727075e1639a42fd966a2f6e67abc\n\n\n\no comando ficará da seguinte maneira:\n\n$ opencode new 20a699301d454509691f3ea02c1cba4b  ea0727075e1639a42fd966a2f6e67abc \"primeiro-tema\"\n\n\n\nApós isso o seu tema já estará criado.\n\nATENÇÃO, não crie nenhum tema importante com as credenciais a cima. Por se tratar de uma loja de teste todos os temas criados são apagados periodicamente."
+						}
+						
+					
+				
+			
+				
+					
+						,
+						
+						"console-tool-open": {
+							"id": "console-tool-open",
+							"title": "Preview do Tema",
+							"category": "console-tool",
+							"description": "",
+		  				"type": "",
+							"url": "/frontend/console-tool/#open",
+							"content": "Esse comando é responsavel por abrir a loja no navegador"
+						}
+						
+					
+				
+			
+				
+					
+						,
+						
+						"console-tool-remove": {
+							"id": "console-tool-remove",
+							"title": "Excluir arquivos",
+							"category": "console-tool",
+							"description": "",
+		  				"type": "",
+							"url": "/frontend/console-tool/#remove",
+							"content": "Esse comando é responsavel por remover um arquivo do tema (apenas se o tema não estiver publicado)"
+						}
+						
+					
+				
+			
+				
+					
+						,
+						
+						"console-tool-systeminfo": {
+							"id": "console-tool-systeminfo",
+							"title": "Detalhes de Instalação",
+							"category": "console-tool",
+							"description": "",
+		  				"type": "",
+							"url": "/frontend/console-tool/#systeminfo",
+							"content": "Esse comando é responsavel por mostra informações do sistema"
+						}
+						
+					
+				
+			
+				
+					
+						,
+						
+						"console-tool-upload": {
+							"id": "console-tool-upload",
+							"title": "Upload de Arquivos",
+							"category": "console-tool",
+							"description": "",
+		  				"type": "",
+							"url": "/frontend/console-tool/#upload",
+							"content": "Esse comando é responsavel por fazer upload dos arquivo informado ou todos se FILE for omitido"
+						}
+						
+					
+				
+			
+				
+					
+						,
+						
+						"console-tool-watch": {
+							"id": "console-tool-watch",
+							"title": "Upload automatico de arquivos",
+							"category": "console-tool",
+							"description": "",
+		  				"type": "",
+							"url": "/frontend/console-tool/#watch",
+							"content": "Esse comando é responsavel por monitorar os arquivo sempre que ele for salvo"
+						}
+						
+					
+				
+			
+		
+			
+				
+					
+						,
+						
+						"methods-asset": {
+							"id": "methods-asset",
+							"title": "Asset",
+							"category": "methods",
+							"description": "",
+		  				"type": "",
+							"url": "/frontend/methods/#asset",
+							"content": "O método asset() é utilizado para referenciar o caminho absoluto do tema, com ele é possível incluir arquivos ao tema como css,javascript e imagens.\n\nExemplos ao lado:"
+						}
+						
+					
+				
+			
+				
+					
+						,
+						
+						"methods-brands": {
+							"id": "methods-brands",
+							"title": "Brands",
+							"category": "methods",
+							"description": "",
+		  				"type": "",
+							"url": "/frontend/methods/#brands",
+							"content": "O Método Brands() retorna as marcas cadastradas no Painel Administrativo da loja.\n\nDisponível nas páginas: todas\nPara saber mais sobre como gerenciar marcas acesse: Wiki - Gerenciar Marcas\n\nAs requisições de marcas sempre retornarão um array de dados onde cada chave está descrita abaixo:\n\n\n  \n    \n      Atributos\n      Descrição\n    \n  \n  \n    \n      brands[0].id\n      Identificador único da marca\n    \n    \n      brands[0].name\n      Nome da marca\n    \n    \n      brands[0].slug\n      Final da url da marca\n    \n  \n\n\nVeja alguns exemplos de uso ao lado:"
+						}
+						
+					
+				
+			
+				
+					
+						,
+						
+						"methods-categories": {
+							"id": "methods-categories",
+							"title": "Categories",
+							"category": "methods",
+							"description": "",
+		  				"type": "",
+							"url": "/frontend/methods/#categories",
+							"content": "O método Categories() retorna as categorias cadastradas no Painel Administrativo da loja.\n\nDisponível nas páginas: todas\nPara saber mais sobre como gerenciar categorias acesse: Wiki - Gerenciar Categorias\n\nAs requisições de categorias sempre retornarão um array de dados, veja o padrão de retorno em: Categories\n\nVeja alguns exemplos de uso ao lado:"
+						}
+						
+					
+				
+			
+				
+					
+						,
+						
+						"methods-image": {
+							"id": "methods-image",
+							"title": "Image",
+							"category": "methods",
+							"description": "",
+		  				"type": "",
+							"url": "/frontend/methods/#image",
+							"content": "O Método Image() retorna uma imagem cadastrada no Painel Administrativo.\n\nDisponível nas páginas: todas\nPara saber mais sobre como gerenciar imagnes acesse: Wiki - Imagens/Botões\n\nAs requisições de marcas sempre retornarão um array de dados onde cada chave está descrita abaixo:\n\n\n  \n    \n      Keys\n      Descrição\n    \n  \n  \n    \n      additional_button\n      Botão Adicional\n    \n    \n      unavailable_button\n      Botão Indisponível\n    \n    \n      buy_together_button\n      Botão Compre Junto\n    \n    \n      calculate_shipping_value\n      Botão Calcular Frete\n    \n    \n      buy\n      Botão Comprar\n    \n    \n      back_to_shopping\n      Botão Continuar Comprando\n    \n    \n      discount_code\n      Botão Cupom de Desconto\n    \n    \n      sign_up\n      Botão Efetuar Login\n    \n    \n      featured\n      Imagem de Destaque\n    \n    \n      send\n      Imagem Enviar\n    \n    \n      select\n      Selecionado\n    \n    \n      free_shipping\n      Imagem Frete Grátis\n    \n    \n      new\n      Imagem Novo\n    \n    \n      sign_in\n      Botão Logar\n    \n    \n      logo\n      Imagem de Logo\n    \n    \n      next_step_sign_up\n      Botão Prosseguir Cadastro já Efetuado\n    \n    \n      next_step_purchase\n      Botão Próxima Etapa\n    \n    \n      simulate_shipping\n      Simular Frete\n    \n    \n      upon_request\n      Sob Consulta"
+						}
+						
+					
+				
+			
+				
+					
+						,
+						
+						"methods-introducao": {
+							"id": "methods-introducao",
+							"title": "O que são métodos",
+							"category": "methods",
+							"description": "",
+		  				"type": "",
+							"url": "/frontend/methods/#methods",
+							"content": "Os métodos do opencode são conjuntos de comandos já prontos que realizam determinado procedimento. Esses métodos têm como objetivo facilitar e estruturar o desenvolvimento.\n\nA utilização de métodos possibilita consultar informações de Produtos, Marcas e Categorias, onde também disponibiliza utilidades como referenciar o caminho absoluto do tema além de exibir imagens e textos cadastrados no painel administrativo da Tray."
+						}
+						
+					
+				
+			
+				
+					
+						,
+						
+						"methods-manipulando": {
+							"id": "methods-manipulando",
+							"title": "Manipulando métodos",
+							"category": "methods",
+							"description": "",
+		  				"type": "",
+							"url": "/frontend/methods/#methods2",
+							"content": "Podemos manipular os métodos de diversas maneiras, como exibir seus atributos na tela, utilizar laços de repetição e fazer validações, tudo isso de acordo com a necessidade.\n\nAlguns métodos como por exemplo Product(), Brands() e Categories() sempre retornarão um array (vetor) de dados, por isso para exibir determinada informação você deve passar seu índice dentro desse vetor ou utilizar um laço de repetição para exibir as informações. Já os métodos como Assets(), Image() e a Translation(), retornam apenas informações pontuais.\n\nDesta forma, para exibir uma posição do vetor de products retornadas pelo método é necessario passar o indice do item no Array retornado, como ao lado.\n\nPodemos também exibir todos os produtos ou todas as categorias utilizando uma estrutura de repetição (laço for)\n\nAlém disso podemos utilizar por exemplo o método Image() para exibir um botão adicional cadastrado no painel."
+						}
+						
+					
+				
+			
+				
+					
+						,
+						
+						"methods-products": {
+							"id": "methods-products",
+							"title": "Products",
+							"category": "methods",
+							"description": "",
+		  				"type": "",
+							"url": "/frontend/methods/#products",
+							"content": "O Método Products() retorna os produtos cadastrados na loja.\n\nDisponível nas páginas: todas\nPara saber mais sobre como gerenciar produtos acesse Wiki - Produtos\n\nAs requisições de produtos sempre retornarão um array de dados, veja o padrão de retorno em: Products\n\nÉ possivel aplicar filtros a esse método para que ela retorne apenas os produtos desejados.\nSegue a baixo a relação de filtros disponiveis:\n\n\n  \n    \n      Filtro\n      Parametro\n    \n  \n  \n    \n      filter\n      O filtro filter pode receber os seguintes parametros: featured, new, free_shipping, available, promotion\n    \n    \n      limit\n      Recebe um valor da qual será a quantidade maxima de produtos.\n    \n    \n      order\n      O filtro order é usado para ordernar a lista de produtos, pode receber os seguintes parametros: id, name, price, price_offer, stock, rand\n    \n    \n      categories\n      O filtro categories Recebe o id das categorias da qual deseja filtrar os produtos.\n    \n    \n      brands\n      O filtro brands Recebe o nome da marca da qual deseja filtrar os produtos.\n    \n  \n\n\nVeja alguns exemplos de uso ao lado:"
+						}
+						
+					
+				
+			
+				
+					
+						,
+						
+						"methods-translation": {
+							"id": "methods-translation",
+							"title": "Translation",
+							"category": "methods",
+							"description": "",
+		  				"type": "",
+							"url": "/frontend/methods/#translation",
+							"content": "O método Translation() exibe um texto de acordo com o idioma configurado na sua loja no Painel Administrativo.\n\nDisponível nas páginas: todas\nPara saber mais sobre como gerenciar textos acesse:Wiki - Gerenciamento de Textos"
+						}
+						
+					
+				
+			
+		
+			
+				
+					
+						,
+						
+						"objetos-banners": {
+							"id": "objetos-banners",
+							"title": "Banners",
+							"category": "objetos",
+							"description": "",
+		  				"type": "",
+							"url": "/frontend/objetos/#banners",
+							"content": "O objeto banners é responsável por trazer os banner cadastrados no painel e mostra-lo conforme as características necessárias.\n\nDisponível nas páginas: Todas.\n\nPara saber mais sobre como gerenciar banners acesse:\nWiki - Cadastrar Banners |\nWiki - Cadastrar Banners Banner JavaScript |\nWiki - Banner por Categoria ou Marca\n\nPara imprimir um banner,você poderá utilizar o helper de banner, onde exibem os banners em um bloco pre-moldado. Segue abaixo algumas chamadas:\n\n\n  \n    \n      Atributos\n      Descrição\n    \n  \n  \n    \n      banner.home\n      Exibido somente na página inicial do site. Antes dos produtos\n    \n    \n      banner.footer\n      Exibido em todas as páginas, no rodapé.\n    \n    \n      banner.bottom\n      Banner exibido na pagina na parte inferior\n    \n    \n      banner.side\n      Exibido em todas as páginas, na lateral da loja\n    \n    \n      banner.title\n      Exibido em todas as páginas antes do título\n    \n    \n      banner.floating\n      Exibido na vitrine, apenas arquivos em FLASH\n    \n    \n      banner.popup\n      Exibido na vitrine\n    \n    \n      banner.showcase\n      Exibido somente na página inicial do site, ao lado do menu de categorias.\n    \n    \n      banner.extra1\n      Exibido em layouts personalizados\n    \n    \n      banner.extra2\n      Exibido em layouts personalizados\n    \n    \n      banner.extra3\n      Exibido em layouts personalizados\n    \n    \n      banner.extra4\n      Exibido em layouts personalizados\n    \n  \n\n\nSe você deseja criar o banner do seu jeito, poderá utilizar as seguinte informações, lembrando que o padrão de chamada é sempre: banners.{position}.{key}.\n\nSintaxe: banners.{position}.{key}.\n\n\n  \n    \n      Atributos\n      Descrição\n    \n  \n  \n    \n      banners.{position}.id\n      Identificador único do banner\n    \n    \n      banners.{position}.type\n      Tipo do banner, valores possíveis: “javascript”, “image”, “flash”, “gallery”\n    \n    \n      banners.{position}.description\n      Descrição do banner\n    \n    \n      banners.{position}.src\n      URL do banner\n    \n    \n      banners.{position}.link\n      Link do banner\n    \n    \n      banners.{position}.width\n      Largura da imagem ou do objeto flash\n    \n    \n      banners.{position}.height\n      Altura da imagem ou do objeto flash\n    \n    \n      banners.{position}.alt\n      Texto alternativo para a imagem do banner\n    \n    \n      banners.{position}.target\n      Se o link vai abrir em uma nova janela ou na mesma\n    \n    \n      banners.{position}.banner_alt\n      Banner alternativo caso não tenha suporte ao flash (apenas quando o tipo for “flash”), possui as chaves “src”, “link”, “target”\n    \n    \n      banners.{position}.margin_top\n      Especifica a posição do banner referente ao topo da página (apenas banner “floating”)\n    \n    \n      banners.{position}.margin_left\n      Especifica a posição do banner referente ao lado esquerdo da página\n    \n    \n      banners.extra1.interval*\n      Intervalo da transição entre cada slide 3 a 10 (segundos)\n    \n    \n      banners.extra1.velocity*\n      Velocidade da animação 0.5,  1.0,  1.5,  2.0\n    \n    \n      banners.extra1.animation*\n      Tipo da animação blind,  block,  cube, cubeSpread, fade, fadeFour, glassCube,  horizontal, tube\n    \n    \n      banners.extra1.stop_over*\n      Pausar a troca de slides quando o mouse estiver sobre o banner 0, 1\n    \n    \n      banners.extra1.navigation*\n      Tipos de navegação 0, 1, 2\n    \n    \n      banners.extra1.progressbar *\n      Exibir barra de progresso 0,  1\n    \n  \n\n\n* Disponível apenas e banners em js."
+						}
+						
+					
+				
+			
+				
+					
+						,
+						
+						"objetos-breadcrumb": {
+							"id": "objetos-breadcrumb",
+							"title": "Breadcrumb",
+							"category": "objetos",
+							"description": "",
+		  				"type": "",
+							"url": "/frontend/objetos/#breadcrumb",
+							"content": "O breadcrumb é responsável por retornar um array com as informações de localização das categorias relacionadas.\n\nDisponível nas páginas: catalog e product\nPara saber mais sobre como gerenciar categorias acesse: Wiki - Gerenciar categorias\n\nNesse Objeto são retornados os atributos abaixo:\n\n\n  \n    \n      Atributos\n      Descrição\n    \n  \n  \n    \n      breadcrumb.name\n      Retorna o nome da categoria\n    \n    \n      breadcrumb.link\n      Retorna o link para a categoria\n    \n  \n\n\nPara exibir um breadcrumb, você poderá utilizar o helper de breadcrumb, onde exibem o breadcrumb em um bloco pre-moldado. Ao lado a chamada:\n\nÉ possivel também montar seu proprio breadcrumb, ao lado exemplo:"
+						}
+						
+					
+				
+			
+				
+					
+						,
+						
+						"objetos-categories": {
+							"id": "objetos-categories",
+							"title": "Categories",
+							"category": "objetos",
+							"description": "",
+		  				"type": "",
+							"url": "/frontend/objetos/#categories",
+							"content": "O Objeto categories é responsável por retornar um array as categorias cadastradas no painel.\n\nDisponível nas páginas: Todas.\n\nPara saber mais sobre como gerenciar categorias acesse: Wiki - Gerenciar categorias\n\n\n  \n    \n      Atributos\n      Descrição\n    \n  \n  \n    \n      categories[0].slug\n      Endpoint onde é acessado a categoria\n    \n    \n      categories[0].id\n      Identificador único da categoria\n    \n    \n      categories[0].parent_id\n      Identificador único da categoria mãe\n    \n    \n      categories[0].name\n      Nome da categoria\n    \n    \n      categories[0].description\n      Descrição da categoria\n    \n    \n      categories[0].title\n      Titulo da Categoria (SEO)\n    \n    \n      categories[0].small_description\n      Descrição detalhada da categoria\n    \n    \n      categories[0].link\n      URL da categoria\n    \n    \n      categories[0].has_product\n      Retorna 1 caso tenha produtos\n    \n    \n      categories[0].images\n      Imagem por categoria\n    \n    \n      categories[0].children\n      Subcategorias"
+						}
+						
+					
+				
+			
+				
+					
+						,
+						
+						"objetos-category": {
+							"id": "objetos-category",
+							"title": "Category",
+							"category": "objetos",
+							"description": "",
+		  				"type": "",
+							"url": "/frontend/objetos/#category",
+							"content": "O Objeto category é responsável por retornar a categoria atual do tema, através dela é possível fazer validações relacionas a categoria dos produtos.\n\nDisponível nas páginas: Catalog.\n\nPara saber mais sobre como gerenciar categorias acesse: Wiki - Gerenciar categorias\n\n\n  \n    \n      Atributos\n      Descrição\n    \n  \n  \n    \n      category.slug\n      Endpoint onde é acessado a categoria\n    \n    \n      category.id\n      Identificador único da categoria\n    \n    \n      category.name\n      Nome da categoria\n    \n    \n      category.description\n      Descrição da categoria\n    \n    \n      category.order\n      Ordem de exibição segundo as configurações da loja\n    \n    \n      category.title\n      Titulo da Categoria (SEO)\n    \n    \n      category.small_description\n      Descrição detalhada da categoria\n    \n    \n      category.link\n      URL da categoria\n    \n    \n      category.has_acceptance_term\n      Possui o termo “Aceito”\n    \n    \n      category.acceptance_term\n      Retorna as opções de Termo\n    \n    \n      category.brands\n      As marcas vinculadas aos produtos dessa categoria (name, selected)\n    \n    \n      category.children\n      Subcategorias\n    \n    \n      category.parent\n      ID da categoria mãe"
+						}
+						
+					
+				
+			
+				
+					
+						,
+						
+						"objetos-filters": {
+							"id": "objetos-filters",
+							"title": "Filters",
+							"category": "objetos",
+							"description": "",
+		  				"type": "",
+							"url": "/frontend/objetos/#filters",
+							"content": "O Objeto filters retorna um array com filtros que da a possibilidade de montar filtros com caracteristicas e variações de produtos.\n\nDisponível nas páginas: catalog, search,  home\nPara saber mais sobre como gerenciar os Filtros Inteligentes acesse:  Wiki - Filtro Inteligente\n\n\n  \n    \n      Chaves principais\n      Descrição\n    \n  \n  \n    \n      categories\n      Lista de categorias\n    \n    \n      brands\n      Lista de marcas\n    \n    \n      prices\n      Lista de preços\n    \n    \n      variations\n      Lista de variações\n    \n    \n      features\n      Lista de características\n    \n  \n\n\nNessas chaves são retornadas informações secundarias no filtro.\n\n\n  \n    \n      Chaves secundárias\n      Descrição\n    \n  \n  \n    \n      title\n      Título do filtro (ex: Categorias, Filtrar por marca, Faixa de preços)\n    \n    \n      items\n      Lista de itens"
+						}
+						
+					
+				
+			
+				
+					
+						,
+						
+						"objetos-links": {
+							"id": "objetos-links",
+							"title": "Links",
+							"category": "objetos",
+							"description": "",
+		  				"type": "",
+							"url": "/frontend/objetos/#links",
+							"content": "O Objeto links é responsável por retornar o caminho das paginas e todos os links utilizados no tema\n\n\n  \n    \n      Atributos\n      Descrição\n    \n  \n  \n    \n      links.search\n      Página de busca\n    \n    \n      links.search_by_brand\n      Página de busca por marca\n    \n    \n      links.search_new\n      Página de busca por lançamento\n    \n    \n      links.search_featured\n      Página de busca por destaque\n    \n    \n      links.search_offer\n      Página de busca por oferta\n    \n    \n      links.search_order_name\n      Página de busca por ordem alfabética\n    \n    \n      links.search_order_price\n      Página de busca por ordem de preço\n    \n    \n      links.search_order_bestsellers\n      Página de busca ordenada pelos produtos mais vendidos\n    \n    \n      links.search_order_new\n      Página de busca ordenada por novos produtos\n    \n    \n      links.search_order_release\n      Página de busca ordenada pelos produtos em lançamento\n    \n    \n      links.search_featured\n      Página de busca ordenada pelos produtos em destaque\n    \n    \n      links.search_advanced_form\n      Página de busca avançada\n    \n    \n      links.home\n      Página inicial\n    \n    \n      links.company\n      Página com informações sobre a loja/empresa\n    \n    \n      links.contact\n      Página de contato\n    \n    \n      links.cart\n      Página do carrinho de compras\n    \n    \n      links.cart_add ~ product.id\n      Adiciona um produto ao carrinho de compras\n    \n    \n      links.info\n      Página de informações gerais sobre os processos da loja\n    \n    \n      links.info_buy\n      Âncora de informações sobre compra\n    \n    \n      links.security\n      Âncora de informações sobre segurança\n    \n    \n      links.warranty\n      Âncora de informações sobre garantia\n    \n    \n      links.send\n      Âncora de informações sobre envio\n    \n    \n      links.payment\n      Âncora de informações sobre pagamento\n    \n    \n      links.newsletter\n      Página de cadastro de newsletter\n    \n    \n      links.map\n      Página mapa do site\n    \n    \n      links.register\n      Página de cadastro\n    \n    \n      links.central\n      Página da central do cliente\n    \n    \n      links.login\n      Página de login\n    \n    \n      links.orders\n      Página de pedidos\n    \n    \n      links.orders_tracking\n      Página de rastreio de pedidos\n    \n    \n      links.orders_return\n      Página de trocas/devoluções\n    \n    \n      links.payment_confirm\n      Página de confirmação de pagamento\n    \n    \n      links.account\n      Página central do cliente\n    \n    \n      links.account_password\n      Página de alteração de senha\n    \n    \n      links.logout\n      Página de logout\n    \n    \n      links.compare\n      Página com a comparação dos produtos selecionados\n    \n    \n      links.compare_add ~ product.id\n      Adiciona um produto à comparação\n    \n    \n      links.compare_delete ~ product.id\n      Remover da comparação de produto\n    \n    \n      navigation_history\n      Pagina com o histórico de navegação\n    \n    \n      links.clear_history\n      Limpa o histórico de navegação"
+						}
+						
+					
+				
+			
+				
+					
+						,
+						
+						"objetos-manipulando": {
+							"id": "objetos-manipulando",
+							"title": "Como manipular Objetos",
+							"category": "objetos",
+							"description": "",
+		  				"type": "",
+							"url": "/frontend/objetos/#objetos2",
+							"content": "Podemos manipular objetos de diversas maneiras, como exibir seus atributos na tela, utilizar laços de repetição e fazer validações, tudo isso de acordo com a necessidade.\n\nAs requisições de produtos sempre retornarão um array (vetor) de dados, por isso para exibir um produto você deve passar seu índice dentro desse vetor.\n\nPara saber os dados retornados no objeto, você pode utilizar o debug do twig, ele irá exibir na tela a estrutura retornada no objeto"
+						}
+						
+					
+				
+			
+				
+					
+						,
+						
+						"objetos-objetos": {
+							"id": "objetos-objetos",
+							"title": "Objetos do Opencode",
+							"category": "objetos",
+							"description": "",
+		  				"type": "",
+							"url": "/frontend/objetos/#objetos",
+							"content": "Objetos são estruturas de dados utilizadas para facilitar a manipulação de determinadas informações.\n\nPodemos citar por exemplo o objeto product que contem todos os atributos de um produto, e também o objeto categories que tem como retorno todas as categorias da loja.\n\nAs  informações podem ser trazidas em um vetor (array). Por isso, para utilizar por exemplo uma categoria, é necessário passar seu índice na listagem de categorias, ou seja a posição que a categoria se encontra dentro desse vetor de categorias.\n\nIf\n\nPodemos exibir na tela somente os itens que tiverem o atributo igual ao que foi passado, para isso podemos fazer uma comparação na exibição de produto utilizando o if:\n\nCom o if também podemos verificar se o objeto em questão, no caso o objeto categories, contém determinado atributo cadastrado. Como exemplo ao lado, é verificado se as categorias contém uma imagem, caso tenha ela é exibida na tela:\n\nPara saber mais sobre as opções da tag if, clique aqui para ir até a documentação do Twig\n\nFor\n\nPodemos também exibir elementos de um objeto utilizando um laço for, exemplo ao lado:\n\nPara saber mais sobre as opções da tag for, clique aqui para ir até a documentação do Twig"
+						}
+						
+					
+				
+			
+				
+					
+						,
+						
+						"objetos-pages": {
+							"id": "objetos-pages",
+							"title": "Pages",
+							"category": "objetos",
+							"description": "",
+		  				"type": "",
+							"url": "/frontend/objetos/#pages",
+							"content": "O Objeto pages, contém informações das páginas da loja, como por exemplo a página atual e as paginas personalizadas.\n\nDisponível nas páginas: todas\nPara saber mais sobre Paginas Personalizadas acesse:  Wiki - Paginas Personalizadas\n\n\n  \n    \n      Atributos\n      Característica\n    \n  \n  \n    \n      pages.current\n      Em qual página o usuário está navegando, ex: home\n    \n    \n      pages.custom\n      Páginas Personalizadas cadastradas no Painel Administrativo\n    \n  \n\n\nA baixo temos uma lista com retornos possíveis do Objeto pages.current\n\n\n  \n    \n      Retorno de pages.current\n      Descrição\n    \n  \n  \n    \n      home\n      Página inicial da loja\n    \n    \n      search\n      Página de busca\n    \n    \n      catalog\n      Página de catálogo (categoria)\n    \n    \n      product\n      Página de produto\n    \n    \n      checkout_cart\n      Carrinho de compras\n    \n    \n      register\n      Página de cadastro\n    \n    \n      login\n      Página de login\n    \n    \n      checkout_payment\n      Escolha de pagamento na finalização de compra\n    \n    \n      company\n      Quem somos\n    \n    \n      map\n      Mapa do site\n    \n  \n\n\nEm paginas personalizadas é retornado o slug da pagina."
+						}
+						
+					
+				
+			
+				
+					
+						,
+						
+						"objetos-paginate": {
+							"id": "objetos-paginate",
+							"title": "Paginate",
+							"category": "objetos",
+							"description": "",
+		  				"type": "",
+							"url": "/frontend/objetos/#paginate",
+							"content": "O Objeto paginate retorna um helper de paginação de produtos.\n\nDisponível nas páginas:  catalog,  search\n\nSe quiser utilizar um snippet pronto, utilize a seguinte chamada:\n\nAo lado um exemplo de montagem da exibição da paginação personalizada.\n\nPara mais informações, visite a documentação oficial do helper Paginator."
+						}
+						
+					
+				
+			
+				
+					
+						,
+						
+						"objetos-paymentmethods": {
+							"id": "objetos-paymentmethods",
+							"title": "PaymentMethods",
+							"category": "objetos",
+							"description": "",
+		  				"type": "",
+							"url": "/frontend/objetos/#paymentMethods",
+							"content": "Esse objeto trás todas as informações de formas de pagamentos a vista e a prazo cadastradas no painel.\n\nDisponível nas páginas: Todas\nPara saber mais sobre como gerenciar os meios de pagamento acesse: Wiki - Configurar formas de Pagamento\n\nNesse Objeto são retornadas as seguintes informações:\n\n\n  \n    \n      Atributos\n      Descrição\n    \n  \n  \n    \n      paymentMethods.order\n      Formas de pagamento à vista\n    \n    \n      paymentMethods.credit\n      Formas de pagamento à prazo\n    \n  \n\n\n\n  \n    \n      Atributos Secundárias\n      Descrição\n    \n  \n  \n    \n      display_name\n      Nome da forma de Pagamento\n    \n    \n      thumbnail.url\n      Url da imagem ilustrativa\n    \n  \n\n\nAo lado, exemplos de aplicação do Objeto paymentMethods:"
+						}
+						
+					
+				
+			
+				
+					
+						,
+						
+						"objetos-product": {
+							"id": "objetos-product",
+							"title": "Product",
+							"category": "objetos",
+							"description": "",
+		  				"type": "",
+							"url": "/frontend/objetos/#product",
+							"content": "Esse objeto trás todas as informações do produto, juntamente com algumas caracteristicas e configurações de recursos relacionados a ele.\n\nDisponível nas páginas: Product\n\nPara saber mais sobre como gerenciar produtos acesse: Wiki - Gerenciar produtos\n\nNesse Objeto são retornadas as seguintes informações:\n\n\n  \n    \n      Atributos\n      Descrição\n    \n  \n  \n    \n      product.ean\n      Exibe o código de barras do produto\n    \n    \n      product.modified\n      Retorna a data de motificação do produto\n    \n    \n      product.is_kit\n      Retorna 1 caso o produto tenha kit\n    \n    \n      product.slug\n      Retorna o slug do produto\n    \n    \n      product.id\n      Identificador único do produto\n    \n    \n      product.name\n      Nome do produto\n    \n    \n      product.description\n      Exibe a descrição completa do produto\n    \n    \n      product.description_small\n      Exibe um resumo do produto\n    \n    \n      product.price\n      Valor do produto\n    \n    \n      product.cost_price\n      Retorna o preço de custo do produto\n    \n    \n      product.start_promotion\n      Exibe a data de ínicio da promoção do produto\n    \n    \n      product.end_promotion\n      Exibe a data de término da promoção do produto\n    \n    \n      product.brand\n      Exibe a marca do produto\n    \n    \n      product.brand_id\n      Retorna o id da marca do produto\n    \n    \n      product.model\n      Exibe o modelo do produto\n    \n    \n      product.weight\n      Exibe o peso do produto em gramas\n    \n    \n      product.length\n      Exibe o comprimento do produto em centímetros\n    \n    \n      product.width\n      Exibe a largura do produto em centímetros\n    \n    \n      product.height\n      Exibe a altura do produto em centímetros\n    \n    \n      product.stock\n      Quantidade de produtos em estoque\n    \n    \n      product.category_id\n      Identificador único da categoria principal do produto\n    \n    \n      product.category_name\n      Retorna o nome da categoria principal do produto\n    \n    \n      product.available\n      Retorna se o produto está disponível\n    \n    \n      product.availability\n      Informação de disponibilidade do produto\n    \n    \n      product.reference\n      Exibe o código de referência do produto\n    \n    \n      product.has_variation\n      Retorna verdadeiro caso o produto contenha variações\n    \n    \n      product.has_acceptance_terms\n      Retorna verdadeiro se o produto possuir termos de aceitação\n    \n    \n      product.has_buy_together\n      Retorna 1 caso o produto possua “Compre Junto”\n    \n    \n      product.additional_button\n      Retorna verdadeiro se deve-se exibir selo adicional\n    \n    \n      product.additional_message\n      Exibe a mensagem adicional do produto\n    \n    \n      product.quantity_sold\n      Exibe a quantidade produtos vendidos\n    \n    \n      product.image\n      Retorna 1 caso o produto tenha imagem\n    \n    \n      product.payment_option\n      Retorna uma string com as opções de pagamento configuradas\n    \n    \n      product.payment_option_details\n      Retorna as informações das formas de pagamento display_name, plots, value, type, tax\n    \n    \n      product.related_categories\n      Retorna o ID das categorias relacionadas ao produto\n    \n    \n      product.release_date\n      Retorna a data de lançamento do produto\n    \n    \n      product.virtual_product\n      Retorna verdadeiro se o produto for virtual\n    \n    \n      product.minimum_stock\n      Retorna o estoque minimo do produto\n    \n    \n      product.included_items\n      Itens inclusos na compra do produto\n    \n    \n      product.related_products\n      Array dos produtos relacionados\n    \n    \n      product.free_shipping\n      Retorna verdadeiro se possuir frete grátis\n    \n    \n      product.ipi\n      Retorna o ipi do produto\n    \n    \n      product.acceptance_term\n       \n    \n    \n      product.warranty_days\n      Retorna a quantidade de dias em garantia\n    \n    \n      product.availability_days\n       \n    \n    \n      product.cubic_weight\n      Retorna o peso cubico do produto\n    \n    \n      product.video\n      Exibe a url do vídeo inserido no produto\n    \n    \n      product.metatag\n      retorna um array com as meta tags configuradas no produto\n    \n    \n      product.payment_option_html\n      Retornas um bloco html com as opções de pagamentos\n    \n    \n      product.percentage_discount\n      Retorna a porcentagem de desconto do produto.\n    \n    \n      product.payment\n      Retorna opões de parcelamento do produto\n    \n    \n      product.compared_product\n      Retorna verdadeiro se o produto estiver na comparação\n    \n    \n      product.price_w_coupon\n      Retorna o preço caso esteja com Cupon de desconto aplicado.\n    \n    \n      product.images\n      Retorna as imagens do produto\n    \n    \n      product.variants\n      Retorna um array com todas as informações das variações,os indices retornados são: id, ean, product_id, price, stock, minimum_stock, reference, start_promotion, end_promotion, promotional_price, payment_option, illustrative_image, Sku, VariantImage, payment_option_details\n    \n    \n      product.properties\n      Retorna as caracteristicas do produto\n    \n    \n      product.price_offer\n      Valor do produto em promoção\n    \n    \n      product.featured\n      Retorna verdadeiro se for destaque\n    \n    \n      product.new\n      Retorna verdadeiro se for lançamento\n    \n    \n      product.minimum_price\n      Retorna o preço minimo do produto.\n    \n    \n      product.ranking\n      count  rating Ranking (avaliação) do produto\n    \n    \n      product.link\n      Link para a página do produto\n    \n    \n      product.show_price\n      Retorna 1 caso as informações de preço devam ser exibidas\n    \n    \n      product.upon_request\n      Retorna se o produto está sob consulta\n    \n    \n      product.has_other_prices\n      Retorna se o produto possui outros preços.\n    \n    \n      product.additional_information\n      Exibe a informação adicional (máximo de 256 caracteres)\n    \n    \n      product.minimum_variant_price\n      Retorna o melhor valor entre as variações do produto\n    \n    \n      product.payment_detail\n      Retorna os detalhes das formas de pagamento"
+						}
+						
+					
+				
+			
+				
+					
+						,
+						
+						"objetos-productfeatured": {
+							"id": "objetos-productfeatured",
+							"title": "ProductFeatured",
+							"category": "objetos",
+							"description": "",
+		  				"type": "",
+							"url": "/frontend/objetos/#productFeatured",
+							"content": "Esse objeto retorna os produtos em destaque na categoria atual. As informações retornadas são as mesmas da Products.\n\nDisponível nas páginas: catalog"
+						}
+						
+					
+				
+			
+				
+					
+						,
+						
+						"objetos-products": {
+							"id": "objetos-products",
+							"title": "Products",
+							"category": "objetos",
+							"description": "",
+		  				"type": "",
+							"url": "/frontend/objetos/#products",
+							"content": "O Objeto products está disponível de acordo com as regras de cada página:\n\n\n  Na “home” contém os produtos em destaque;\n  Na “catalog” contém os produtos de uma categoria específica de acordo com os filtros aplicados;\n  Na “search” contém os produtos de acordo com os critérios da busca e os filtros aplicados.\n\n\nDisponível nas páginas:  home,  catalog,  search\n\nPara saber mais sobre como gerenciar produtos acesse: Wiki - Gerenciar produtos\n\nAs requisições de produtos sempre retornarão um array de dados onde cada chave está descrita abaixo:\n\n\n  \n    \n      Atributos\n      Descrição\n    \n  \n  \n    \n      products.id\n      Identificador único do produto\n    \n    \n      products.name\n      Nome do produto\n    \n    \n      products.description_small\n      Exibe um resumo do produto\n    \n    \n      products.price\n      Valor do produto\n    \n    \n      products.start_promotion\n      Exibe a data de ínicio da promoção do produto\n    \n    \n      products.end_promotion\n      Exibe a data de término da promoção do produto\n    \n    \n      products.brand\n      Exibe a marca do produto\n    \n    \n      products.model\n      Exibe o modelo do produto\n    \n    \n      products.weight\n      Exibe o peso do produto em gramas\n    \n    \n      products.length\n      Exibe o comprimento do produto em centímetros\n    \n    \n      products.width\n      Exibe a largura do produto em centímetros\n    \n    \n      products.height\n      Exibe a altura do produto em centímetros\n    \n    \n      products.stock\n      Quantidade de produtos em estoque\n    \n    \n      products.category_id\n      Identificador único da categoria principal do produto\n    \n    \n      products.available\n      Retorna se o produto está disponível\n    \n    \n      products.availability\n      Informação de disponibilidade do produto\n    \n    \n      products.reference\n      Exibe o código de referência do produto\n    \n    \n      products.additional_button\n      Retorna verdadeiro se deve-se exibir selo adicional\n    \n    \n      products.has_variation\n      Retorna verdadeiro caso o produto contenha variações\n    \n    \n      products.additional_message\n      Exibe a mensagem adicional do produto\n    \n    \n      products.warranty\n      Retorna a quantidade de dias em garantia\n    \n    \n      products.quantity_sold\n      Exibe a quantidade produtos vendidos\n    \n    \n      products.images\n      Retorna as imagens do produto\n    \n    \n      products.shortcut\n       \n    \n    \n      products.payment_option\n      Retorna uma string com as opções de pagamento configuradas\n    \n    \n      products.related_categories\n      Retorna o ID das categorias relacionadas ao produto\n    \n    \n      products.release_date\n      Retorna a data de lançamento do produto\n    \n    \n      products.slug\n      Retorna o slug do produto\n    \n    \n      products.free_shipping\n      Retorna verdadeiro se possuir frete grátis\n    \n    \n      products.Category\n      Catgeorias do produto id, name\n    \n    \n      products.image\n      Retorna 1 caso o produto tenha imagem\n    \n    \n      products.payment\n      Retorna opões de parcelamento do produto\n    \n    \n      products.payment_option_html\n      Retornas um bloco html com as opções de pagamentos\n    \n    \n      products.product_price\n       \n    \n    \n      products.calculated_price\n       \n    \n    \n      products.variants\n      Retorna um array com todas as informações das variações,os indices retornados são: id, ean, product_id, price, stock, minimum_stock, reference, start_promotion, end_promotion, promotional_price, payment_option, illustrative_image, Sku, VariantImage, payment_option_details\n    \n    \n      products.properties\n      Retorna as caracteristicas do produto\n    \n    \n      products.price_offer\n      Valor do produto em promoção\n    \n    \n      products.featured\n      Retorna verdadeiro se for destaque\n    \n    \n      products.new\n      Retorna verdadeiro se for lançamento\n    \n    \n      products.payment_option_details\n      Retorna as informações das formas de pagamento display_name, plots, value, type, tax\n    \n    \n      products.minimum_price\n      Retorna o preço minimo do produto.\n    \n    \n      products.ranking\n      count  rating Ranking (avaliação) do produto\n    \n    \n      products.link\n      Link para a página do produto\n    \n    \n      products.show_price\n      Retorna 1 caso as informações de preço devam ser exibidas\n    \n    \n      products.upon_request\n      Retorna se o produto está sob consulta\n    \n    \n      products.has_other_prices\n      Retorna se o produto possui outros preços.\n    \n    \n      products.bonus_html\n      Retorna html com o recurso de pontos"
+						}
+						
+					
+				
+			
+				
+					
+						,
+						
+						"objetos-seals": {
+							"id": "objetos-seals",
+							"title": "Seals",
+							"category": "objetos",
+							"description": "",
+		  				"type": "",
+							"url": "/frontend/objetos/#seals",
+							"content": "A Tray possui integração com 2 selos: Loja Protegida e Ebit.\n\nEsses selos só são retornados caso estejam  configurados na loja.\n\nDisponível nas páginas: todas\n\n\n  \n    \n      Atributos\n      Descrição\n    \n  \n  \n    \n      seals.ebit\n      Retorna o HTML do selo do Ebit\n    \n    \n      seals.hackersafe\n      Retorna o HTML do selo Loja Protegida"
+						}
+						
+					
+				
+			
+				
+					
+						,
+						
+						"objetos-search": {
+							"id": "objetos-search",
+							"title": "Search",
+							"category": "objetos",
+							"description": "",
+		  				"type": "",
+							"url": "/frontend/objetos/#search",
+							"content": "O Objeto search retorna informações relacionadas a busca de produtos.\n\nDisponível nas páginas: search (alguns índices estão disponíveis na catalog)\n\nAs informações retornadas são:\n\n\n  \n    \n      Atributos\n      Descrição\n    \n  \n  \n    \n      search.available_options\n      Opções de disponibilidade de produto\n    \n    \n      search.order_options\n      Opções de ordenação\n    \n    \n      search.word\n      Termo buscado na loja.\n    \n    \n      search.brands\n      As marcas vinculadas aos produtos dessa busca\n    \n  \n\n\nAo lado alguns exemplos:"
+						}
+						
+					
+				
+			
+				
+					
+						,
+						
+						"objetos-store": {
+							"id": "objetos-store",
+							"title": "Store",
+							"category": "objetos",
+							"description": "",
+		  				"type": "",
+							"url": "/frontend/objetos/#store",
+							"content": "Esse objeto retorna os dados da loja.\n\n\n  \n    \n      Atributos\n      Descrição\n    \n  \n  \n    \n      store.id\n      Identificador único da loja\n    \n    \n      store.name\n      Nome da loja\n    \n    \n      store.status\n      Retorna o status da loja na plataforma\n    \n    \n      store.url\n      URL da loja\n    \n    \n      store.secure_url\n      Retorna a url em ambiente seguro (https)\n    \n    \n      store.chat\n      Retorna o conteúdo do campo “Atendimento Online” cadastrado no Painel Administrativo\n    \n    \n      store.current_url\n      Retorna a url atual"
+						}
+						
+					
+				
+			
+				
+					
+						,
+						
+						"objetos-tags": {
+							"id": "objetos-tags",
+							"title": "Tags",
+							"category": "objetos",
+							"description": "",
+		  				"type": "",
+							"url": "/frontend/objetos/#tags",
+							"content": "O Objeto tags retorna uma lista com as palavras mais buscadas na loja.\n\n\n  \n    \n      Atributos\n      Descrição\n    \n  \n  \n    \n      tags[0].font_size\n      Tamanho da fonte com base na quantidade de vezes que foi buscada\n    \n    \n      tags[0].url\n      URL para a página de busca\n    \n    \n      tags[0].word\n      Palavra buscada"
+						}
+						
+					
+				
+			
+				
+					
+						,
+						
+						"objetos-tray": {
+							"id": "objetos-tray",
+							"title": "Tray",
+							"category": "objetos",
+							"description": "",
+		  				"type": "",
+							"url": "/frontend/objetos/#tray",
+							"content": "Esse objeto retorna algumas configurações e integrações relacionadas a loja.\n\n\n  \n    \n      Atributos\n      Descrição\n    \n  \n  \n    \n      tray.analytics\n      Script de estatísticas de visitas do Google Analytics\n    \n    \n      tray.credits\n      Retorna informações de creditos da Tray message, status, url\n    \n    \n      tray.meta\n      Retorna informações de meta dados configuradas na plataforma\n    \n    \n      tray.scripts\n      Retorna os scripts internos da plataforma.\n    \n    \n      tray.styles\n      Retornas as folhas de estilos internas da plataforma.\n    \n    \n      tray.paths\n      Retorna caminho dos cdns utilizados no tema js, css, shop_image, system_image, theme"
+						}
+						
+					
+				
+			
+		
+			
+		
+	};
+</script>
+<script src="/js/lunr.min.js"></script>
+<script src="/js/search.js"></script>
+
+            </div>
+        </div>
+
+         <footer class="text-center">
+        <div class="footer-above">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col col-md-4">
+                        <h3>Duvidas?</h3>
+                        <p>developers@tray.com.br</p>
+                    </div>
+                    <div class="footer-col col-md-4">
+                        <h3>Contribua</h3>
+                        <ul class="list-inline">
+                            <li>
+                                <a href="https://github.com/tray-tecnologia/" class="btn-social btn-outline"><span class="sr-only">GitHub</span><i class="fa fa-fw fa-github"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-col col-md-4">
+                        <h3>Sobre nós</h3>
+                        <p>Adipisci et ut maiores delectus velit sunt expedita. Ea quae provident consequatur ipsa amet facere vel et nihil. Harum aut consequatur quam nihil. Accusantium qui nesciunt magni sed rerum enim omnis qui. Qui fugiat inventore dolor repellat aut minima.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-below">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                       @ 2017 Tray Plataforma de E-Commerce e/ou Locaweb
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://example.com/vendor/jquery/jquery.min.js"></script>
+    <script src="https://example.com/vendor/bootstrap/js/bootstrap.min.js"></script>
+	<script src="/js/main.js"></script>
+    
+</body>
+</html>

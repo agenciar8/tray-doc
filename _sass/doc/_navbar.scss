@@ -1,0 +1,90 @@
+.navbar-custom {
+  background: $nav-color;
+  font-family: 'Lato', sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  border: none;
+  .navbar-brand{
+      color: $nav-text;
+
+      &:hover,
+      &:focus,
+      &:active{
+          color: $nav-hover;
+      }
+       
+       
+       img{
+        width: 65px;
+        margin-top: -13px;
+      }
+
+  }
+
+  .navbar-nav{
+        letter-spacing: 1px;
+      li{
+            a{
+                color: $nav-link;
+                &:hover,
+                &:focus,
+                &:active{
+                      color: $nav-active;
+                }
+            }
+        &:hover{
+              background:$nav-hover;
+        }
+        .active a{
+             color: $nav-active;
+             background: $nav-active-bg;
+
+             &:hover,
+             &:focus,
+             &:active{
+                  color: $nav-active;
+                  background: $nav-active-bg;
+             }
+        }
+      }
+
+  }
+
+  .navbar-toggle{
+    color: $nav-text;
+    text-transform: uppercase;
+    font-size: 15px;
+    border-color: white;
+
+    &:hover,
+    &:focus{
+        background-color: $nav-focus;
+        color: white;
+    }
+  }
+  @media (min-width: 768px) {
+       .navbar-head{
+           width: 768px;
+       }
+        .navbar-custom {
+            -webkit-transition: padding 0.3s;
+            -moz-transition: padding 0.3s;
+            transition: padding 0.3s;
+
+            .navbar-brand{
+                font-size: 2em;
+                -webkit-transition: all 0.3s;
+                -moz-transition: all 0.3s;
+                transition: all 0.3s;
+            }
+
+            .affix{
+                padding: 10px 0;
+                .navbar-brand{
+                        font-size: 1.5em;
+                }
+            }
+        }
+  }
+
+}

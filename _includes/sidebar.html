@@ -1,0 +1,24 @@
+<div id="sidebar" class="sidebar">
+	{% assign page_current =  page.url | split:'/' %}
+	{% assign sorted_collections = site.collections | sort: "position" %}
+	{% assign origin = page_current[1] | append:'/' | prepend:'/'  %}
+	{% for collection in sorted_collections %}
+		{% if collection.label != "posts" and collection.origem == origin %}
+				<section >
+				<h6><span class="icon"><i class="fa fa-caret-right" aria-hidden="true"></i></span> {{ collection.title }}</h6>
+				<ul {% if page_current[2] == collection.name %} class="active" {% endif %}>
+					{% assign sorted_docs = collection.docs | sort: "position" %}
+					{% for doc in sorted_docs %}
+						<li>
+							<a {% if page.url != doc.session %}} href="{{ doc.session }}#{{ doc.link }}" {% else %} href="#{{ doc.link }}" {% endif %}>
+								{{ doc.title }}
+								{% if doc.type %}<span class="endpoint {{ doc.type }}"></span>{% endif %}
+							</a>
+						</li>
+					{% endfor %}
+				</ul>
+			</section>
+		{% endif %}
+	{% endfor %}
+</div>
+

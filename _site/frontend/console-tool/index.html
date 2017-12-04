@@ -1,0 +1,1029 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Documentação de Desenvolvimento Tray">
+    <meta name="author" content="Tray - Plataforma de E-commerce">
+
+    <title>Tray - Plataforma de E-commerce </title>
+
+    <link href="https://example.com/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+	<link rel="stylesheet" href="https://example.com/css/doc.css">
+    <link href="/../../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+</head>
+
+<body id="page-top" class="index">
+
+	    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom">
+        <div class="container">
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span> <i class="fa fa-bars"></i>
+                </button>
+            </div>
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="/frontend">Personalize seu Front-End</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="/aplicativos">Aplicativos</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+     <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 logo">
+                    <a href="https://example.com">
+                        <img class="img-responsive logo" src="https://example.com/images/logo-tray-2017-branca-svg.svg" alt="">
+                    </a>
+                </div>
+                <div class="col-sm-6">
+                    <form action="/search/" method="get">
+                        <input type="text" name="q" id="search-input" placeholder="Search">
+                        <input type="submit" value="Search" style="display: none;">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </header>
+
+        <div class="flexcontainer">
+            <div class="smallitem">
+                <div id="sidebar" class="sidebar">
+	
+	
+	
+	
+		
+	
+		
+				<section >
+				<h6><span class="icon"><i class="fa fa-caret-right" aria-hidden="true"></i></span> Console Tool</h6>
+				<ul  class="active" >
+					
+					
+						<li>
+							<a  href="#install" >
+								Instalação
+								
+							</a>
+						</li>
+					
+						<li>
+							<a  href="#update" >
+								Atualização
+								
+							</a>
+						</li>
+					
+						<li>
+							<a  href="#uninstall" >
+								Desinstalação
+								
+							</a>
+						</li>
+					
+						<li>
+							<a  href="#commands" >
+								Comandos Disponiveis
+								
+							</a>
+						</li>
+					
+						<li>
+							<a  href="#keys" >
+								Chaves de desenvolvimento
+								
+							</a>
+						</li>
+					
+						<li>
+							<a  href="#new" >
+								Criar Tema
+								
+							</a>
+						</li>
+					
+						<li>
+							<a  href="#clean" >
+								Cache no Tema
+								
+							</a>
+						</li>
+					
+						<li>
+							<a  href="#configure" >
+								Configurar tema para edição
+								
+							</a>
+						</li>
+					
+						<li>
+							<a  href="#download" >
+								Download dos arquivos do Tema
+								
+							</a>
+						</li>
+					
+						<li>
+							<a  href="#help" >
+								Help de comandos
+								
+							</a>
+						</li>
+					
+						<li>
+							<a  href="#list" >
+								Temas disponiveis
+								
+							</a>
+						</li>
+					
+						<li>
+							<a  href="#open" >
+								Preview do Tema
+								
+							</a>
+						</li>
+					
+						<li>
+							<a  href="#remove" >
+								Excluir arquivos
+								
+							</a>
+						</li>
+					
+						<li>
+							<a  href="#systeminfo" >
+								Detalhes de Instalação
+								
+							</a>
+						</li>
+					
+						<li>
+							<a  href="#upload" >
+								Upload de Arquivos
+								
+							</a>
+						</li>
+					
+						<li>
+							<a  href="#watch" >
+								Upload automatico de arquivos
+								
+							</a>
+						</li>
+					
+						<li>
+							<a  href="#error" >
+								Erros
+								
+							</a>
+						</li>
+					
+				</ul>
+			</section>
+		
+	
+		
+				<section >
+				<h6><span class="icon"><i class="fa fa-caret-right" aria-hidden="true"></i></span> Objetos</h6>
+				<ul >
+					
+					
+						<li>
+							<a } href="/frontend/objetos/#objetos" >
+								Objetos do Opencode
+								
+							</a>
+						</li>
+					
+						<li>
+							<a } href="/frontend/objetos/#objetos2" >
+								Como manipular Objetos
+								
+							</a>
+						</li>
+					
+						<li>
+							<a } href="/frontend/objetos/#tray" >
+								Tray
+								
+							</a>
+						</li>
+					
+						<li>
+							<a } href="/frontend/objetos/#store" >
+								Store
+								
+							</a>
+						</li>
+					
+						<li>
+							<a } href="/frontend/objetos/#links" >
+								Links
+								
+							</a>
+						</li>
+					
+						<li>
+							<a } href="/frontend/objetos/#category" >
+								Category
+								
+							</a>
+						</li>
+					
+						<li>
+							<a } href="/frontend/objetos/#categories" >
+								Categories
+								
+							</a>
+						</li>
+					
+						<li>
+							<a } href="/frontend/objetos/#banners" >
+								Banners
+								
+							</a>
+						</li>
+					
+						<li>
+							<a } href="/frontend/objetos/#tags" >
+								Tags
+								
+							</a>
+						</li>
+					
+						<li>
+							<a } href="/frontend/objetos/#filters" >
+								Filters
+								
+							</a>
+						</li>
+					
+						<li>
+							<a } href="/frontend/objetos/#pages" >
+								Pages
+								
+							</a>
+						</li>
+					
+						<li>
+							<a } href="/frontend/objetos/#paginate" >
+								Paginate
+								
+							</a>
+						</li>
+					
+						<li>
+							<a } href="/frontend/objetos/#seals" >
+								Seals
+								
+							</a>
+						</li>
+					
+						<li>
+							<a } href="/frontend/objetos/#breadcrumb" >
+								Breadcrumb
+								
+							</a>
+						</li>
+					
+						<li>
+							<a } href="/frontend/objetos/#search" >
+								Search
+								
+							</a>
+						</li>
+					
+						<li>
+							<a } href="/frontend/objetos/#productFeatured" >
+								ProductFeatured
+								
+							</a>
+						</li>
+					
+						<li>
+							<a } href="/frontend/objetos/#paymentMethods" >
+								PaymentMethods
+								
+							</a>
+						</li>
+					
+						<li>
+							<a } href="/frontend/objetos/#product" >
+								Product
+								
+							</a>
+						</li>
+					
+						<li>
+							<a } href="/frontend/objetos/#products" >
+								Products
+								
+							</a>
+						</li>
+					
+				</ul>
+			</section>
+		
+	
+		
+				<section >
+				<h6><span class="icon"><i class="fa fa-caret-right" aria-hidden="true"></i></span> Metodos</h6>
+				<ul >
+					
+					
+						<li>
+							<a } href="/frontend/methods/#methods" >
+								O que são métodos
+								
+							</a>
+						</li>
+					
+						<li>
+							<a } href="/frontend/methods/#methods2" >
+								Manipulando métodos
+								
+							</a>
+						</li>
+					
+						<li>
+							<a } href="/frontend/methods/#asset" >
+								Asset
+								
+							</a>
+						</li>
+					
+						<li>
+							<a } href="/frontend/methods/#brands" >
+								Brands
+								
+							</a>
+						</li>
+					
+						<li>
+							<a } href="/frontend/methods/#categories" >
+								Categories
+								
+							</a>
+						</li>
+					
+						<li>
+							<a } href="/frontend/methods/#image" >
+								Image
+								
+							</a>
+						</li>
+					
+						<li>
+							<a } href="/frontend/methods/#products" >
+								Products
+								
+							</a>
+						</li>
+					
+						<li>
+							<a } href="/frontend/methods/#translation" >
+								Translation
+								
+							</a>
+						</li>
+					
+				</ul>
+			</section>
+		
+	
+</div>
+
+
+            </div>
+            <div class="bigitem">
+             
+
+	
+	
+
+	
+	
+		
+		<section class="doc-content" id="install">
+			<section class="left-docs">
+				<h3>
+						Instalação
+						
+				</h3>
+				
+
+				<p>Crie, e customize os layouts de seus projetos de maneira simples e eficiente. Faça o upload de todos os seus arquivos de forma automática utilizando a nossa console tool.</p>
+
+<p>A console tool nada mais é do que uma gem escrita em Ruby onde é possivel realizar download e upload dos arquivos do tema de uma forma mais dinâmica permitindo um ambiente de alta produtividade, por isso é a nossa recomendação.</p>
+
+<p class="success"><strong>pré requisito:</strong> Ruby - versão igual ou superior á 2.1.7</p>
+
+			</section>
+
+			
+				<section class="right-code">
+					<div title="Instalação da Gem" class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>gem install opencode_theme
+</code></pre>
+</div>
+
+<div title="Verificando a Instalação" class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>opencode systeminfo
+Ruby: v2.3.3-p222
+OpencodeTheme: v:1.0.5
+Operating System: x86_64-linux
+HTTParty: v0.14.0
+Launchy: v2.4.3
+</code></pre>
+</div>
+
+				</section>
+			
+		</section>
+		
+	
+		
+		<section class="doc-content" id="update">
+			<section class="left-docs">
+				<h3>
+						Atualização
+						
+				</h3>
+				
+
+				<p>A atualização da Console Tool é recomendada para sempre manter compatível com os recursos do OpenCode.</p>
+
+<p>Para esta atualização, é necessário verificar a versão da GEM utilizada, pois caso utilize uma versão igual ou inferior a versão <strong>0.1.2</strong>, é necessário desinstalar a GEM e realizar uma nova instalação</p>
+
+
+			</section>
+
+			
+				<section class="right-code">
+					<div title="Atualizando a Gem" class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>gem update opencode_theme
+</code></pre>
+</div>
+<div title="Verificando a Instalação" class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>opencode systeminfo
+Ruby: v2.3.3-p222
+OpencodeTheme: v:1.0.5
+Operating System: x86_64-linux
+HTTParty: v0.14.0
+Launchy: v2.4.3
+</code></pre>
+</div>
+
+				</section>
+			
+		</section>
+		
+	
+		
+		<section class="doc-content" id="uninstall">
+			<section class="left-docs">
+				<h3>
+						Desinstalação
+						
+				</h3>
+				
+
+				<p>Caso utilize uma versão igual ou inferior a versão <strong>0.1.2</strong> será necessário realizar a desinstalação da GEM e a instalação para versão atual.</p>
+
+
+			</section>
+
+			
+				<section class="right-code">
+					<div title="Desistalando a Gem" class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>gem uninstall opencode_theme
+</code></pre>
+</div>
+
+				</section>
+			
+		</section>
+		
+	
+		
+		<section class="doc-content" id="commands">
+			<section class="left-docs">
+				<h3>
+						Comandos Disponiveis
+						
+				</h3>
+				
+
+				<p>Para saber quais comandos estão disponíveis digite o comando ao lado:</p>
+
+			</section>
+
+			
+				<section class="right-code">
+					<div title="Listando Comandos" class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>opencode -h
+</code></pre>
+</div>
+
+<div title="Comandos Disponiveis" class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>opencode new API_KEY PASSWORD THEME_NAME THEME_BASE
+<span class="gp">$ </span>opencode clean
+<span class="gp">$ </span>opencode configure API_KEY PASSWORD THEME_ID
+<span class="gp">$ </span>opencode download FILE
+<span class="gp">$ </span>opencode <span class="nb">help</span> <span class="o">[</span>COMMAND]
+<span class="gp">$ </span>opencode list
+<span class="gp">$ </span>opencode open
+<span class="gp">$ </span>opencode remove FILE
+<span class="gp">$ </span>opencode systeminfo
+<span class="gp">$ </span>opencode upload FILE
+<span class="gp">$ </span>opencode watch
+</code></pre>
+</div>
+
+				</section>
+			
+		</section>
+		
+	
+		
+		<section class="doc-content" id="keys">
+			<section class="left-docs">
+				<h3>
+						Chaves de desenvolvimento
+						
+				</h3>
+				
+
+				<p>As chaves <code class="highlighter-rouge">API_KEY</code> e <code class="highlighter-rouge">PASSWORD</code> necessarias para criação e manutenção de temas são geradas através do painel administrativo, na aba <strong>Minha Loja &gt; Design Da Loja</strong> , no canto superior direito, como mostra abaixo.</p>
+
+<p><img src="/../../images/keys.gif" alt="Lista de Desenvolvedores" /></p>
+
+			</section>
+
+			
+				<section class="right-code">
+					
+
+				</section>
+			
+		</section>
+		
+	
+		
+		<section class="doc-content" id="new">
+			<section class="left-docs">
+				<h3>
+						Criar Tema
+						
+				</h3>
+				
+
+				<p>Cria um novo tema com o nome informado.</p>
+
+<p>É possivel também informar um tema base para criação informando também o id do tema a ser utilizado.</p>
+
+<h5 id="experimente-já">Experimente já!</h5>
+
+<p>Ficou curioso para saber como funciona? Experimente criar agora uma tema na nossa loja de teste…</p>
+
+<p>Para isso basta usar a <code class="highlighter-rouge">API_KEY</code> e o <code class="highlighter-rouge">PASSWORD</code> disponibilizados a baixo:</p>
+
+<div class="language-yml highlighter-rouge"><pre class="highlight"><code><span class="s">API_KEY</span><span class="pi">:</span> <span class="s">20a699301d454509691f3ea02c1cba4b</span>
+<span class="s">PASSWORD</span><span class="pi">:</span> <span class="s">ea0727075e1639a42fd966a2f6e67abc</span>
+</code></pre>
+</div>
+
+<p>o comando ficará da seguinte maneira:</p>
+
+<div title="Cria um novo tema" class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>opencode new 20a699301d454509691f3ea02c1cba4b  ea0727075e1639a42fd966a2f6e67abc <span class="s2">"primeiro-tema"</span>
+</code></pre>
+</div>
+
+<p>Após isso o seu tema já estará criado.</p>
+
+<p class="error"><strong>ATENÇÃO</strong>, não crie nenhum tema importante com as credenciais a cima. Por se tratar de uma loja de teste todos os temas criados são apagados periodicamente.</p>
+
+			</section>
+
+			
+				<section class="right-code">
+					<div title="Cria um novo tema" class="language-bash highlighter-rouge"><pre class="highlight"><code> <span class="nv">$ </span>opencode new API_KEY PASSWORD THEME_NAME THEME_BASE
+</code></pre>
+</div>
+
+				</section>
+			
+		</section>
+		
+	
+		
+		<section class="doc-content" id="clean">
+			<section class="left-docs">
+				<h3>
+						Cache no Tema
+						
+				</h3>
+				
+
+				<p>Esse comando é responsável por limpar o cache dos arquivos estáticos do tema.</p>
+
+
+			</section>
+
+			
+				<section class="right-code">
+					<div title="Remove o cache do tema" class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>opencode clean
+</code></pre>
+</div>
+
+				</section>
+			
+		</section>
+		
+	
+		
+		<section class="doc-content" id="configure">
+			<section class="left-docs">
+				<h3>
+						Configurar tema para edição
+						
+				</h3>
+				
+
+				<p>Esse comando é responsável por configurar o tema, é através dele que é gerado o arquivo <code class="highlighter-rouge">config.yml</code>, responsável pela sincronização do tema.</p>
+
+
+			</section>
+
+			
+				<section class="right-code">
+					<div title="Configurando tema para edição" class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$ </span>mkdir meuTema
+<span class="gp">$ </span><span class="nb">cd </span>meuTema
+<span class="gp">$ </span>opencode configure API_KEY PASSWORD THEME_ID 
+</code></pre>
+</div>
+
+<div title="config.yml" class="language-yml highlighter-rouge"><pre class="highlight"><code>  <span class="s">---</span>
+  <span class="s">:api_key</span><span class="pi">:</span> <span class="s">API_KEY</span>
+  <span class="s">:password</span><span class="pi">:</span> <span class="s">PASSWORD</span>
+  <span class="s">:theme_id</span><span class="pi">:</span> <span class="s">THEME_ID</span>
+  <span class="s">:preview_url</span><span class="pi">:</span> <span class="s">PREVIEW_URL</span>
+</code></pre>
+</div>
+
+				</section>
+			
+		</section>
+		
+	
+		
+		<section class="doc-content" id="download">
+			<section class="left-docs">
+				<h3>
+						Download dos arquivos do Tema
+						
+				</h3>
+				
+
+				<p>Esse comando é responsavel por efetuar o download dos arquivos, ou de um arquivo especifico do tema.</p>
+
+			</section>
+
+			
+				<section class="right-code">
+					<div title="Baixa os arquivos do tema configurado" class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$  </span>opencode download FILE 
+</code></pre>
+</div>
+
+				</section>
+			
+		</section>
+		
+	
+		
+		<section class="doc-content" id="help">
+			<section class="left-docs">
+				<h3>
+						Help de comandos
+						
+				</h3>
+				
+
+				<p>Esse comando é responsavel por descrever um comando especifico.</p>
+
+			</section>
+
+			
+				<section class="right-code">
+					<div title="Help" class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$  </span>opencode <span class="nb">help </span>COMMAND 
+</code></pre>
+</div>
+
+				</section>
+			
+		</section>
+		
+	
+		
+		<section class="doc-content" id="list">
+			<section class="left-docs">
+				<h3>
+						Temas disponiveis
+						
+				</h3>
+				
+
+				<p>Esse comando é responsavel por listar todos os temas da loja.</p>
+
+			</section>
+
+			
+				<section class="right-code">
+					<div title="Lista os temas disponiveis" class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$    </span>opencode list 
+</code></pre>
+</div>
+
+				</section>
+			
+		</section>
+		
+	
+		
+		<section class="doc-content" id="open">
+			<section class="left-docs">
+				<h3>
+						Preview do Tema
+						
+				</h3>
+				
+
+				<p>Esse comando é responsavel por abrir a loja no navegador</p>
+
+			</section>
+
+			
+				<section class="right-code">
+					<div title="preview do tema" class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$    </span>opencode open 
+</code></pre>
+</div>
+
+				</section>
+			
+		</section>
+		
+	
+		
+		<section class="doc-content" id="remove">
+			<section class="left-docs">
+				<h3>
+						Excluir arquivos
+						
+				</h3>
+				
+
+				<p>Esse comando é responsavel por remover um arquivo do tema (apenas se o tema não estiver publicado)</p>
+
+			</section>
+
+			
+				<section class="right-code">
+					<div title="Exclui um arquivo especifico" class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$    </span>opencode remove FILE 
+</code></pre>
+</div>
+
+				</section>
+			
+		</section>
+		
+	
+		
+		<section class="doc-content" id="systeminfo">
+			<section class="left-docs">
+				<h3>
+						Detalhes de Instalação
+						
+				</h3>
+				
+
+				<p>Esse comando é responsavel por mostra informações do sistema</p>
+
+			</section>
+
+			
+				<section class="right-code">
+					<div title="Detalhes de Instalação" class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$    </span>opencode systeminfo 
+</code></pre>
+</div>
+
+				</section>
+			
+		</section>
+		
+	
+		
+		<section class="doc-content" id="upload">
+			<section class="left-docs">
+				<h3>
+						Upload de Arquivos
+						
+				</h3>
+				
+
+				<p>Esse comando é responsavel por fazer upload dos arquivo informado ou todos se FILE for omitido</p>
+
+			</section>
+
+			
+				<section class="right-code">
+					<div title="upload" class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$    </span>opencode upload FILE 
+</code></pre>
+</div>
+
+				</section>
+			
+		</section>
+		
+	
+		
+		<section class="doc-content" id="watch">
+			<section class="left-docs">
+				<h3>
+						Upload automatico de arquivos
+						
+				</h3>
+				
+
+				<p>Esse comando é responsavel por monitorar os arquivo sempre que ele for salvo</p>
+
+			</section>
+
+			
+				<section class="right-code">
+					<div title="Monitora alterações" class="language-bash highlighter-rouge"><pre class="highlight"><code><span class="gp">$    </span>opencode watch 
+</code></pre>
+</div>
+
+				</section>
+			
+		</section>
+		
+	
+		
+		<section class="doc-content" id="error">
+			<section class="left-docs">
+				<h3>
+						Erros
+						
+				</h3>
+				
+
+				<p>Abaixo descrição dos possiveis erros exibidos na gem</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Código</th>
+      <th>Descrição</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>00313</strong></td>
+      <td>Extensão ou nome de arquivo invalido, verifique as regras <a href="">aqui</a>.</td>
+    </tr>
+    <tr>
+      <td><strong>00314</strong></td>
+      <td>Não é permitido o envio de arquivos para este diretórios veja a estrutura do tema <a href="">aqui</a>.</td>
+    </tr>
+    <tr>
+      <td><strong>00401</strong></td>
+      <td>Não é possivel editar o tema já publicado, saiba mais <a href="">aqui</a></td>
+    </tr>
+  </tbody>
+</table>
+
+
+			</section>
+
+			
+				<section class="right-code">
+					
+
+				</section>
+			
+		</section>
+		
+	
+
+	
+	
+		
+	
+		
+	
+		
+	
+		
+	
+		
+	
+		
+	
+		
+	
+		
+	
+		
+	
+		
+	
+		
+	
+		
+	
+		
+	
+		
+	
+		
+	
+		
+	
+		
+	
+		
+	
+		
+	
+
+	
+	
+		
+	
+		
+	
+		
+	
+		
+	
+		
+	
+		
+	
+		
+	
+		
+	
+
+            </div>
+        </div>
+
+         <footer class="text-center">
+        <div class="footer-above">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col col-md-4">
+                        <h3>Duvidas?</h3>
+                        <p>developers@tray.com.br</p>
+                    </div>
+                    <div class="footer-col col-md-4">
+                        <h3>Contribua</h3>
+                        <ul class="list-inline">
+                            <li>
+                                <a href="https://github.com/tray-tecnologia/" class="btn-social btn-outline"><span class="sr-only">GitHub</span><i class="fa fa-fw fa-github"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-col col-md-4">
+                        <h3>Sobre nós</h3>
+                        <p>Adipisci et ut maiores delectus velit sunt expedita. Ea quae provident consequatur ipsa amet facere vel et nihil. Harum aut consequatur quam nihil. Accusantium qui nesciunt magni sed rerum enim omnis qui. Qui fugiat inventore dolor repellat aut minima.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-below">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                       @ 2017 Tray Plataforma de E-Commerce e/ou Locaweb
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://example.com/vendor/jquery/jquery.min.js"></script>
+    <script src="https://example.com/vendor/bootstrap/js/bootstrap.min.js"></script>
+	<script src="/js/main.js"></script>
+    
+</body>
+</html>

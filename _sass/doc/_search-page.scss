@@ -1,0 +1,25 @@
+.search-page{
+    ul{
+        width: 70%;
+        padding: 20px 0;
+        li{
+            list-style-type :none;
+            border-bottom: 1px solid #dcd5d5;
+            width: 100%;
+            margin-bottom: 5%;
+
+            @media(max-width: $mobile){
+                margin-bottom: 6%;
+                margin-left: 5%;
+                text-align: left;
+                padding-right: 10%;
+            }
+        }
+        @media(max-width: $mobile){
+            width: 100%;
+        }
+    }
+    @media(max-width: $mobile){
+        text-align: center;
+    }
+}
