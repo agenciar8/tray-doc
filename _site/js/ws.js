@@ -15,11 +15,13 @@ self.addEventListener('install', function (event) {
         '/js/main.js',
         '/js/responsive-nav.min.js',
         '/js/search.js',          
-        'https://tray-desenvolvedores.github.io/',
-        'https://tray-desenvolvedores.github.io/frontend/',
-        'https://tray-desenvolvedores.github.io/frontend/console-tool/',
-        'https://tray-desenvolvedores.github.io/frontend/objetos/',
-        'https://tray-desenvolvedores.github.io/frontend/methods/'
+        'https://tray-desenvolvedores.github.io',
+        'https://tray-desenvolvedores.github.io/frontend',
+        'https://tray-desenvolvedores.github.io/frontend/console-tool',
+        'https://tray-desenvolvedores.github.io/frontend/objetos',
+        'https://tray-desenvolvedores.github.io/frontend/methods',
+        '/vendor/bootstrap/css/bootstrap.min.css',
+        '/vendor/font-awesome/css/font-awesome.min.css'
       ]);
     })
   )

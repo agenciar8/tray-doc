@@ -4,7 +4,7 @@
     "name": "Tray Plataforma de Loja Virtual - Documenta…",
     "scope": "/",
     "display": "standalone",
-    "start_url": "https://tray-desenvolvedores.github.io/",
+    "start_url": "https://tray-desenvolvedores.github.io",
     "short_name": "Tray Plataforma",
     "theme_color": "#0c8fcd",
     "orientation": "landscape",
