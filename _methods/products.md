@@ -47,7 +47,7 @@ O Método `Products()` retorna os produtos cadastrados na loja.
 **Para saber mais sobre como gerenciar produtos acesse Wiki** - [Produtos](http://dev.tray.com.br/hc/pt-br/articles/205391978-Products)
 {: .info}
 
-As requisições de produtos sempre retornarão um array de dados, veja o padrão de retorno em: [Products](https://tray-desenvolvedores.github.io/frontend/objetos/#products)
+As requisições de produtos sempre retornarão um array de dados, veja o padrão de retorno em: [Products](http://dev.tray.com.br/frontend/objetos/#products)
 
 É possivel aplicar filtros a esse método para que ela retorne apenas os produtos desejados.
 Segue a baixo a relação de filtros disponiveis:
