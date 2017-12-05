@@ -12,7 +12,7 @@
 						<li>
 							<a {% if page.url != doc.session %}} href="{{ doc.session }}#{{ doc.link }}" {% else %} href="#{{ doc.link }}" {% endif %}>
 								{{ doc.title }}
-								{% if doc.type %}<span class="endpoint {{ doc.type }}"></span>{% endif %}
+								{% if doc.type %}<span class="endpoint {{ doc.type }}">{{ doc.type }}</span>{% endif %}
 							</a>
 						</li>
 					{% endfor %}

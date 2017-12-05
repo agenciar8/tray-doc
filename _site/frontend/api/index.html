@@ -1,0 +1,2585 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Documentação de Desenvolvimento Tray">
+    <meta name="author" content="Tray - Plataforma de E-commerce">
+    <meta name="theme-color" content="#0c8fcd"/>
+    
+    <title>Tray - Plataforma de E-commerce </title>
+
+    <link href="http://localhost:4000/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+	<link rel="stylesheet" href="http://localhost:4000/css/doc.css">
+    <link href="/../../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link rel="manifest" href="/manifest.json">
+    
+    <script>
+        if ('serviceWorker' in navigator) {
+          navigator.serviceWorker.register('https://tray-desenvolvedores.github.io/js/ws.js')
+            .then(function () {
+              console.log('service worker registered');
+            })
+            .catch(function () {
+              console.warn('service worker failed');
+            });
+        }
+    </script>
+</head>
+
+<body id="page-top" class="index">
+
+	    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom">
+        <div class="container">
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span> <i class="fa fa-bars"></i>
+                </button>
+            </div>
+
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <!-- <li class="page-scroll">
+                        <a href="/frontend">Personalize seu Front-End</a>
+                    </li> -->
+                    <li>
+                        <a href="/frontend/console-tool/">Console-Tool</a>
+                    </li>
+                    <li>
+                        <a href="/frontend/objetos/">Objetos</a>
+                    </li>
+                    <li>
+                        <a href="/frontend/methods/">Métodos</a>
+                    </li>
+                    <!-- <li class="page-scroll">
+                        <a href="/aplicativos">Aplicativos</a>
+                    </li> -->
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+     <header>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 logo">
+                    <a href="http://localhost:4000">
+                        <img class="img-responsive logo" src="http://localhost:4000/images/logo-tray-2017-branca-svg.svg" alt="">
+                    </a>
+                </div>
+                <div class="col-sm-6">
+                    <form action="/search/" method="get">
+                        <input type="text" name="q" id="search-input" placeholder="Search">
+                        <input type="submit" value="Search" style="display: none;">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </header>
+
+        <div class="flexcontainer">
+            <div class="smallitem">
+                <div id="sidebar" class="sidebar">
+	
+	
+	
+	
+		
+	
+		
+				<section >
+				<h6><span class="icon"><i class="fa fa-caret-right" aria-hidden="true"></i></span> Console Tool</h6>
+				<ul >
+					
+					
+						<li>
+							<a } href="/frontend/console-tool/#install" >
+								Instalação
+								
+							</a>
+						</li>
+					
+						<li>
+							<a } href="/frontend/console-tool/#update" >
+								Atualização
+								
+							</a>
+						</li>
+					
+						<li>
+							<a } href="/frontend/console-tool/#uninstall" >
+								Desinstalação
+								
+							</a>
+						</li>
+					
+						<li>
+							<a } href="/frontend/console-tool/#commands" >
+								Comandos Disponiveis
+								
+							</a>
+						</li>
+					
+						<li>
+							<a } href="/frontend/console-tool/#keys" >
+								Chaves de desenvolvimento
+								
+							</a>
+						</li>
+					
+						<li>
+							<a } href="/frontend/console-tool/#new" >
+								Criar Tema
+								
+							</a>
+						</li>
+					
+						<li>
+							<a } href="/frontend/console-tool/#clean" >
+								Cache no Tema
+								
+							</a>
+						</li>
+					
+						<li>
+							<a } href="/frontend/console-tool/#configure" >
+								Configurar tema para edição
+								
+							</a>
+						</li>
+					
+						<li>
+							<a } href="/frontend/console-tool/#download" >
+								Download dos arquivos do Tema
+								
+							</a>
+						</li>
+					
+						<li>
+							<a } href="/frontend/console-tool/#help" >
+								Help de comandos
+								
+							</a>
+						</li>
+					
+						<li>
+							<a } href="/frontend/console-tool/#list" >
+								Temas disponiveis
+								
+							</a>
+						</li>
+					
+						<li>
+							<a } href="/frontend/console-tool/#open" >
+								Preview do Tema
+								
+							</a>
+						</li>
+					
+						<li>
+							<a } href="/frontend/console-tool/#remove" >
+								Excluir arquivos
+								
+							</a>
+						</li>
+					
+						<li>
+							<a } href="/frontend/console-tool/#systeminfo" >
+								Detalhes de Instalação
+								
+							</a>
+						</li>
+					
+						<li>
+							<a } href="/frontend/console-tool/#upload" >
+								Upload de Arquivos
+								
+							</a>
+						</li>
+					
+						<li>
+							<a } href="/frontend/console-tool/#watch" >
+								Upload automatico de arquivos
+								
+							</a>
+						</li>
+					
+						<li>
+							<a } href="/frontend/console-tool/#error" >
+								Erros
+								
+							</a>
+						</li>
+					
+				</ul>
+			</section>
+		
+	
+		
+				<section >
+				<h6><span class="icon"><i class="fa fa-caret-right" aria-hidden="true"></i></span> Objetos</h6>
+				<ul >
+					
+					
+						<li>
+							<a } href="/frontend/objetos/#objetos" >
+								Objetos do Opencode
+								
+							</a>
+						</li>
+					
+						<li>
+							<a } href="/frontend/objetos/#objetos2" >
+								Como manipular Objetos
+								
+							</a>
+						</li>
+					
+						<li>
+							<a } href="/frontend/objetos/#tray" >
+								Tray
+								
+							</a>
+						</li>
+					
+						<li>
+							<a } href="/frontend/objetos/#store" >
+								Store
+								
+							</a>
+						</li>
+					
+						<li>
+							<a } href="/frontend/objetos/#links" >
+								Links
+								
+							</a>
+						</li>
+					
+						<li>
+							<a } href="/frontend/objetos/#category" >
+								Category
+								
+							</a>
+						</li>
+					
+						<li>
+							<a } href="/frontend/objetos/#categories" >
+								Categories
+								
+							</a>
+						</li>
+					
+						<li>
+							<a } href="/frontend/objetos/#banners" >
+								Banners
+								
+							</a>
+						</li>
+					
+						<li>
+							<a } href="/frontend/objetos/#tags" >
+								Tags
+								
+							</a>
+						</li>
+					
+						<li>
+							<a } href="/frontend/objetos/#filters" >
+								Filters
+								
+							</a>
+						</li>
+					
+						<li>
+							<a } href="/frontend/objetos/#pages" >
+								Pages
+								
+							</a>
+						</li>
+					
+						<li>
+							<a } href="/frontend/objetos/#paginate" >
+								Paginate
+								
+							</a>
+						</li>
+					
+						<li>
+							<a } href="/frontend/objetos/#seals" >
+								Seals
+								
+							</a>
+						</li>
+					
+						<li>
+							<a } href="/frontend/objetos/#breadcrumb" >
+								Breadcrumb
+								
+							</a>
+						</li>
+					
+						<li>
+							<a } href="/frontend/objetos/#search" >
+								Search
+								
+							</a>
+						</li>
+					
+						<li>
+							<a } href="/frontend/objetos/#productFeatured" >
+								ProductFeatured
+								
+							</a>
+						</li>
+					
+						<li>
+							<a } href="/frontend/objetos/#paymentMethods" >
+								PaymentMethods
+								
+							</a>
+						</li>
+					
+						<li>
+							<a } href="/frontend/objetos/#product" >
+								Product
+								
+							</a>
+						</li>
+					
+						<li>
+							<a } href="/frontend/objetos/#products" >
+								Products
+								
+							</a>
+						</li>
+					
+				</ul>
+			</section>
+		
+	
+		
+				<section >
+				<h6><span class="icon"><i class="fa fa-caret-right" aria-hidden="true"></i></span> Metodos</h6>
+				<ul >
+					
+					
+						<li>
+							<a } href="/frontend/methods/#methods" >
+								O que são métodos
+								
+							</a>
+						</li>
+					
+						<li>
+							<a } href="/frontend/methods/#methods2" >
+								Manipulando métodos
+								
+							</a>
+						</li>
+					
+						<li>
+							<a } href="/frontend/methods/#asset" >
+								Asset
+								
+							</a>
+						</li>
+					
+						<li>
+							<a } href="/frontend/methods/#brands" >
+								Brands
+								
+							</a>
+						</li>
+					
+						<li>
+							<a } href="/frontend/methods/#categories" >
+								Categories
+								
+							</a>
+						</li>
+					
+						<li>
+							<a } href="/frontend/methods/#image" >
+								Image
+								
+							</a>
+						</li>
+					
+						<li>
+							<a } href="/frontend/methods/#products" >
+								Products
+								
+							</a>
+						</li>
+					
+						<li>
+							<a } href="/frontend/methods/#translation" >
+								Translation
+								
+							</a>
+						</li>
+					
+				</ul>
+			</section>
+		
+	
+		
+				<section >
+				<h6><span class="icon"><i class="fa fa-caret-right" aria-hidden="true"></i></span> APIs</h6>
+				<ul  class="active" >
+					
+					
+						<li>
+							<a  href="#get-product" >
+								Consultar Produtos
+								<span class="endpoint get">get</span>
+							</a>
+						</li>
+					
+						<li>
+							<a  href="#attrs" >
+								Attrs
+								<span class="endpoint get">get</span>
+							</a>
+						</li>
+					
+						<li>
+							<a  href="#get-products" >
+								Listagem de Produtos
+								<span class="endpoint get">get</span>
+							</a>
+						</li>
+					
+						<li>
+							<a  href="#variants" >
+								Variações de Produto
+								
+							</a>
+						</li>
+					
+						<li>
+							<a  href="#get-variant" >
+								Consultar Variação do Produt
+								<span class="endpoint get">get</span>
+							</a>
+						</li>
+					
+						<li>
+							<a  href="#get-variants" >
+								Listagem de Variações do Produto
+								<span class="endpoint get">get</span>
+							</a>
+						</li>
+					
+						<li>
+							<a  href="#categorias" >
+								Categorias
+								
+							</a>
+						</li>
+					
+						<li>
+							<a  href="#get-categories" >
+								Lista de Categorias
+								<span class="endpoint get">get</span>
+							</a>
+						</li>
+					
+						<li>
+							<a  href="#search" >
+								Busca
+								
+							</a>
+						</li>
+					
+						<li>
+							<a  href="#search-products" >
+								Busca de Produtos
+								<span class="endpoint get">get</span>
+							</a>
+						</li>
+					
+				</ul>
+			</section>
+		
+	
+</div>
+
+
+            </div>
+            <div class="bigitem">
+             
+
+	
+	
+
+	
+	
+		
+	
+		
+	
+		
+	
+		
+	
+		
+	
+		
+	
+		
+	
+		
+	
+		
+	
+		
+	
+		
+	
+		
+	
+		
+	
+		
+	
+		
+	
+		
+	
+		
+	
+
+	
+	
+		
+	
+		
+	
+		
+	
+		
+	
+		
+	
+		
+	
+		
+	
+		
+	
+		
+	
+		
+	
+		
+	
+		
+	
+		
+	
+		
+	
+		
+	
+		
+	
+		
+	
+		
+	
+		
+	
+
+	
+	
+		
+	
+		
+	
+		
+	
+		
+	
+		
+	
+		
+	
+		
+	
+		
+	
+
+	
+	
+		
+		<section class="doc-content" id="get-product">
+			<section class="left-docs">
+				<h3>
+						Consultar Produtos
+						
+							<span class="endpoint get"></span>
+						
+				</h3>
+				
+
+				<p>Através da API de Produtos é possível consultar e listar os produtos contidos na loja virtual.</p>
+
+<h5 id="endereço-para-integração">Endereço para Integração</h5>
+
+<table>
+  <tbody>
+    <tr>
+      <td><strong>URL de Acesso</strong></td>
+      <td>https://{URL_LOJA}/web_api/products</td>
+    </tr>
+    <tr>
+      <td><strong>Protocolo</strong></td>
+      <td>Rest/HTTP</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Para retornar as informações do produto, basta realizar uma requisição via GET, enviando na URL o código do produto desejado.</p>
+
+<p>Exemplo ao lado de como consultar informações do produto:</p>
+
+<p>Na consulta do produto, a API retorna a resposta em JSON.</p>
+
+<p>Abaixo um detalhamento de cada nó do JSON de resposta:</p>
+
+<h5 id="json-de-resposta">JSON de Resposta</h5>
+
+<table>
+  <tbody>
+    <tr>
+      <td><strong>Product</strong></td>
+      <td>Dados do Produto</td>
+    </tr>
+    <tr>
+      <td><strong>Product.ean</strong></td>
+      <td>EAN do Produto</td>
+    </tr>
+    <tr>
+      <td><strong>Product.id</strong></td>
+      <td>Código do Produto</td>
+    </tr>
+    <tr>
+      <td><strong>Product.name</strong></td>
+      <td>Nome do Produto</td>
+    </tr>
+    <tr>
+      <td><strong>Product.price</strong></td>
+      <td>Preço do Produto</td>
+    </tr>
+    <tr>
+      <td><strong>Product.promotional_price</strong></td>
+      <td>Preço Promocional do Produto</td>
+    </tr>
+    <tr>
+      <td><strong>Product.start_promotion</strong></td>
+      <td>Data Inicial da Promoção do Produto</td>
+    </tr>
+    <tr>
+      <td><strong>Product.end_promotion</strong></td>
+      <td>Data Final da Promoção do Produto</td>
+    </tr>
+    <tr>
+      <td><strong>Product.brand</strong></td>
+      <td>Marca do Produto</td>
+    </tr>
+    <tr>
+      <td><strong>Product.model</strong></td>
+      <td>Modelo do Produto</td>
+    </tr>
+    <tr>
+      <td><strong>Product.category_id</strong></td>
+      <td>Código da Categoria do Produto</td>
+    </tr>
+    <tr>
+      <td><strong>Product.available</strong></td>
+      <td>Disponibilidade do Produto</td>
+    </tr>
+    <tr>
+      <td><strong>Product.hot</strong></td>
+      <td>Produto em Destaque</td>
+    </tr>
+    <tr>
+      <td><strong>Product.release</strong></td>
+      <td>Liberação do Produto</td>
+    </tr>
+    <tr>
+      <td><strong>Product.additional_button</strong></td>
+      <td>Botão Adicional do Produto</td>
+    </tr>
+    <tr>
+      <td><strong>Product.has_variation</strong></td>
+      <td>Confirmação de Produto com Variação</td>
+    </tr>
+    <tr>
+      <td><strong>Product.url</strong></td>
+      <td>Objeto com as URLs do Produto</td>
+    </tr>
+    <tr>
+      <td><strong>Product.url.http</strong></td>
+      <td>URL Simples do Produto</td>
+    </tr>
+    <tr>
+      <td><strong>Product.url.https</strong></td>
+      <td>URL Segura do Produto</td>
+    </tr>
+    <tr>
+      <td><strong>Product.payment_option</strong></td>
+      <td>Informações de Pagamento</td>
+    </tr>
+    <tr>
+      <td><strong>Product.payment_option_details[]</strong></td>
+      <td>Informações de Pagamento</td>
+    </tr>
+    <tr>
+      <td><strong>Product.payment_option_details[].display_name</strong></td>
+      <td>Nome da Forma de Pagamento</td>
+    </tr>
+    <tr>
+      <td><strong>Product.payment_option_details[].plots</strong></td>
+      <td>Quantidade de parcelas</td>
+    </tr>
+    <tr>
+      <td><strong>Product.payment_option_details[].value</strong></td>
+      <td>Valor da parcela</td>
+    </tr>
+    <tr>
+      <td><strong>Product.related_categories</strong></td>
+      <td>Categorias Relacionadas do Produto</td>
+    </tr>
+    <tr>
+      <td><strong>Product.release_date</strong></td>
+      <td>Data da Liberação do Produto</td>
+    </tr>
+    <tr>
+      <td><strong>Product.virtual_product</strong></td>
+      <td>Produto Virtual</td>
+    </tr>
+    <tr>
+      <td><strong>Product.ProductImage[]</strong></td>
+      <td>Imagens do Produto</td>
+    </tr>
+    <tr>
+      <td><strong>Product.ProductImage[].http</strong></td>
+      <td>URL Simples da Imagem do Produto</td>
+    </tr>
+    <tr>
+      <td><strong>Product.ProductImage[].https</strong></td>
+      <td>URL Segura da Imagem do Produto</td>
+    </tr>
+    <tr>
+      <td><strong>Product.ProductImage[].thumbs</strong></td>
+      <td>Miniatura da Imagem do Produto</td>
+    </tr>
+    <tr>
+      <td><strong>Product.ProductImage[].thumbs.30</strong></td>
+      <td>Miniatura de Tamanho 30px</td>
+    </tr>
+    <tr>
+      <td><strong>Product.ProductImage[].thumbs.30.http</strong></td>
+      <td>URL Simples da Miniatura de 30px</td>
+    </tr>
+    <tr>
+      <td><strong>Product.ProductImage[].thumbs.30.https</strong></td>
+      <td>URL Segura da Miniatura de 30px</td>
+    </tr>
+    <tr>
+      <td><strong>Product.ProductImage[].thumbs.90</strong></td>
+      <td>Miniatura de Tamanho 90px</td>
+    </tr>
+    <tr>
+      <td><strong>Product.ProductImage[].thumbs.90.http</strong></td>
+      <td>URL Simples da Miniatura de 90px</td>
+    </tr>
+    <tr>
+      <td><strong>Product.ProductImage[].thumbs.90.https</strong></td>
+      <td>URL Segura da Miniatura de 90px</td>
+    </tr>
+    <tr>
+      <td><strong>Product.ProductImage[].thumbs.180</strong></td>
+      <td>Miniatura de Tamanho 180px</td>
+    </tr>
+    <tr>
+      <td><strong>Product.ProductImage[].thumbs.180.http</strong></td>
+      <td>URL Simples da Miniatura de 180px</td>
+    </tr>
+    <tr>
+      <td><strong>Product.ProductImage[].thumbs.180.https</strong></td>
+      <td>URL Segura da Miniatura de 180px</td>
+    </tr>
+  </tbody>
+</table>
+
+  				
+			</section>
+
+			
+				<section class="right-code">
+					<div class="language-javascript highlighter-rouge"><pre class="highlight"><code> <span class="o">&lt;</span><span class="nx">script</span> <span class="nx">type</span><span class="o">=</span><span class="s2">"text/javascript"</span><span class="o">&gt;</span> 
+
+ <span class="kd">let</span> <span class="nx">producId</span> <span class="o">=</span> <span class="mi">88</span><span class="p">;</span>
+ <span class="nx">fetch</span><span class="p">(</span><span class="err">`</span><span class="o">/</span><span class="nx">web_api</span><span class="o">/</span><span class="nx">products</span><span class="o">/</span><span class="nx">$</span><span class="p">{</span><span class="nx">producId</span><span class="p">}</span><span class="err">`</span><span class="p">)</span>
+   <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">response</span> <span class="o">=&gt;</span> <span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">())</span>
+   <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">result</span> <span class="o">=&gt;</span> <span class="p">{</span>
+     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span><span class="p">.</span><span class="nx">Product</span><span class="p">);</span>
+   <span class="p">})</span>
+   <span class="p">.</span><span class="k">catch</span><span class="p">(</span><span class="nx">err</span> <span class="o">=&gt;</span> <span class="p">{</span>
+     <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s1">'Falha'</span><span class="p">,</span> <span class="nx">err</span><span class="p">);</span>
+   <span class="p">});</span>
+ <span class="o">&lt;</span><span class="sr">/script</span><span class="err">&gt;
+</span></code></pre>
+</div>
+
+				</section>
+			
+
+			
+				<section class="right-code">
+					<pre><code class="language-obj"> {
+ "Product": {
+   "ean": "8882",
+   "id": "84",
+   "name": "Produto Teste 4",
+   "description": "Produto para Teste",
+   "description_small":"Produto de Teste",
+   "price": "199.90",
+   "promotional_price": "0.00",
+   "start_promotion": "0000-00-00",
+   "end_promotion": "0000-00-00",
+   "brand": "Paginacao",
+   "model": "Modelo 3",
+   "category_id": "16",
+   "available": "1",
+   "availability": "Em estoque",
+   "hot": "1",
+   "release": "0",
+   "additional_button": "",
+   "has_variation": "",
+   "additional_message": "Mensagem.",
+   "warranty": "1 ano",
+   "rating": "0",
+   "count_rating": "0",
+   "ProductImage": [
+     {
+     "http": 
+       "http://images/123/1.png",
+     "https": 
+       "https://images/123/1.png",
+     "thumbs": {
+     "30": {
+       "http": 
+         "http://images/123/30_1.png",
+       "https": 
+         "https://images/123/30_1.png"
+       },
+       "90": {
+         "http": 
+           "http://images/123/90_1.png",
+         "https": 
+           "https://images/123/90_1.png"
+       },
+       "180": {
+         "http": 
+           "http://images/123/180_1.png",
+         "https": 
+           "https://images/123/180_1.png"
+       }
+     }
+     }
+   ],
+   "image": "1",
+   "url": {
+     "http": "http://sualojavirtual.commercesuite.com.br/produto-teste-4-pr.htm",
+     "https": "https://sualojavirtual.commercesuite.com.br/produto-teste-4-pr.htm"
+   },
+   "Properties": [],
+   "payment_option": "ou 12x com juros de R$ 18,89",
+   "related_categories": [
+     "16"
+   ],
+   "release_date": "0000-00-00",
+   "virtual_product": "",
+   "Variant": []
+ }
+ }
+</code></pre>
+
+				</section>
+			
+
+			
+		</section>
+		
+	
+		
+		<section class="doc-content" id="attrs">
+			<section class="left-docs">
+				<h3>
+						Attrs
+						
+							<span class="endpoint get"></span>
+						
+				</h3>
+				
+
+				<p>Caso deseje exibir apenas alguns atributos da API, pode-se utilizar o parâmetro attrs.</p>
+
+<p>O parâmetro Attrs deve ser passado pela url da requisição da API, nela você deve passar os atributos da qual deseja exibir separados por (,).</p>
+
+<p class="info"><strong>Disponivel em todas APIs Publicas</strong></p>
+
+<h5 id="exemplo">Exemplo</h5>
+
+<table>
+  <tbody>
+    <tr>
+      <td><strong>URL de Acesso</strong></td>
+      <td>https://{URL_LOJA}/web_api/products?attrs=Product.ean,Product.price</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Terá como resposta o conteúdo ao lado:</p>
+
+
+  				
+			</section>
+
+			
+				<section class="right-code">
+					<div title="Retorno Array" class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="o">&lt;</span><span class="nx">script</span> <span class="nx">type</span><span class="o">=</span><span class="s2">"text/javascript"</span><span class="o">&gt;</span> 
+       <span class="nx">fetch</span><span class="p">(</span><span class="err">`</span><span class="o">/</span><span class="nx">web_api</span><span class="o">/</span><span class="nx">products</span><span class="o">/</span><span class="p">?</span><span class="nx">attrs</span><span class="o">=</span><span class="nx">Product</span><span class="p">.</span><span class="nx">name</span><span class="err">`</span><span class="p">)</span>
+       <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">response</span> <span class="o">=&gt;</span> <span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">())</span>
+       <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">result</span> <span class="o">=&gt;</span> <span class="p">{</span>
+           <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span><span class="p">);</span>
+       <span class="p">})</span>
+       <span class="p">.</span><span class="k">catch</span><span class="p">(</span><span class="nx">err</span> <span class="o">=&gt;</span> <span class="p">{</span>
+           <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s1">'Falha'</span><span class="p">,</span> <span class="nx">err</span><span class="p">);</span>
+       <span class="p">});</span>
+   <span class="o">&lt;</span><span class="sr">/script</span><span class="err">&gt;
+</span></code></pre>
+</div>
+
+<div title="Exemplo" class="language-javascript highlighter-rouge"><pre class="highlight"><code>   <span class="s2">"Products"</span><span class="err">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+        <span class="s2">"Product"</span><span class="p">:</span> <span class="p">{</span>
+          <span class="s2">"ean"</span><span class="p">:</span> <span class="s2">""</span><span class="p">,</span>
+          <span class="s2">"id"</span><span class="p">:</span> <span class="s2">"110"</span><span class="p">,</span>
+          <span class="s2">"price"</span><span class="p">:</span> <span class="s2">"3000.00"</span>
+        <span class="p">}</span>
+      <span class="p">},</span>
+   
+</code></pre>
+</div>
+
+				</section>
+			
+
+			
+
+			
+		</section>
+		
+	
+		
+		<section class="doc-content" id="get-products">
+			<section class="left-docs">
+				<h3>
+						Listagem de Produtos
+						
+							<span class="endpoint get"></span>
+						
+				</h3>
+				
+
+				<p>Para a listagem de produtos, deverá ser realizada uma requisição via GET.</p>
+
+<p>Podem ser enviados alguns parâmetros nesta integração para realizar filtros na listagem de produtos, segue abaixo o dado necessário para envio:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Dados de Entrada</th>
+      <th>Obrig.</th>
+      <th>Descrição</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>id</strong></td>
+      <td>Não</td>
+      <td>Código do Produto</td>
+    </tr>
+    <tr>
+      <td><strong>name</strong></td>
+      <td>Não</td>
+      <td>Nome do Produto</td>
+    </tr>
+    <tr>
+      <td><strong>category_id</strong></td>
+      <td>Não</td>
+      <td>Categoria do Produto</td>
+    </tr>
+    <tr>
+      <td><strong>ean</strong></td>
+      <td>Não</td>
+      <td>EAN do Produto</td>
+    </tr>
+    <tr>
+      <td><strong>price</strong></td>
+      <td>Não</td>
+      <td>Preço do Produto</td>
+    </tr>
+    <tr>
+      <td><strong>brand</strong></td>
+      <td>Não</td>
+      <td>Marca do Produto</td>
+    </tr>
+    <tr>
+      <td><strong>available</strong></td>
+      <td>Não</td>
+      <td>Dsiponibilidade do Produto</td>
+    </tr>
+    <tr>
+      <td><strong>attrs</strong></td>
+      <td>Não</td>
+      <td>Atributos do Produto</td>
+    </tr>
+    <tr>
+      <td><strong>created</strong></td>
+      <td>Não</td>
+      <td>Data de Criação do Produto</td>
+    </tr>
+    <tr>
+      <td><strong>modified</strong></td>
+      <td>Não</td>
+      <td>Data de Modificação do Produto</td>
+    </tr>
+    <tr>
+      <td><strong>stock</strong></td>
+      <td>Não</td>
+      <td>Estoque do Produto</td>
+    </tr>
+    <tr>
+      <td><strong>promotion</strong></td>
+      <td>Não</td>
+      <td>Produto Promocional</td>
+    </tr>
+    <tr>
+      <td><strong>free_shipping</strong></td>
+      <td>Não</td>
+      <td>Produto com Frete Grátis</td>
+    </tr>
+    <tr>
+      <td><strong>release</strong></td>
+      <td>Não</td>
+      <td>Produto em Lançamento</td>
+    </tr>
+    <tr>
+      <td><strong>hot</strong></td>
+      <td>Não</td>
+      <td>Produto em Destaque</td>
+    </tr>
+    <tr>
+      <td><strong>quantity_sold</strong></td>
+      <td>Não</td>
+      <td>Quantidade Vendida do Produto</td>
+    </tr>
+    <tr>
+      <td><strong>rand</strong></td>
+      <td>Não</td>
+      <td>Retornar Produtos Randômicos</td>
+    </tr>
+    <tr>
+      <td><strong>sort</strong></td>
+      <td>Não</td>
+      <td>Ordenação da Consulta</td>
+    </tr>
+    <tr>
+      <td><strong>limit</strong></td>
+      <td>Não</td>
+      <td>Quantidade Limite de Registros</td>
+    </tr>
+    <tr>
+      <td><strong>page</strong></td>
+      <td>Não</td>
+      <td>Página da Consulta</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Na listagem de produtos, a API retorna a resposta em JSON.</p>
+
+<p>Abaixo um detalhamento de cada nó do JSON de resposta:</p>
+
+<h4 id="json-de-resposta">JSON de Resposta</h4>
+
+<table>
+  <tbody>
+    <tr>
+      <td><strong>paging</strong></td>
+      <td>Dados do Produto</td>
+    </tr>
+    <tr>
+      <td><strong>paging.total</strong></td>
+      <td>Total de Registros</td>
+    </tr>
+    <tr>
+      <td><strong>paging.page</strong></td>
+      <td>Páginas corrente</td>
+    </tr>
+    <tr>
+      <td><strong>paging.offset</strong></td>
+      <td>Registro Inicial da Página</td>
+    </tr>
+    <tr>
+      <td><strong>paging.limit</strong></td>
+      <td>Limite de Registros</td>
+    </tr>
+    <tr>
+      <td><strong>paging.maxLimit</strong></td>
+      <td>Máximo de Registros</td>
+    </tr>
+    <tr>
+      <td><strong>sort</strong></td>
+      <td>Ordenação</td>
+    </tr>
+    <tr>
+      <td><strong>availableFilters</strong></td>
+      <td>Filtros Disponíveis</td>
+    </tr>
+    <tr>
+      <td><strong>appliedFilters</strong></td>
+      <td>Filtros Utilizados</td>
+    </tr>
+    <tr>
+      <td><strong>Products[]</strong></td>
+      <td>Lista de Produtos</td>
+    </tr>
+    <tr>
+      <td><strong>Products[].Product</strong></td>
+      <td>Dados do Produto</td>
+    </tr>
+    <tr>
+      <td><strong>Products[].Product.ean</strong></td>
+      <td>EAN do Produto</td>
+    </tr>
+    <tr>
+      <td><strong>Products[].Product.id</strong></td>
+      <td>Código do Produto</td>
+    </tr>
+    <tr>
+      <td><strong>Products[].Product.name</strong></td>
+      <td>Nome do Produto</td>
+    </tr>
+    <tr>
+      <td><strong>Products[].Product.price</strong></td>
+      <td>Preço do Produto</td>
+    </tr>
+    <tr>
+      <td><strong>Products[].Product.promotional_price</strong></td>
+      <td>Preço Promocional do Produto</td>
+    </tr>
+    <tr>
+      <td><strong>Products[].Product.start_promotion</strong></td>
+      <td>Data Inicial da Promoção do Produto</td>
+    </tr>
+    <tr>
+      <td><strong>Products[].Product.end_promotion</strong></td>
+      <td>Data Final da Promoção do Produto</td>
+    </tr>
+    <tr>
+      <td><strong>Products[].Product.brand</strong></td>
+      <td>Marca do Produto</td>
+    </tr>
+    <tr>
+      <td><strong>Products[].Product.model</strong></td>
+      <td>Modelo do Produto</td>
+    </tr>
+    <tr>
+      <td><strong>Products[].Product.category_id</strong></td>
+      <td>Código da Categoria do Produto</td>
+    </tr>
+    <tr>
+      <td><strong>Products[].Product.available</strong></td>
+      <td>Produto Disponível</td>
+    </tr>
+    <tr>
+      <td><strong>Products[].Product.availability</strong></td>
+      <td>Disponibilidade do Produto</td>
+    </tr>
+    <tr>
+      <td><strong>Products[].Product.hot</strong></td>
+      <td>Produto em Destaque</td>
+    </tr>
+    <tr>
+      <td><strong>Products[].Product.release</strong></td>
+      <td>Liberação do Produto</td>
+    </tr>
+    <tr>
+      <td><strong>Products[].Product.additional_button</strong></td>
+      <td>Botão Adicional do Produto</td>
+    </tr>
+    <tr>
+      <td><strong>Products[].Product.has_variation</strong></td>
+      <td>Confirmação de Produto com Variação</td>
+    </tr>
+    <tr>
+      <td><strong>Products[].Product.url</strong></td>
+      <td>Objeto com as URLs do Produto</td>
+    </tr>
+    <tr>
+      <td><strong>Products[].Product.url.http</strong></td>
+      <td>URL Simples do Produto</td>
+    </tr>
+    <tr>
+      <td><strong>Products[].Product.url.https</strong></td>
+      <td>URL Segura do Produto</td>
+    </tr>
+    <tr>
+      <td><strong>Products[].Product.payment_option</strong></td>
+      <td>Informações de Pagamento</td>
+    </tr>
+    <tr>
+      <td><strong>Products[].Product.related_categories</strong></td>
+      <td>Categorias Relacionadas do Produto</td>
+    </tr>
+    <tr>
+      <td><strong>Products[].Product.release_date</strong></td>
+      <td>Data da Liberação do Produto</td>
+    </tr>
+    <tr>
+      <td><strong>Products[].Product.virtual_product</strong></td>
+      <td>Produto Virtual</td>
+    </tr>
+    <tr>
+      <td><strong>Products[].Product.ProductImage[]</strong></td>
+      <td>Imagens do Produto</td>
+    </tr>
+    <tr>
+      <td><strong>Products[].Product.ProductImage[].http</strong></td>
+      <td>URL Simples da Imagem do Produto</td>
+    </tr>
+    <tr>
+      <td><strong>Products[].Product.ProductImage[].https</strong></td>
+      <td>URL Segura da Imagem do Produto</td>
+    </tr>
+    <tr>
+      <td><strong>Products[].Product.ProductImage[].thumbs</strong></td>
+      <td>Miniatura da Imagem do Produto</td>
+    </tr>
+    <tr>
+      <td><strong>Products[].Product.ProductImage[].thumbs.30</strong></td>
+      <td>Miniatura de Tamanho 30px</td>
+    </tr>
+    <tr>
+      <td><strong>Products[].Product.ProductImage[].thumbs.30.http</strong></td>
+      <td>URL Simples da Miniatura de 30px</td>
+    </tr>
+    <tr>
+      <td><strong>Products[].Product.ProductImage[].thumbs.30.https</strong></td>
+      <td>URL Segura da Miniatura de 30px</td>
+    </tr>
+    <tr>
+      <td><strong>Products[].Product.ProductImage[].thumbs.90</strong></td>
+      <td>Miniatura de Tamanho 90px</td>
+    </tr>
+    <tr>
+      <td><strong>Products[].Product.ProductImage[].thumbs.90.http</strong></td>
+      <td>URL Simples da Miniatura de 90px</td>
+    </tr>
+    <tr>
+      <td><strong>Products[].Product.ProductImage[].thumbs.90.https</strong></td>
+      <td>URL Segura da Miniatura de 90px</td>
+    </tr>
+    <tr>
+      <td><strong>Products[].Product.ProductImage[].thumbs.180</strong></td>
+      <td>Miniatura de Tamanho 180px</td>
+    </tr>
+    <tr>
+      <td><strong>Products[].Product.ProductImage[].thumbs.180.http</strong></td>
+      <td>URL Simples da Miniatura de 180px</td>
+    </tr>
+    <tr>
+      <td><strong>Products[].Product.ProductImage[].thumbs.180.https</strong></td>
+      <td>URL Segura da Miniatura de 180px</td>
+    </tr>
+    <tr>
+      <td><strong>Products[].Product.Variant[]</strong></td>
+      <td>Variações do Produto</td>
+    </tr>
+  </tbody>
+</table>
+
+  				
+			</section>
+
+			
+				<section class="right-code">
+					<div title="Exemplo" class="language-javascript highlighter-rouge"><pre class="highlight"><code>   <span class="o">&lt;</span><span class="nx">script</span> <span class="nx">type</span><span class="o">=</span><span class="s2">"text/javascript"</span><span class="o">&gt;</span> 
+       <span class="nx">fetch</span><span class="p">(</span><span class="err">`</span><span class="o">/</span><span class="nx">web_api</span><span class="o">/</span><span class="nx">products</span><span class="o">/</span><span class="p">?</span><span class="nx">category_id</span><span class="o">=</span><span class="mi">1</span><span class="o">&amp;</span><span class="nx">limit</span><span class="o">=</span><span class="mi">20</span><span class="err">`</span> <span class="p">)</span>
+         <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">response</span> <span class="o">=&gt;</span> <span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">())</span>
+         <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">result</span> <span class="o">=&gt;</span> <span class="p">{</span>
+           <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span><span class="p">);</span>
+         <span class="p">})</span>
+         <span class="p">.</span><span class="k">catch</span><span class="p">(</span><span class="nx">err</span> <span class="o">=&gt;</span> <span class="p">{</span>
+         <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s1">'Falha'</span><span class="p">,</span> <span class="nx">err</span><span class="p">);</span>
+       <span class="p">});</span>
+   <span class="o">&lt;</span><span class="sr">/script</span><span class="err">&gt;
+</span></code></pre>
+</div>
+
+				</section>
+			
+
+			
+				<section class="right-code">
+					<div title="Retorno do Array" class="language-javascript highlighter-rouge"><pre class="highlight"><code>   <span class="p">{</span>
+   <span class="s2">"paging"</span><span class="err">:</span> <span class="p">{</span>
+   <span class="s2">"total"</span><span class="err">:</span> <span class="mi">201</span><span class="p">,</span>
+   <span class="s2">"page"</span><span class="err">:</span> <span class="mi">1</span><span class="p">,</span>
+   <span class="s2">"offset"</span><span class="err">:</span> <span class="mi">0</span><span class="p">,</span>
+   <span class="s2">"limit"</span><span class="err">:</span> <span class="mi">1</span><span class="p">,</span>
+   <span class="s2">"maxLimit"</span><span class="err">:</span> <span class="mi">50</span>
+   <span class="p">},</span>
+   <span class="s2">"sort"</span><span class="err">:</span> <span class="p">[</span> <span class="p">{</span> <span class="s2">"id"</span><span class="p">:</span> <span class="s2">"asc"</span> <span class="p">}</span> <span class="p">],</span>
+   <span class="s2">"availableFilters"</span><span class="err">:</span> <span class="p">[</span>
+   <span class="s2">"id"</span><span class="p">,</span> <span class="s2">"name"</span><span class="p">,</span> <span class="s2">"category_id"</span><span class="p">,</span> <span class="s2">"ean"</span><span class="p">,</span> <span class="s2">"available"</span><span class="p">,</span> <span class="s2">"price"</span><span class="p">,</span>
+   <span class="s2">"brand"</span><span class="p">,</span> <span class="s2">"model"</span><span class="p">,</span> <span class="s2">"hot"</span><span class="p">,</span> <span class="s2">"quantity_sold"</span><span class="p">,</span> <span class="s2">"release"</span><span class="p">,</span>
+   <span class="s2">"free_shipping"</span><span class="p">,</span> <span class="s2">"weight"</span><span class="p">,</span> <span class="s2">"image"</span><span class="p">,</span> <span class="s2">"release_date"</span><span class="p">,</span>
+   <span class="s2">"stock"</span><span class="p">,</span><span class="s2">"promotion"</span><span class="p">,</span> <span class="s2">"modified"</span><span class="p">,</span> <span class="s2">"created"</span> <span class="p">],</span>
+   <span class="s2">"appliedFilters"</span><span class="err">:</span> <span class="p">[],</span>
+   <span class="s2">"Products"</span><span class="err">:</span> <span class="p">[</span>
+   <span class="p">{</span>
+       <span class="s2">"Product"</span><span class="p">:</span> <span class="p">{</span>
+       <span class="s2">"ean"</span><span class="p">:</span> <span class="s2">"8882"</span><span class="p">,</span>
+       <span class="s2">"id"</span><span class="p">:</span> <span class="s2">"84"</span><span class="p">,</span>
+       <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"Produto Teste 4"</span><span class="p">,</span>
+       <span class="s2">"price"</span><span class="p">:</span> <span class="s2">"199.90"</span><span class="p">,</span>
+       <span class="s2">"promotional_price"</span><span class="p">:</span> <span class="s2">"0.00"</span><span class="p">,</span>
+       <span class="s2">"start_promotion"</span><span class="p">:</span> <span class="s2">"0000-00-00"</span><span class="p">,</span>
+       <span class="s2">"end_promotion"</span><span class="p">:</span> <span class="s2">"0000-00-00"</span><span class="p">,</span>
+       <span class="s2">"brand"</span><span class="p">:</span> <span class="s2">"Paginacao"</span><span class="p">,</span>
+       <span class="s2">"model"</span><span class="p">:</span> <span class="s2">"Modelo 3"</span><span class="p">,</span>
+       <span class="s2">"category_id"</span><span class="p">:</span> <span class="s2">"16"</span><span class="p">,</span>
+       <span class="s2">"available"</span><span class="p">:</span> <span class="s2">"1"</span><span class="p">,</span>
+       <span class="s2">"availability"</span><span class="p">:</span> <span class="s2">"Em estoque"</span><span class="p">,</span>
+       <span class="s2">"hot"</span><span class="p">:</span> <span class="s2">"1"</span><span class="p">,</span>
+       <span class="s2">"release"</span><span class="p">:</span> <span class="s2">"0"</span><span class="p">,</span>
+       <span class="s2">"additional_button"</span><span class="p">:</span> <span class="s2">""</span><span class="p">,</span>
+       <span class="s2">"has_variation"</span><span class="p">:</span> <span class="s2">""</span><span class="p">,</span>
+       <span class="s2">"url"</span><span class="p">:</span> <span class="p">{</span>
+           <span class="s2">"http"</span><span class="p">:</span> <span class="s2">"http://sualoja/produto1.htm"</span><span class="p">,</span>
+           <span class="s2">"https"</span><span class="p">:</span> <span class="s2">"https://sualoja/produto1.htm"</span>
+       <span class="p">},</span>
+       <span class="s2">"payment_option"</span><span class="p">:</span> <span class="s2">"ou 12x com juros de R$ 18,89"</span><span class="p">,</span>
+       <span class="s2">"related_categories"</span><span class="p">:</span> <span class="p">[</span><span class="s2">"16"</span><span class="p">],</span>
+       <span class="s2">"release_date"</span><span class="p">:</span> <span class="s2">"0000-00-00"</span><span class="p">,</span>
+       <span class="s2">"virtual_product"</span><span class="p">:</span> <span class="s2">""</span><span class="p">,</span>
+       <span class="s2">"ProductImage"</span><span class="p">:</span> <span class="p">[{</span>
+           <span class="s2">"http"</span><span class="p">:</span> <span class="s2">"http://images/123/1.png"</span><span class="p">,</span>
+           <span class="s2">"https"</span><span class="p">:</span> <span class="s2">"https://images/123/1.png"</span><span class="p">,</span>
+           <span class="s2">"thumbs"</span><span class="p">:</span> <span class="p">{</span>
+               <span class="s2">"30"</span><span class="p">:</span> <span class="p">{</span>
+                   <span class="s2">"http"</span><span class="p">:</span> <span class="s2">"http://images/123/30_1.png"</span><span class="p">,</span>
+                   <span class="s2">"https"</span><span class="p">:</span> <span class="s2">"https://images/123/30_1.png"</span>
+               <span class="p">},</span>
+               <span class="s2">"90"</span><span class="p">:</span> <span class="p">{</span>
+                   <span class="s2">"http"</span><span class="p">:</span> <span class="s2">"http://images/123/90_1.png"</span><span class="p">,</span>
+                   <span class="s2">"https"</span><span class="p">:</span> <span class="s2">"https://images/123/90_1.png"</span>
+               <span class="p">},</span>
+               <span class="s2">"180"</span><span class="p">:</span> <span class="p">{</span>
+                   <span class="s2">"http"</span><span class="p">:</span> <span class="s2">"http://images/132/180_1.png"</span><span class="p">,</span>
+                   <span class="s2">"https"</span><span class="p">:</span> <span class="s2">"https://images/123/180_1.png"</span>
+               <span class="p">}</span>
+           <span class="p">}</span>
+       <span class="p">}</span> <span class="p">],</span>
+       <span class="s2">"Variant"</span><span class="p">:</span> <span class="p">[]</span>
+       <span class="p">}</span>
+   <span class="p">}</span>
+   <span class="p">]</span>
+   
+</code></pre>
+</div>
+
+				</section>
+			
+
+			
+		</section>
+		
+	
+		
+		<section class="doc-content" id="variants">
+			<section class="left-docs">
+				<h3>
+						Variações de Produto
+						
+				</h3>
+				
+
+				<p>Através da API de Variações de Produtos é possível identificar todas as variações contidas na loja virtual e identificar o produto relacionado à variação.</p>
+
+<h5 id="endereço-para-integração">Endereço para Integração</h5>
+
+<table>
+  <tbody>
+    <tr>
+      <td><strong>URL de Acesso</strong></td>
+      <td>https://{URL_LOJA}/web_api/variants</td>
+    </tr>
+    <tr>
+      <td><strong>Protocolo</strong></td>
+      <td>Rest/HTTP</td>
+    </tr>
+  </tbody>
+</table>
+
+  				
+			</section>
+
+			
+				<section class="right-code">
+					
+
+				</section>
+			
+
+			
+
+			
+		</section>
+		
+	
+		
+		<section class="doc-content" id="get-variant">
+			<section class="left-docs">
+				<h3>
+						Consultar Variação do Produt
+						
+							<span class="endpoint get"></span>
+						
+				</h3>
+				
+
+				<p>Para retornar as informações da variação do produto, basta realizar uma requisição via GET, enviando na URL o código da variação desejada.</p>
+
+<p>Na consulta de variação do produto, a API retorna a resposta em JSON.</p>
+
+<p>Abaixo um detalhamento de cada nó do JSON de resposta:</p>
+
+<h4 id="json-de-resposta">JSON de Resposta</h4>
+
+<table>
+  <tbody>
+    <tr>
+      <td><strong>Variant</strong></td>
+      <td>Dados da Variação do Produto</td>
+    </tr>
+    <tr>
+      <td><strong>Variant.ean</strong></td>
+      <td>EAN da Variação do Produto</td>
+    </tr>
+    <tr>
+      <td><strong>Variant.id</strong></td>
+      <td>Código da Variação do Produto</td>
+    </tr>
+    <tr>
+      <td><strong>Variant.product_id</strong></td>
+      <td>Código do Produto</td>
+    </tr>
+    <tr>
+      <td><strong>Variant.price</strong></td>
+      <td>Preço da Variação do Produto</td>
+    </tr>
+    <tr>
+      <td><strong>Variant.promotional_price</strong></td>
+      <td>Preço Promocional da Variação do Produto</td>
+    </tr>
+    <tr>
+      <td><strong>Variant.start_promotion</strong></td>
+      <td>Data Inicial da Promoção da Variação do Produto</td>
+    </tr>
+    <tr>
+      <td><strong>Variant.end_promotion</strong></td>
+      <td>Data Final da Promoção da Variação do Produto</td>
+    </tr>
+    <tr>
+      <td><strong>Variant.payment_option</strong></td>
+      <td>Informações de Pagamento</td>
+    </tr>
+    <tr>
+      <td><strong>Variant.illustrative_image</strong></td>
+      <td>Imagem Ilustrativa da Variação do Produto</td>
+    </tr>
+    <tr>
+      <td><strong>Variant.VariantImage[]</strong></td>
+      <td>Imagens da Variação do Produto</td>
+    </tr>
+    <tr>
+      <td><strong>Variant.VariantImage[].http</strong></td>
+      <td>URL Simples da Imagem da Variação do Produto</td>
+    </tr>
+    <tr>
+      <td><strong>Variant.VariantImage[].https</strong></td>
+      <td>URL Segura da Imagem da Variação do Produto</td>
+    </tr>
+    <tr>
+      <td><strong>Variant.VariantImage[].thumbs</strong></td>
+      <td>Miniaturas da Imagem da Variação do Produto</td>
+    </tr>
+    <tr>
+      <td><strong>Variant.VariantImage[].thumbs.30</strong></td>
+      <td>Miniatura de Tamanho 30px</td>
+    </tr>
+    <tr>
+      <td><strong>Variant.VariantImage[].thumbs.30.http</strong></td>
+      <td>URL Simples da Miniatura de 30px</td>
+    </tr>
+    <tr>
+      <td><strong>Variant.VariantImage[].thumbs.30.https</strong></td>
+      <td>URL Segura da Miniatura de 30px</td>
+    </tr>
+    <tr>
+      <td><strong>Variant.VariantImage[].thumbs.90</strong></td>
+      <td>Miniatura de Tamanho 90px</td>
+    </tr>
+    <tr>
+      <td><strong>Variant.VariantImage[].thumbs.90.http</strong></td>
+      <td>URL Simples da Miniatura de 90px</td>
+    </tr>
+    <tr>
+      <td><strong>Variant.VariantImage[].thumbs.90.https</strong></td>
+      <td>URL Segura da Miniatura de 90px</td>
+    </tr>
+    <tr>
+      <td><strong>Variant.VariantImage[].thumbs.180</strong></td>
+      <td>Miniatura de Tamanho 180px</td>
+    </tr>
+    <tr>
+      <td><strong>Variant.VariantImage[].thumbs.180.http</strong></td>
+      <td>URL Simples da Miniatura de 180px</td>
+    </tr>
+    <tr>
+      <td><strong>Variant.VariantImage[].thumbs.180.https</strong></td>
+      <td>URL Segura da Miniatura de 180px</td>
+    </tr>
+    <tr>
+      <td><strong>Variant.Sku[]</strong></td>
+      <td>Sku da Variação do Produto</td>
+    </tr>
+    <tr>
+      <td><strong>Variant.Sku[].type</strong></td>
+      <td>Tipo da Variação do Produto</td>
+    </tr>
+    <tr>
+      <td><strong>Variant.Sku[].value</strong></td>
+      <td>Dados da Variação do Produto</td>
+    </tr>
+  </tbody>
+</table>
+
+  				
+			</section>
+
+			
+				<section class="right-code">
+					<div title="Exemplo" class="language-javascript highlighter-rouge"><pre class="highlight"><code> <span class="o">&lt;</span><span class="nx">script</span> <span class="nx">type</span><span class="o">=</span><span class="s2">"text/javascript"</span><span class="o">&gt;</span> 
+
+ <span class="kd">let</span> <span class="nx">variantId</span> <span class="o">=</span> <span class="mi">88</span><span class="p">;</span>
+ <span class="nx">fetch</span><span class="p">(</span><span class="err">`</span><span class="o">/</span><span class="nx">web_api</span><span class="o">/</span><span class="nx">variants</span><span class="o">/</span><span class="nx">$</span><span class="p">{</span><span class="nx">variantId</span><span class="p">}</span><span class="err">`</span><span class="p">)</span>
+   <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">response</span> <span class="o">=&gt;</span> <span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">())</span>
+   <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">result</span> <span class="o">=&gt;</span> <span class="p">{</span>
+     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span><span class="p">.</span><span class="nx">Product</span><span class="p">);</span>
+   <span class="p">})</span>
+   <span class="p">.</span><span class="k">catch</span><span class="p">(</span><span class="nx">err</span> <span class="o">=&gt;</span> <span class="p">{</span>
+     <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s1">'Falha'</span><span class="p">,</span> <span class="nx">err</span><span class="p">);</span>
+   <span class="p">});</span>
+ <span class="o">&lt;</span><span class="sr">/script</span><span class="err">&gt;
+</span></code></pre>
+</div>
+
+				</section>
+			
+
+			
+				<section class="right-code">
+					<div title="Retorno do Array" class="language-javascript highlighter-rouge"><pre class="highlight"><code>   <span class="p">{</span>
+   <span class="s2">"Variant"</span><span class="err">:</span> <span class="p">{</span>
+       <span class="s2">"id"</span><span class="err">:</span> <span class="s2">"184"</span><span class="p">,</span>
+       <span class="s2">"ean"</span><span class="err">:</span> <span class="s2">""</span><span class="p">,</span>
+       <span class="s2">"product_id"</span><span class="err">:</span> <span class="s2">"610"</span><span class="p">,</span>
+       <span class="s2">"price"</span><span class="err">:</span> <span class="s2">"199.90"</span><span class="p">,</span>
+       <span class="s2">"start_promotion"</span><span class="err">:</span> <span class="s2">"0000-00-00"</span><span class="p">,</span>
+       <span class="s2">"end_promotion"</span><span class="err">:</span> <span class="s2">"0000-00-00"</span><span class="p">,</span>
+       <span class="s2">"promotional_price"</span><span class="err">:</span> <span class="s2">"0.00"</span><span class="p">,</span>
+       <span class="s2">"payment_option"</span><span class="err">:</span> <span class="s2">"ou 12x com juros de R$ 18,89"</span><span class="p">,</span>
+       <span class="s2">"illustrative_image"</span><span class="err">:</span> <span class="s2">""</span><span class="p">,</span>
+       <span class="s2">"VariantImage"</span><span class="err">:</span> <span class="p">[</span>
+       <span class="p">{</span>
+       <span class="s2">"http"</span><span class="p">:</span> <span class="s2">"http://images/123/1.png"</span><span class="p">,</span>
+       <span class="s2">"https"</span><span class="p">:</span> <span class="s2">"https://images/123/1.png"</span><span class="p">,</span>
+       <span class="s2">"thumbs"</span><span class="p">:</span> <span class="p">{</span>
+           <span class="s2">"30"</span><span class="p">:</span> <span class="p">{</span>
+               <span class="s2">"http"</span><span class="p">:</span> <span class="s2">"http://images/123/30_1.png"</span><span class="p">,</span>
+               <span class="s2">"https"</span><span class="p">:</span> <span class="s2">"https://images/123/30_1.png"</span>
+           <span class="p">},</span>
+           <span class="s2">"90"</span><span class="p">:</span> <span class="p">{</span>
+               <span class="s2">"http"</span><span class="p">:</span> <span class="s2">"http://images/123/90_1.png"</span><span class="p">,</span>
+               <span class="s2">"https"</span><span class="p">:</span> <span class="s2">"https://images/123/90_1.png"</span>
+           <span class="p">},</span>
+           <span class="s2">"180"</span><span class="p">:</span> <span class="p">{</span>
+               <span class="s2">"http"</span><span class="p">:</span> <span class="s2">"http://images123/180_1.png"</span><span class="p">,</span>
+               <span class="s2">"https"</span><span class="p">:</span> <span class="s2">"https://images123/180_1.png"</span>
+           <span class="p">}</span>
+       <span class="p">}</span>
+       <span class="p">}],</span>
+       <span class="s2">"Sku"</span><span class="p">:</span> <span class="p">[</span>
+       <span class="p">{</span>
+           <span class="s2">"type"</span><span class="p">:</span> <span class="s2">"Cor"</span><span class="p">,</span>
+           <span class="s2">"value"</span><span class="p">:</span> <span class="s2">"Verde"</span>
+       <span class="p">},</span>
+       <span class="p">{</span>
+           <span class="s2">"type"</span><span class="p">:</span> <span class="s2">"Tamanho"</span><span class="p">,</span>
+           <span class="s2">"value"</span><span class="p">:</span> <span class="s2">"G"</span>
+       <span class="p">}]</span>
+     <span class="p">}</span>
+   <span class="p">}</span>
+</code></pre>
+</div>
+
+				</section>
+			
+
+			
+		</section>
+		
+	
+		
+		<section class="doc-content" id="get-variants">
+			<section class="left-docs">
+				<h3>
+						Listagem de Variações do Produto
+						
+							<span class="endpoint get"></span>
+						
+				</h3>
+				
+
+				<p>Para a listagem de variações do produto, deverá ser realizada uma requisição via GET.</p>
+
+<p>Podem ser enviados alguns parâmetros nesta integração para realizar filtros na listagem de variações de produtos, segue abaixo o dado necessário para envio:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Dados de Entrada</th>
+      <th>Obrig.</th>
+      <th>Descrição</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>id</strong></td>
+      <td>Não</td>
+      <td>Código do Produto</td>
+    </tr>
+    <tr>
+      <td><strong>sort</strong></td>
+      <td>Não</td>
+      <td>Ordenação da Consulta</td>
+    </tr>
+    <tr>
+      <td><strong>limit</strong></td>
+      <td>Não</td>
+      <td>Quantidade Limite de Registros</td>
+    </tr>
+    <tr>
+      <td><strong>page</strong></td>
+      <td>Não</td>
+      <td>Página da Consulta</td>
+    </tr>
+  </tbody>
+</table>
+
+<h4 id="json-de-resposta">JSON de Resposta</h4>
+
+<table>
+  <tbody>
+    <tr>
+      <td><strong>Variant</strong></td>
+      <td>Dados da Variação do Produto</td>
+    </tr>
+    <tr>
+      <td><strong>Variant.ean</strong></td>
+      <td>EAN da Variação do Produto</td>
+    </tr>
+    <tr>
+      <td><strong>Variant.id</strong></td>
+      <td>Código da Variação do Produto</td>
+    </tr>
+    <tr>
+      <td><strong>Variant.product_id</strong></td>
+      <td>Código do Produto</td>
+    </tr>
+    <tr>
+      <td><strong>Variant.price</strong></td>
+      <td>Preço da Variação do Produto</td>
+    </tr>
+    <tr>
+      <td><strong>Variant.promotional_price</strong></td>
+      <td>Preço Promocional da Variação do Produto</td>
+    </tr>
+    <tr>
+      <td><strong>Variant.start_promotion</strong></td>
+      <td>Data Inicial da Promoção da Variação do Produto</td>
+    </tr>
+    <tr>
+      <td><strong>Variant.end_promotion</strong></td>
+      <td>Data Final da Promoção da Variação do Produto</td>
+    </tr>
+    <tr>
+      <td><strong>Variant.payment_option</strong></td>
+      <td>Informações de Pagamento</td>
+    </tr>
+    <tr>
+      <td><strong>Variant.illustrative_image</strong></td>
+      <td>Imagem Ilustrativa da Variação do Produto</td>
+    </tr>
+    <tr>
+      <td><strong>Variant.VariantImage[]</strong></td>
+      <td>Imagens da Variação do Produto</td>
+    </tr>
+    <tr>
+      <td><strong>Variant.VariantImage[].http</strong></td>
+      <td>URL Simples da Imagem da Variação do Produto</td>
+    </tr>
+    <tr>
+      <td><strong>Variant.VariantImage[].https</strong></td>
+      <td>URL Segura da Imagem da Variação do Produto</td>
+    </tr>
+    <tr>
+      <td><strong>Variant.VariantImage[].thumbs</strong></td>
+      <td>Miniaturas da Imagem da Variação do Produto</td>
+    </tr>
+    <tr>
+      <td><strong>Variant.VariantImage[].thumbs.30</strong></td>
+      <td>Miniatura de Tamanho 30px</td>
+    </tr>
+    <tr>
+      <td><strong>Variant.VariantImage[].thumbs.30.http</strong></td>
+      <td>URL Simples da Miniatura de 30px</td>
+    </tr>
+    <tr>
+      <td><strong>Variant.VariantImage[].thumbs.30.https</strong></td>
+      <td>URL Segura da Miniatura de 30px</td>
+    </tr>
+    <tr>
+      <td><strong>Variant.VariantImage[].thumbs.90</strong></td>
+      <td>Miniatura de Tamanho 90px</td>
+    </tr>
+    <tr>
+      <td><strong>Variant.VariantImage[].thumbs.90.http</strong></td>
+      <td>URL Simples da Miniatura de 90px</td>
+    </tr>
+    <tr>
+      <td><strong>Variant.VariantImage[].thumbs.90.https</strong></td>
+      <td>URL Segura da Miniatura de 90px</td>
+    </tr>
+    <tr>
+      <td><strong>Variant.VariantImage[].thumbs.180</strong></td>
+      <td>Miniatura de Tamanho 180px</td>
+    </tr>
+    <tr>
+      <td><strong>Variant.VariantImage[].thumbs.180.http</strong></td>
+      <td>URL Simples da Miniatura de 180px</td>
+    </tr>
+    <tr>
+      <td><strong>Variant.VariantImage[].thumbs.180.https</strong></td>
+      <td>URL Segura da Miniatura de 180px</td>
+    </tr>
+    <tr>
+      <td><strong>Variant.Sku[]</strong></td>
+      <td>Sku da Variação do Produto</td>
+    </tr>
+    <tr>
+      <td><strong>Variant.Sku[].type</strong></td>
+      <td>Tipo da Variação do Produto</td>
+    </tr>
+    <tr>
+      <td><strong>Variant.Sku[].value</strong></td>
+      <td>Dados da Variação do Produto</td>
+    </tr>
+  </tbody>
+</table>
+
+  				
+			</section>
+
+			
+				<section class="right-code">
+					<div title="Exemplo" class="language-javascript highlighter-rouge"><pre class="highlight"><code> <span class="o">&lt;</span><span class="nx">script</span> <span class="nx">type</span><span class="o">=</span><span class="s2">"text/javascript"</span><span class="o">&gt;</span> 
+
+ <span class="kd">let</span> <span class="nx">variantId</span> <span class="o">=</span> <span class="mi">88</span><span class="p">;</span>
+ <span class="nx">fetch</span><span class="p">(</span><span class="err">`</span><span class="o">/</span><span class="nx">web_api</span><span class="o">/</span><span class="nx">variants</span><span class="o">/</span><span class="nx">$</span><span class="p">{</span><span class="nx">variantId</span><span class="p">}</span><span class="err">`</span><span class="p">)</span>
+   <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">response</span> <span class="o">=&gt;</span> <span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">())</span>
+   <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">result</span> <span class="o">=&gt;</span> <span class="p">{</span>
+     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span><span class="p">.</span><span class="nx">Product</span><span class="p">);</span>
+   <span class="p">})</span>
+   <span class="p">.</span><span class="k">catch</span><span class="p">(</span><span class="nx">err</span> <span class="o">=&gt;</span> <span class="p">{</span>
+     <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s1">'Falha'</span><span class="p">,</span> <span class="nx">err</span><span class="p">);</span>
+   <span class="p">});</span>
+ <span class="o">&lt;</span><span class="sr">/script</span><span class="err">&gt;
+</span></code></pre>
+</div>
+
+				</section>
+			
+
+			
+				<section class="right-code">
+					<div title="Retorno do Array" class="language-javascript highlighter-rouge"><pre class="highlight"><code>   <span class="p">{</span>   		
+   <span class="s2">"paging"</span><span class="err">:</span> <span class="p">{</span>
+       <span class="s2">"total"</span><span class="err">:</span> <span class="mi">105</span><span class="p">,</span>
+       <span class="s2">"page"</span><span class="err">:</span> <span class="mi">1</span><span class="p">,</span>
+       <span class="s2">"offset"</span><span class="err">:</span> <span class="mi">0</span><span class="p">,</span>
+       <span class="s2">"limit"</span><span class="err">:</span> <span class="mi">30</span><span class="p">,</span>
+       <span class="s2">"maxLimit"</span><span class="err">:</span> <span class="mi">50</span>
+   <span class="p">},</span>
+   <span class="s2">"sort"</span><span class="err">:</span> <span class="p">[</span>
+   <span class="p">{</span>
+       <span class="s2">"id"</span><span class="p">:</span> <span class="s2">"asc"</span>
+   <span class="p">}],</span>
+   <span class="s2">"availableFilters"</span><span class="err">:</span> <span class="p">[</span>
+       <span class="s2">"id"</span><span class="p">,</span>
+       <span class="s2">"product_id"</span><span class="p">,</span>
+       <span class="s2">"ean"</span><span class="p">,</span>
+       <span class="s2">"price"</span><span class="p">,</span>
+       <span class="s2">"promotional_price"</span><span class="p">,</span>
+       <span class="s2">"modified"</span>
+   <span class="p">],</span>
+   <span class="s2">"appliedFilters"</span><span class="err">:</span> <span class="p">[],</span>
+   <span class="s2">"Variants"</span><span class="err">:</span> <span class="p">[</span>
+   <span class="p">{</span>
+       <span class="s2">"Variant"</span><span class="p">:</span> <span class="p">{</span>
+           <span class="s2">"id"</span><span class="p">:</span> <span class="s2">"182"</span><span class="p">,</span>
+           <span class="s2">"ean"</span><span class="p">:</span> <span class="s2">""</span><span class="p">,</span>
+           <span class="s2">"product_id"</span><span class="p">:</span> <span class="s2">"610"</span><span class="p">,</span>
+           <span class="s2">"price"</span><span class="p">:</span> <span class="s2">"199.90"</span><span class="p">,</span>
+           <span class="s2">"start_promotion"</span><span class="p">:</span> <span class="s2">"0000-00-00"</span><span class="p">,</span>
+           <span class="s2">"end_promotion"</span><span class="p">:</span> <span class="s2">"0000-00-00"</span><span class="p">,</span>
+           <span class="s2">"promotional_price"</span><span class="p">:</span> <span class="s2">"0.00"</span><span class="p">,</span>
+           <span class="s2">"payment_option"</span><span class="p">:</span> <span class="s2">"ou 12x com juros de R$ 18,89"</span><span class="p">,</span>
+           <span class="s2">"illustrative_image"</span><span class="p">:</span> <span class="s2">""</span><span class="p">,</span>
+           <span class="s2">"Sku"</span><span class="p">:</span> <span class="p">[</span>
+               <span class="p">{</span>
+                   <span class="s2">"type"</span><span class="p">:</span> <span class="s2">"Cor"</span><span class="p">,</span>
+                   <span class="s2">"value"</span><span class="p">:</span> <span class="s2">"Verde"</span>
+               <span class="p">},</span>
+               <span class="p">{</span>
+                   <span class="s2">"type"</span><span class="p">:</span> <span class="s2">"Tamanho"</span><span class="p">,</span>
+                   <span class="s2">"value"</span><span class="p">:</span> <span class="s2">"P"</span>
+               <span class="p">}</span>
+           <span class="p">]</span>
+       <span class="p">}</span>
+   <span class="p">}]</span>
+   <span class="p">}</span>
+
+</code></pre>
+</div>
+
+				</section>
+			
+
+			
+		</section>
+		
+	
+		
+		<section class="doc-content" id="categorias">
+			<section class="left-docs">
+				<h3>
+						Categorias
+						
+				</h3>
+				
+
+				<p>Através da API de Categorias é possível consultar as categorias contidas na loja virtual.</p>
+
+<h5 id="endereço-para-integração">Endereço para Integração</h5>
+
+<table>
+  <tbody>
+    <tr>
+      <td><strong>URL de Acesso</strong></td>
+      <td>https://{URL_LOJA}/web_api/categories/tree/</td>
+    </tr>
+    <tr>
+      <td><strong>Protocolo</strong></td>
+      <td>Rest/HTTP</td>
+    </tr>
+  </tbody>
+</table>
+
+  				
+			</section>
+
+			
+				<section class="right-code">
+					
+
+				</section>
+			
+
+			
+
+			
+		</section>
+		
+	
+		
+		<section class="doc-content" id="get-categories">
+			<section class="left-docs">
+				<h3>
+						Lista de Categorias
+						
+							<span class="endpoint get"></span>
+						
+				</h3>
+				
+
+				<p>Para a lista de categorias, deverá ser realizada uma requisição via GET.</p>
+
+<p>Podem ser enviados na URL o código da categoria desejada, onde será retornada somente a categoria desejada e as respectivas subcategorias:</p>
+
+<h4 id="json-de-resposta">JSON de Resposta</h4>
+
+<table>
+  <tbody>
+    <tr>
+      <td><strong>Category[]</strong></td>
+      <td>Lista de Categorias</td>
+    </tr>
+    <tr>
+      <td><strong>Category[].Category</strong></td>
+      <td>Dados da Categoria</td>
+    </tr>
+    <tr>
+      <td><strong>Category[].Category.slug</strong></td>
+      <td>Caminho absoluto da Categoria</td>
+    </tr>
+    <tr>
+      <td><strong>Category[].Category.id</strong></td>
+      <td>Código da Categoria</td>
+    </tr>
+    <tr>
+      <td><strong>Category[].Category.parent_id</strong></td>
+      <td>Código da Categoria Pai</td>
+    </tr>
+    <tr>
+      <td><strong>Category[].Category.name</strong></td>
+      <td>Nome da Categoria</td>
+    </tr>
+    <tr>
+      <td><strong>Category[].Category.description</strong></td>
+      <td>Descrição da Categoria (meta title)</td>
+    </tr>
+    <tr>
+      <td><strong>Category[].Category.title</strong></td>
+      <td>Título da categoria (meta title)</td>
+    </tr>
+    <tr>
+      <td><strong>Category[].Category.link</strong></td>
+      <td>Objeto com as URLs da Categoria</td>
+    </tr>
+    <tr>
+      <td><strong>Category[].Category.link.http</strong></td>
+      <td>URL Simples da Categoria</td>
+    </tr>
+    <tr>
+      <td><strong>Category[].Category.link.https</strong></td>
+      <td>URL Segura da Categoria</td>
+    </tr>
+    <tr>
+      <td><strong>Category[].Category.images[]</strong></td>
+      <td>Imagens da Categoria</td>
+    </tr>
+    <tr>
+      <td><strong>Category[].Category.images[].http</strong></td>
+      <td>URL Simples da Imagem da Categoria</td>
+    </tr>
+    <tr>
+      <td><strong>Category[].Category.images[].https</strong></td>
+      <td>URL Segura da Imagem da Categoria</td>
+    </tr>
+    <tr>
+      <td><strong>Category[].Category.children[]</strong></td>
+      <td>Lista de Subcategorias</td>
+    </tr>
+    <tr>
+      <td><strong>Category[].Category.children[].Category</strong></td>
+      <td>Dados da Subcategoria</td>
+    </tr>
+  </tbody>
+</table>
+
+  				
+			</section>
+
+			
+				<section class="right-code">
+					<div title="Exemplo" class="language-javascript highlighter-rouge"><pre class="highlight"><code> <span class="o">&lt;</span><span class="nx">script</span> <span class="nx">type</span><span class="o">=</span><span class="s2">"text/javascript"</span><span class="o">&gt;</span> 
+
+ <span class="kd">let</span> <span class="nx">variantId</span> <span class="o">=</span> <span class="mi">88</span><span class="p">;</span>
+ <span class="nx">fetch</span><span class="p">(</span><span class="err">`</span><span class="o">/</span><span class="nx">web_api</span><span class="o">/</span><span class="nx">variants</span><span class="o">/</span><span class="nx">$</span><span class="p">{</span><span class="nx">variantId</span><span class="p">}</span><span class="err">`</span><span class="p">)</span>
+   <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">response</span> <span class="o">=&gt;</span> <span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">())</span>
+   <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">result</span> <span class="o">=&gt;</span> <span class="p">{</span>
+     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span><span class="p">.</span><span class="nx">Product</span><span class="p">);</span>
+   <span class="p">})</span>
+   <span class="p">.</span><span class="k">catch</span><span class="p">(</span><span class="nx">err</span> <span class="o">=&gt;</span> <span class="p">{</span>
+     <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s1">'Falha'</span><span class="p">,</span> <span class="nx">err</span><span class="p">);</span>
+   <span class="p">});</span>
+ <span class="o">&lt;</span><span class="sr">/script</span><span class="err">&gt;
+</span></code></pre>
+</div>
+
+<div title="Retorno do Array" class="language-javascript highlighter-rouge"><pre class="highlight"><code>   
+<span class="p">{</span>
+   <span class="s2">"Category"</span><span class="err">:</span> <span class="p">[</span>
+   <span class="p">{</span>
+    <span class="s2">"Category"</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s2">"slug"</span><span class="p">:</span> <span class="s2">"categoria-1"</span><span class="p">,</span>
+    <span class="s2">"id"</span><span class="p">:</span> <span class="s2">"1"</span><span class="p">,</span>
+    <span class="s2">"parent_id"</span><span class="p">:</span> <span class="s2">""</span><span class="p">,</span>
+    <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"Categoria 1"</span><span class="p">,</span>
+    <span class="s2">"description"</span><span class="p">:</span> <span class="s2">"categoria-1"</span><span class="p">,</span>
+    <span class="s2">"title"</span><span class="p">:</span> <span class="s2">""</span><span class="p">,</span>
+    <span class="s2">"link"</span><span class="p">:</span> <span class="p">{</span>
+     <span class="s2">"http"</span><span class="p">:</span> <span class="s2">"http://sualojavirtual/categoria-1"</span><span class="p">,</span>
+     <span class="s2">"https"</span><span class="p">:</span> <span class="s2">"https://sualojavirtual/categoria-1"</span>
+     <span class="p">},</span>
+     <span class="s2">"images"</span><span class="p">:</span> <span class="p">[</span>
+     <span class="p">{</span>
+       <span class="s2">"http"</span><span class="p">:</span> <span class="s2">"http://images1/123/img_1.png"</span><span class="p">,</span>
+       <span class="s2">"https"</span><span class="p">:</span> <span class="s2">"https://images2/123/_1.png"</span>
+     <span class="p">}</span>
+     <span class="p">],</span>
+     <span class="s2">"children"</span><span class="p">:</span> <span class="p">[</span>
+     <span class="p">{</span>
+       <span class="s2">"Category"</span><span class="p">:</span> <span class="p">{</span>
+       <span class="s2">"slug"</span><span class="p">:</span> <span class="s2">"categoria-1/subcategoria"</span><span class="p">,</span>
+       <span class="s2">"id"</span><span class="p">:</span> <span class="s2">"3"</span><span class="p">,</span>
+       <span class="s2">"parent_id"</span><span class="p">:</span> <span class="s2">"1"</span><span class="p">,</span>
+       <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"Subcategoria"</span><span class="p">,</span>
+       <span class="s2">"description"</span><span class="p">:</span> <span class="s2">"Subcategoria"</span><span class="p">,</span>
+       <span class="s2">"title"</span><span class="p">:</span> <span class="s2">""</span><span class="p">,</span>
+       <span class="s2">"link"</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">"http"</span><span class="p">:</span> <span class="s2">"http://sualojavirtual/categoria-1/subcategoria"</span><span class="p">,</span>
+        <span class="s2">"https"</span><span class="p">:</span> <span class="s2">"https://sualojavirtual/categoria-1/subcategoria"</span>
+       <span class="p">},</span>
+       <span class="s2">"images"</span><span class="p">:</span> <span class="p">[],</span>
+       <span class="s2">"children"</span><span class="p">:</span> <span class="kc">null</span>
+      <span class="p">}</span>
+    <span class="p">}]</span>
+   <span class="p">}]</span>
+  <span class="p">}</span>
+
+</code></pre>
+</div>
+
+				</section>
+			
+
+			
+
+			
+		</section>
+		
+	
+		
+		<section class="doc-content" id="search">
+			<section class="left-docs">
+				<h3>
+						Busca
+						
+				</h3>
+				
+
+				<p>Através da API de Busca é possível consultar os produtos contidos na loja virtual através de palavras-chave.</p>
+<h5 id="endereço-para-integração">Endereço para Integração</h5>
+
+<table>
+  <tbody>
+    <tr>
+      <td><strong>URL de Acesso</strong></td>
+      <td>https://{URL_LOJA}/web_api/search</td>
+    </tr>
+    <tr>
+      <td><strong>Protocolo</strong></td>
+      <td>Rest/HTTP</td>
+    </tr>
+  </tbody>
+</table>
+
+  				
+			</section>
+
+			
+				<section class="right-code">
+					
+
+				</section>
+			
+
+			
+
+			
+		</section>
+		
+	
+		
+		<section class="doc-content" id="search-products">
+			<section class="left-docs">
+				<h3>
+						Busca de Produtos
+						
+							<span class="endpoint get"></span>
+						
+				</h3>
+				
+
+				<p>Para a busca de produtos, deverá ser realizada uma requisição via GET.</p>
+
+<p>Podem ser enviados alguns parâmetros nesta integração para realizar filtros na busca de produtos, segue abaixo o dado necessário para envio:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Dados de Entrada</th>
+      <th>Obrig.</th>
+      <th>Descrição</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>query</strong></td>
+      <td>Não</td>
+      <td>Texto de Busca</td>
+    </tr>
+    <tr>
+      <td><strong>promotion</strong></td>
+      <td>Não</td>
+      <td>Produto Promocional</td>
+    </tr>
+    <tr>
+      <td><strong>id</strong></td>
+      <td>Não</td>
+      <td>Códigos do Produto (Valores separados por “,”. Exemplo: 15,123,54)</td>
+    </tr>
+    <tr>
+      <td><strong>category_id</strong></td>
+      <td>Não</td>
+      <td>Categoria do Produto</td>
+    </tr>
+    <tr>
+      <td><strong>price</strong></td>
+      <td>Não</td>
+      <td>Faixa de Valor do Produto (Valores separados por “,”. Exemplo: 10.25,123.54)</td>
+    </tr>
+    <tr>
+      <td><strong>rand</strong></td>
+      <td>Não</td>
+      <td>Retornar Produtos Randômicos</td>
+    </tr>
+    <tr>
+      <td><strong>sort</strong></td>
+      <td>Não</td>
+      <td>Ordenação da Busca</td>
+    </tr>
+    <tr>
+      <td><strong>limit</strong></td>
+      <td>Não</td>
+      <td>Quantidade Limite de Registros</td>
+    </tr>
+    <tr>
+      <td><strong>page</strong></td>
+      <td>Não</td>
+      <td>Página da Busca</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Na busca de produtos, a API retorna a resposta em JSON.</p>
+
+<p>Abaixo um detalhamento de cada nó do JSON de resposta:</p>
+
+<h4 id="json-de-resposta">JSON de Resposta</h4>
+
+<table>
+  <tbody>
+    <tr>
+      <td><strong>paging</strong></td>
+      <td>Dados de Paginação</td>
+    </tr>
+    <tr>
+      <td><strong>paging.total</strong></td>
+      <td>Total de Registros</td>
+    </tr>
+    <tr>
+      <td><strong>paging.page</strong></td>
+      <td>Páginas corrente</td>
+    </tr>
+    <tr>
+      <td><strong>paging.offset</strong></td>
+      <td>Registro Inicial da Página</td>
+    </tr>
+    <tr>
+      <td><strong>paging.limit</strong></td>
+      <td>Limite de Registros</td>
+    </tr>
+    <tr>
+      <td><strong>paging.maxLimit</strong></td>
+      <td>Máximo de Registros</td>
+    </tr>
+    <tr>
+      <td><strong>sort</strong></td>
+      <td>Ordenação</td>
+    </tr>
+    <tr>
+      <td><strong>availableFilters</strong></td>
+      <td>Filtros Disponíveis</td>
+    </tr>
+    <tr>
+      <td><strong>appliedFilters</strong></td>
+      <td>Filtros Utilizados</td>
+    </tr>
+    <tr>
+      <td><strong>Products[]</strong></td>
+      <td>Lista de Produtos</td>
+    </tr>
+    <tr>
+      <td><strong>Products[].Product</strong></td>
+      <td>Dados do Produto</td>
+    </tr>
+    <tr>
+      <td><strong>Products[].Product.id</strong></td>
+      <td>Código do Produto</td>
+    </tr>
+    <tr>
+      <td><strong>Products[].Product.name</strong></td>
+      <td>Nome do Produto</td>
+    </tr>
+    <tr>
+      <td><strong>Products[].Product.available</strong></td>
+      <td>Produto Disponível</td>
+    </tr>
+    <tr>
+      <td><strong>Products[].Product.price</strong></td>
+      <td>Preço do Produto</td>
+    </tr>
+    <tr>
+      <td><strong>Products[].Product.shortcut</strong></td>
+      <td>Atalho do Produto</td>
+    </tr>
+    <tr>
+      <td><strong>Products[].Product.category_id</strong></td>
+      <td>Código da Categoria do Produto</td>
+    </tr>
+    <tr>
+      <td><strong>Products[].Product.description_small</strong></td>
+      <td>Descrição do Produto</td>
+    </tr>
+    <tr>
+      <td><strong>Products[].Product.promotional_price</strong></td>
+      <td>Preço Promocional do Produto</td>
+    </tr>
+    <tr>
+      <td><strong>Products[].Product.start_promotion</strong></td>
+      <td>Data Inicial da Promoção do Produto</td>
+    </tr>
+    <tr>
+      <td><strong>Products[].Product.end_promotion</strong></td>
+      <td>Data Final da Promoção do Produto</td>
+    </tr>
+    <tr>
+      <td><strong>Products[].Product.brand</strong></td>
+      <td>Marca do Produto</td>
+    </tr>
+    <tr>
+      <td><strong>Products[].Product.model</strong></td>
+      <td>Modelo do Produto</td>
+    </tr>
+    <tr>
+      <td><strong>Products[].Product.availability</strong></td>
+      <td>Disponibilidade do Produto</td>
+    </tr>
+    <tr>
+      <td><strong>Products[].Product.hot</strong></td>
+      <td>Produto em Destaque</td>
+    </tr>
+    <tr>
+      <td><strong>Products[].Product.release</strong></td>
+      <td>Liberação do Produto</td>
+    </tr>
+    <tr>
+      <td><strong>Products[].Product.additional_button</strong></td>
+      <td>Botão Adicional do Produto</td>
+    </tr>
+    <tr>
+      <td><strong>Products[].Product.has_variation</strong></td>
+      <td>Confirmação de Produto com Variação</td>
+    </tr>
+    <tr>
+      <td><strong>Products[].Product.rating</strong></td>
+      <td>Classificação do Produto</td>
+    </tr>
+    <tr>
+      <td><strong>Products[].Product.count_rating</strong></td>
+      <td>Contador de Classificação do Produto</td>
+    </tr>
+    <tr>
+      <td><strong>Products[].Product.url</strong></td>
+      <td>Objeto com as URLs do Produto</td>
+    </tr>
+    <tr>
+      <td><strong>Products[].Product.url.http</strong></td>
+      <td>URL Simples do Produto</td>
+    </tr>
+    <tr>
+      <td><strong>Products[].Product.url.https</strong></td>
+      <td>URL Segura do Produto</td>
+    </tr>
+    <tr>
+      <td><strong>Products[].Product.payment_option</strong></td>
+      <td>Informações de Pagamento</td>
+    </tr>
+    <tr>
+      <td><strong>Products[].Product.ProductImage[]</strong></td>
+      <td>Imagens do Produto</td>
+    </tr>
+    <tr>
+      <td><strong>Products[].Product.ProductImage[].http</strong></td>
+      <td>URL Simples da Imagem do Produto</td>
+    </tr>
+    <tr>
+      <td><strong>Products[].Product.ProductImage[].https</strong></td>
+      <td>URL Segura da Imagem do Produto</td>
+    </tr>
+    <tr>
+      <td><strong>Products[].Product.ProductImage[].thumbs</strong></td>
+      <td>Miniatura da Imagem do Produto</td>
+    </tr>
+    <tr>
+      <td><strong>Products[].Product.ProductImage[].thumbs.30</strong></td>
+      <td>Miniatura de Tamanho 30px</td>
+    </tr>
+    <tr>
+      <td><strong>Products[].Product.ProductImage[].thumbs.30.http</strong></td>
+      <td>URL Simples da Miniatura de 30px</td>
+    </tr>
+    <tr>
+      <td><strong>Products[].Product.ProductImage[].thumbs.30.https</strong></td>
+      <td>URL Segura da Miniatura de 30px</td>
+    </tr>
+    <tr>
+      <td><strong>Products[].Product.ProductImage[].thumbs.90</strong></td>
+      <td>Miniatura de Tamanho 90px</td>
+    </tr>
+    <tr>
+      <td><strong>Products[].Product.ProductImage[].thumbs.90.http</strong></td>
+      <td>URL Simples da Miniatura de 90px</td>
+    </tr>
+    <tr>
+      <td><strong>Products[].Product.ProductImage[].thumbs.90.https</strong></td>
+      <td>URL Segura da Miniatura de 90px</td>
+    </tr>
+    <tr>
+      <td><strong>Products[].Product.ProductImage[].thumbs.180</strong></td>
+      <td>Miniatura de Tamanho 180px</td>
+    </tr>
+    <tr>
+      <td><strong>Products[].Product.ProductImage[].thumbs.180.http</strong></td>
+      <td>URL Simples da Miniatura de 180px</td>
+    </tr>
+    <tr>
+      <td><strong>Products[].Product.ProductImage[].thumbs.180.https</strong></td>
+      <td>URL Segura da Miniatura de 180px</td>
+    </tr>
+    <tr>
+      <td><strong>Products[].Product.Properties[]</strong></td>
+      <td>Propriedades do Produto</td>
+    </tr>
+    <tr>
+      <td><strong>Products[].Product.Category</strong></td>
+      <td>Dados da Categoria do Produto</td>
+    </tr>
+    <tr>
+      <td><strong>Products[].Product.Category.id</strong></td>
+      <td>Código da Categoria do Produto</td>
+    </tr>
+    <tr>
+      <td><strong>Products[].Product.Category.name</strong></td>
+      <td>Nome da Categoria do Produto</td>
+    </tr>
+    <tr>
+      <td><strong>Products[].Product.Category.description</strong></td>
+      <td>Descrição da Categoria do Produto</td>
+    </tr>
+  </tbody>
+</table>
+
+  				
+			</section>
+
+			
+				<section class="right-code">
+					<div title="Exemplo" class="language-javascript highlighter-rouge"><pre class="highlight"><code><span class="o">&lt;</span><span class="nx">script</span> <span class="nx">type</span><span class="o">=</span><span class="s2">"text/javascript"</span><span class="o">&gt;</span> 
+<span class="nx">fetch</span><span class="p">(</span><span class="err">`</span><span class="o">/</span><span class="nx">web_api</span><span class="o">/</span><span class="nx">search</span><span class="o">/</span><span class="p">?</span><span class="nx">query</span><span class="o">=</span><span class="s2">"Produto"</span><span class="o">&amp;</span><span class="nx">price</span><span class="o">=</span><span class="s2">"10.00,50.00"</span><span class="err">`</span> <span class="p">)</span>
+   <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">response</span> <span class="o">=&gt;</span> <span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">())</span>
+   <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">result</span> <span class="o">=&gt;</span> <span class="p">{</span>
+   <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span><span class="p">);</span>
+   <span class="p">})</span>
+   <span class="p">.</span><span class="k">catch</span><span class="p">(</span><span class="nx">err</span> <span class="o">=&gt;</span> <span class="p">{</span>
+   <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s1">'Falha'</span><span class="p">,</span> <span class="nx">err</span><span class="p">);</span>
+<span class="p">});</span>
+<span class="o">&lt;</span><span class="sr">/script</span><span class="err">&gt;
+</span></code></pre>
+</div>
+
+				</section>
+			
+
+			
+				<section class="right-code">
+					<div title="Retorno do Array" class="language-javascript highlighter-rouge"><pre class="highlight"><code>   <span class="p">{</span>
+   <span class="s2">"paging"</span><span class="err">:</span> <span class="p">{</span>
+   <span class="s2">"total"</span><span class="err">:</span> <span class="mi">201</span><span class="p">,</span>
+   <span class="s2">"page"</span><span class="err">:</span> <span class="mi">1</span><span class="p">,</span>
+   <span class="s2">"offset"</span><span class="err">:</span> <span class="mi">0</span><span class="p">,</span>
+   <span class="s2">"limit"</span><span class="err">:</span> <span class="mi">1</span><span class="p">,</span>
+   <span class="s2">"maxLimit"</span><span class="err">:</span> <span class="mi">50</span>
+   <span class="p">},</span>
+   <span class="s2">"sort"</span><span class="err">:</span> <span class="p">[</span> <span class="p">{</span> <span class="s2">"id"</span><span class="p">:</span> <span class="s2">"asc"</span> <span class="p">}</span> <span class="p">],</span>
+   <span class="s2">"availableFilters"</span><span class="err">:</span> <span class="p">[</span>
+   <span class="s2">"id"</span><span class="p">,</span> <span class="s2">"name"</span><span class="p">,</span> <span class="s2">"category_id"</span><span class="p">,</span> <span class="s2">"ean"</span><span class="p">,</span> <span class="s2">"available"</span><span class="p">,</span> <span class="s2">"price"</span><span class="p">,</span>
+   <span class="s2">"brand"</span><span class="p">,</span> <span class="s2">"model"</span><span class="p">,</span> <span class="s2">"hot"</span><span class="p">,</span> <span class="s2">"quantity_sold"</span><span class="p">,</span> <span class="s2">"release"</span><span class="p">,</span>
+   <span class="s2">"free_shipping"</span><span class="p">,</span> <span class="s2">"weight"</span><span class="p">,</span> <span class="s2">"image"</span><span class="p">,</span> <span class="s2">"release_date"</span><span class="p">,</span>
+   <span class="s2">"stock"</span><span class="p">,</span><span class="s2">"promotion"</span><span class="p">,</span> <span class="s2">"modified"</span><span class="p">,</span> <span class="s2">"created"</span> <span class="p">],</span>
+   <span class="s2">"appliedFilters"</span><span class="err">:</span> <span class="p">[],</span>
+   <span class="s2">"Products"</span><span class="err">:</span> <span class="p">[</span>
+   <span class="p">{</span>
+       <span class="s2">"Product"</span><span class="p">:</span> <span class="p">{</span>
+       <span class="s2">"ean"</span><span class="p">:</span> <span class="s2">"8882"</span><span class="p">,</span>
+       <span class="s2">"id"</span><span class="p">:</span> <span class="s2">"84"</span><span class="p">,</span>
+       <span class="s2">"name"</span><span class="p">:</span> <span class="s2">"Produto Teste 4"</span><span class="p">,</span>
+       <span class="s2">"price"</span><span class="p">:</span> <span class="s2">"199.90"</span><span class="p">,</span>
+       <span class="s2">"promotional_price"</span><span class="p">:</span> <span class="s2">"0.00"</span><span class="p">,</span>
+       <span class="s2">"start_promotion"</span><span class="p">:</span> <span class="s2">"0000-00-00"</span><span class="p">,</span>
+       <span class="s2">"end_promotion"</span><span class="p">:</span> <span class="s2">"0000-00-00"</span><span class="p">,</span>
+       <span class="s2">"brand"</span><span class="p">:</span> <span class="s2">"Paginacao"</span><span class="p">,</span>
+       <span class="s2">"model"</span><span class="p">:</span> <span class="s2">"Modelo 3"</span><span class="p">,</span>
+       <span class="s2">"category_id"</span><span class="p">:</span> <span class="s2">"16"</span><span class="p">,</span>
+       <span class="s2">"available"</span><span class="p">:</span> <span class="s2">"1"</span><span class="p">,</span>
+       <span class="s2">"availability"</span><span class="p">:</span> <span class="s2">"Em estoque"</span><span class="p">,</span>
+       <span class="s2">"hot"</span><span class="p">:</span> <span class="s2">"1"</span><span class="p">,</span>
+       <span class="s2">"release"</span><span class="p">:</span> <span class="s2">"0"</span><span class="p">,</span>
+       <span class="s2">"additional_button"</span><span class="p">:</span> <span class="s2">""</span><span class="p">,</span>
+       <span class="s2">"has_variation"</span><span class="p">:</span> <span class="s2">""</span><span class="p">,</span>
+       <span class="s2">"url"</span><span class="p">:</span> <span class="p">{</span>
+           <span class="s2">"http"</span><span class="p">:</span> <span class="s2">"http://sualoja/produto1.htm"</span><span class="p">,</span>
+           <span class="s2">"https"</span><span class="p">:</span> <span class="s2">"https://sualoja/produto1.htm"</span>
+       <span class="p">},</span>
+       <span class="s2">"payment_option"</span><span class="p">:</span> <span class="s2">"ou 12x com juros de R$ 18,89"</span><span class="p">,</span>
+       <span class="s2">"related_categories"</span><span class="p">:</span> <span class="p">[</span><span class="s2">"16"</span><span class="p">],</span>
+       <span class="s2">"release_date"</span><span class="p">:</span> <span class="s2">"0000-00-00"</span><span class="p">,</span>
+       <span class="s2">"virtual_product"</span><span class="p">:</span> <span class="s2">""</span><span class="p">,</span>
+       <span class="s2">"ProductImage"</span><span class="p">:</span> <span class="p">[{</span>
+           <span class="s2">"http"</span><span class="p">:</span> <span class="s2">"http://images/123/1.png"</span><span class="p">,</span>
+           <span class="s2">"https"</span><span class="p">:</span> <span class="s2">"https://images/123/1.png"</span><span class="p">,</span>
+           <span class="s2">"thumbs"</span><span class="p">:</span> <span class="p">{</span>
+               <span class="s2">"30"</span><span class="p">:</span> <span class="p">{</span>
+                   <span class="s2">"http"</span><span class="p">:</span> <span class="s2">"http://images/123/30_1.png"</span><span class="p">,</span>
+                   <span class="s2">"https"</span><span class="p">:</span> <span class="s2">"https://images/123/30_1.png"</span>
+               <span class="p">},</span>
+               <span class="s2">"90"</span><span class="p">:</span> <span class="p">{</span>
+                   <span class="s2">"http"</span><span class="p">:</span> <span class="s2">"http://images/123/90_1.png"</span><span class="p">,</span>
+                   <span class="s2">"https"</span><span class="p">:</span> <span class="s2">"https://images/123/90_1.png"</span>
+               <span class="p">},</span>
+               <span class="s2">"180"</span><span class="p">:</span> <span class="p">{</span>
+                   <span class="s2">"http"</span><span class="p">:</span> <span class="s2">"http://images/132/180_1.png"</span><span class="p">,</span>
+                   <span class="s2">"https"</span><span class="p">:</span> <span class="s2">"https://images/123/180_1.png"</span>
+               <span class="p">}</span>
+           <span class="p">}</span>
+       <span class="p">}</span> <span class="p">],</span>
+       <span class="s2">"Variant"</span><span class="p">:</span> <span class="p">[]</span>
+       <span class="p">}</span>
+   <span class="p">}</span>
+   <span class="p">]</span>
+   
+</code></pre>
+</div>
+
+				</section>
+			
+
+			
+		</section>
+		
+	
+
+            </div>
+        </div>
+
+         <footer class="text-center">
+        <div class="footer-above">
+            <div class="container">
+                <div class="row">
+                    <div class="footer-col col-md-4">
+                        <h3>Duvidas?</h3>
+                        <p>developers@tray.com.br</p>
+                    </div>
+                    <div class="footer-col col-md-4">
+                        <h3>Contribua</h3>
+                        <ul class="list-inline">
+                            <li>
+                                <a href="https://github.com/tray-tecnologia/" class="btn-social btn-outline"><span class="sr-only">GitHub</span><i class="fa fa-fw fa-github"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="footer-col col-md-4">
+                        <h3>Sobre nós</h3>
+                        <p>Nossa satisfação é ajudar no desenvolvimento e criação de soluções que contribuam com o sucesso do Cliente.</p>
+                    </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-below">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                       @ 2017 Tray Plataforma de E-Commerce e/ou Locaweb
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="http://localhost:4000/vendor/jquery/jquery.min.js"></script>
+    <script src="http://localhost:4000/vendor/bootstrap/js/bootstrap.min.js"></script>
+	<script src="/js/main.js"></script>
+    
+</body>
+</html>

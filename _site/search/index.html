@@ -11,9 +11,9 @@
     
     <title>Tray - Plataforma de E-commerce </title>
 
-    <link href="https://tray-desenvolvedores.github.io/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://localhost:4000/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-	<link rel="stylesheet" href="https://tray-desenvolvedores.github.io/css/doc.css">
+	<link rel="stylesheet" href="http://localhost:4000/css/doc.css">
     <link href="/../../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link rel="manifest" href="/manifest.json">
     
@@ -69,8 +69,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-6 logo">
-                    <a href="https://tray-desenvolvedores.github.io">
-                        <img class="img-responsive logo" src="https://tray-desenvolvedores.github.io/images/logo-tray-2017-branca-svg.svg" alt="">
+                    <a href="http://localhost:4000">
+                        <img class="img-responsive logo" src="http://localhost:4000/images/logo-tray-2017-branca-svg.svg" alt="">
                     </a>
                 </div>
                 <div class="col-sm-6">
@@ -89,6 +89,8 @@
 	
 	
 	
+	
+		
 	
 		
 	
@@ -117,6 +119,178 @@
 				
 					
 						
+						
+						"api-attrs": {
+							"id": "api-attrs",
+							"title": "Attrs",
+							"category": "api",
+							"description": "",
+		  				"type": "get",
+							"url": "/frontend/api/#attrs",
+							"content": "Caso deseje exibir apenas alguns atributos da API, pode-se utilizar o parâmetro attrs.\n\nO parâmetro Attrs deve ser passado pela url da requisição da API, nela você deve passar os atributos da qual deseja exibir separados por (,).\n\nDisponivel em todas APIs Publicas\n\nExemplo\n\n\n  \n    \n      URL de Acesso\n      https://{URL_LOJA}/web_api/products?attrs=Product.ean,Product.price\n    \n  \n\n\nTerá como resposta o conteúdo ao lado:"
+						}
+						
+					
+				
+			
+				
+					
+						,
+						
+						"api-busca-produtos": {
+							"id": "api-busca-produtos",
+							"title": "Busca de Produtos",
+							"category": "api",
+							"description": "",
+		  				"type": "get",
+							"url": "/frontend/api/#search-products",
+							"content": "Para a busca de produtos, deverá ser realizada uma requisição via GET.\n\nPodem ser enviados alguns parâmetros nesta integração para realizar filtros na busca de produtos, segue abaixo o dado necessário para envio:\n\n\n  \n    \n      Dados de Entrada\n      Obrig.\n      Descrição\n    \n  \n  \n    \n      query\n      Não\n      Texto de Busca\n    \n    \n      promotion\n      Não\n      Produto Promocional\n    \n    \n      id\n      Não\n      Códigos do Produto (Valores separados por “,”. Exemplo: 15,123,54)\n    \n    \n      category_id\n      Não\n      Categoria do Produto\n    \n    \n      price\n      Não\n      Faixa de Valor do Produto (Valores separados por “,”. Exemplo: 10.25,123.54)\n    \n    \n      rand\n      Não\n      Retornar Produtos Randômicos\n    \n    \n      sort\n      Não\n      Ordenação da Busca\n    \n    \n      limit\n      Não\n      Quantidade Limite de Registros\n    \n    \n      page\n      Não\n      Página da Busca\n    \n  \n\n\nNa busca de produtos, a API retorna a resposta em JSON.\n\nAbaixo um detalhamento de cada nó do JSON de resposta:\n\nJSON de Resposta\n\n\n  \n    \n      paging\n      Dados de Paginação\n    \n    \n      paging.total\n      Total de Registros\n    \n    \n      paging.page\n      Páginas corrente\n    \n    \n      paging.offset\n      Registro Inicial da Página\n    \n    \n      paging.limit\n      Limite de Registros\n    \n    \n      paging.maxLimit\n      Máximo de Registros\n    \n    \n      sort\n      Ordenação\n    \n    \n      availableFilters\n      Filtros Disponíveis\n    \n    \n      appliedFilters\n      Filtros Utilizados\n    \n    \n      Products[]\n      Lista de Produtos\n    \n    \n      Products[].Product\n      Dados do Produto\n    \n    \n      Products[].Product.id\n      Código do Produto\n    \n    \n      Products[].Product.name\n      Nome do Produto\n    \n    \n      Products[].Product.available\n      Produto Disponível\n    \n    \n      Products[].Product.price\n      Preço do Produto\n    \n    \n      Products[].Product.shortcut\n      Atalho do Produto\n    \n    \n      Products[].Product.category_id\n      Código da Categoria do Produto\n    \n    \n      Products[].Product.description_small\n      Descrição do Produto\n    \n    \n      Products[].Product.promotional_price\n      Preço Promocional do Produto\n    \n    \n      Products[].Product.start_promotion\n      Data Inicial da Promoção do Produto\n    \n    \n      Products[].Product.end_promotion\n      Data Final da Promoção do Produto\n    \n    \n      Products[].Product.brand\n      Marca do Produto\n    \n    \n      Products[].Product.model\n      Modelo do Produto\n    \n    \n      Products[].Product.availability\n      Disponibilidade do Produto\n    \n    \n      Products[].Product.hot\n      Produto em Destaque\n    \n    \n      Products[].Product.release\n      Liberação do Produto\n    \n    \n      Products[].Product.additional_button\n      Botão Adicional do Produto\n    \n    \n      Products[].Product.has_variation\n      Confirmação de Produto com Variação\n    \n    \n      Products[].Product.rating\n      Classificação do Produto\n    \n    \n      Products[].Product.count_rating\n      Contador de Classificação do Produto\n    \n    \n      Products[].Product.url\n      Objeto com as URLs do Produto\n    \n    \n      Products[].Product.url.http\n      URL Simples do Produto\n    \n    \n      Products[].Product.url.https\n      URL Segura do Produto\n    \n    \n      Products[].Product.payment_option\n      Informações de Pagamento\n    \n    \n      Products[].Product.ProductImage[]\n      Imagens do Produto\n    \n    \n      Products[].Product.ProductImage[].http\n      URL Simples da Imagem do Produto\n    \n    \n      Products[].Product.ProductImage[].https\n      URL Segura da Imagem do Produto\n    \n    \n      Products[].Product.ProductImage[].thumbs\n      Miniatura da Imagem do Produto\n    \n    \n      Products[].Product.ProductImage[].thumbs.30\n      Miniatura de Tamanho 30px\n    \n    \n      Products[].Product.ProductImage[].thumbs.30.http\n      URL Simples da Miniatura de 30px\n    \n    \n      Products[].Product.ProductImage[].thumbs.30.https\n      URL Segura da Miniatura de 30px\n    \n    \n      Products[].Product.ProductImage[].thumbs.90\n      Miniatura de Tamanho 90px\n    \n    \n      Products[].Product.ProductImage[].thumbs.90.http\n      URL Simples da Miniatura de 90px\n    \n    \n      Products[].Product.ProductImage[].thumbs.90.https\n      URL Segura da Miniatura de 90px\n    \n    \n      Products[].Product.ProductImage[].thumbs.180\n      Miniatura de Tamanho 180px\n    \n    \n      Products[].Product.ProductImage[].thumbs.180.http\n      URL Simples da Miniatura de 180px\n    \n    \n      Products[].Product.ProductImage[].thumbs.180.https\n      URL Segura da Miniatura de 180px\n    \n    \n      Products[].Product.Properties[]\n      Propriedades do Produto\n    \n    \n      Products[].Product.Category\n      Dados da Categoria do Produto\n    \n    \n      Products[].Product.Category.id\n      Código da Categoria do Produto\n    \n    \n      Products[].Product.Category.name\n      Nome da Categoria do Produto\n    \n    \n      Products[].Product.Category.description\n      Descrição da Categoria do Produto"
+						}
+						
+					
+				
+			
+				
+					
+						,
+						
+						"api-busca": {
+							"id": "api-busca",
+							"title": "Busca",
+							"category": "api",
+							"description": "",
+		  				"type": "",
+							"url": "/frontend/api/#search",
+							"content": "Através da API de Busca é possível consultar os produtos contidos na loja virtual através de palavras-chave.\nEndereço para Integração\n\n\n  \n    \n      URL de Acesso\n      https://{URL_LOJA}/web_api/search\n    \n    \n      Protocolo\n      Rest/HTTP"
+						}
+						
+					
+				
+			
+				
+					
+						,
+						
+						"api-categorias": {
+							"id": "api-categorias",
+							"title": "Categorias",
+							"category": "api",
+							"description": "",
+		  				"type": "",
+							"url": "/frontend/api/#categorias",
+							"content": "Através da API de Categorias é possível consultar as categorias contidas na loja virtual.\n\nEndereço para Integração\n\n\n  \n    \n      URL de Acesso\n      https://{URL_LOJA}/web_api/categories/tree/\n    \n    \n      Protocolo\n      Rest/HTTP"
+						}
+						
+					
+				
+			
+				
+					
+						,
+						
+						"api-consultar-variacao": {
+							"id": "api-consultar-variacao",
+							"title": "Consultar Variação do Produt",
+							"category": "api",
+							"description": "",
+		  				"type": "get",
+							"url": "/frontend/api/#get-variant",
+							"content": "Para retornar as informações da variação do produto, basta realizar uma requisição via GET, enviando na URL o código da variação desejada.\n\nNa consulta de variação do produto, a API retorna a resposta em JSON.\n\nAbaixo um detalhamento de cada nó do JSON de resposta:\n\nJSON de Resposta\n\n\n  \n    \n      Variant\n      Dados da Variação do Produto\n    \n    \n      Variant.ean\n      EAN da Variação do Produto\n    \n    \n      Variant.id\n      Código da Variação do Produto\n    \n    \n      Variant.product_id\n      Código do Produto\n    \n    \n      Variant.price\n      Preço da Variação do Produto\n    \n    \n      Variant.promotional_price\n      Preço Promocional da Variação do Produto\n    \n    \n      Variant.start_promotion\n      Data Inicial da Promoção da Variação do Produto\n    \n    \n      Variant.end_promotion\n      Data Final da Promoção da Variação do Produto\n    \n    \n      Variant.payment_option\n      Informações de Pagamento\n    \n    \n      Variant.illustrative_image\n      Imagem Ilustrativa da Variação do Produto\n    \n    \n      Variant.VariantImage[]\n      Imagens da Variação do Produto\n    \n    \n      Variant.VariantImage[].http\n      URL Simples da Imagem da Variação do Produto\n    \n    \n      Variant.VariantImage[].https\n      URL Segura da Imagem da Variação do Produto\n    \n    \n      Variant.VariantImage[].thumbs\n      Miniaturas da Imagem da Variação do Produto\n    \n    \n      Variant.VariantImage[].thumbs.30\n      Miniatura de Tamanho 30px\n    \n    \n      Variant.VariantImage[].thumbs.30.http\n      URL Simples da Miniatura de 30px\n    \n    \n      Variant.VariantImage[].thumbs.30.https\n      URL Segura da Miniatura de 30px\n    \n    \n      Variant.VariantImage[].thumbs.90\n      Miniatura de Tamanho 90px\n    \n    \n      Variant.VariantImage[].thumbs.90.http\n      URL Simples da Miniatura de 90px\n    \n    \n      Variant.VariantImage[].thumbs.90.https\n      URL Segura da Miniatura de 90px\n    \n    \n      Variant.VariantImage[].thumbs.180\n      Miniatura de Tamanho 180px\n    \n    \n      Variant.VariantImage[].thumbs.180.http\n      URL Simples da Miniatura de 180px\n    \n    \n      Variant.VariantImage[].thumbs.180.https\n      URL Segura da Miniatura de 180px\n    \n    \n      Variant.Sku[]\n      Sku da Variação do Produto\n    \n    \n      Variant.Sku[].type\n      Tipo da Variação do Produto\n    \n    \n      Variant.Sku[].value\n      Dados da Variação do Produto"
+						}
+						
+					
+				
+			
+				
+					
+						,
+						
+						"api-get-product": {
+							"id": "api-get-product",
+							"title": "Consultar Produtos",
+							"category": "api",
+							"description": "",
+		  				"type": "get",
+							"url": "/frontend/api/#get-product",
+							"content": "Através da API de Produtos é possível consultar e listar os produtos contidos na loja virtual.\n\nEndereço para Integração\n\n\n  \n    \n      URL de Acesso\n      https://{URL_LOJA}/web_api/products\n    \n    \n      Protocolo\n      Rest/HTTP\n    \n  \n\n\nPara retornar as informações do produto, basta realizar uma requisição via GET, enviando na URL o código do produto desejado.\n\nExemplo ao lado de como consultar informações do produto:\n\nNa consulta do produto, a API retorna a resposta em JSON.\n\nAbaixo um detalhamento de cada nó do JSON de resposta:\n\nJSON de Resposta\n\n\n  \n    \n      Product\n      Dados do Produto\n    \n    \n      Product.ean\n      EAN do Produto\n    \n    \n      Product.id\n      Código do Produto\n    \n    \n      Product.name\n      Nome do Produto\n    \n    \n      Product.price\n      Preço do Produto\n    \n    \n      Product.promotional_price\n      Preço Promocional do Produto\n    \n    \n      Product.start_promotion\n      Data Inicial da Promoção do Produto\n    \n    \n      Product.end_promotion\n      Data Final da Promoção do Produto\n    \n    \n      Product.brand\n      Marca do Produto\n    \n    \n      Product.model\n      Modelo do Produto\n    \n    \n      Product.category_id\n      Código da Categoria do Produto\n    \n    \n      Product.available\n      Disponibilidade do Produto\n    \n    \n      Product.hot\n      Produto em Destaque\n    \n    \n      Product.release\n      Liberação do Produto\n    \n    \n      Product.additional_button\n      Botão Adicional do Produto\n    \n    \n      Product.has_variation\n      Confirmação de Produto com Variação\n    \n    \n      Product.url\n      Objeto com as URLs do Produto\n    \n    \n      Product.url.http\n      URL Simples do Produto\n    \n    \n      Product.url.https\n      URL Segura do Produto\n    \n    \n      Product.payment_option\n      Informações de Pagamento\n    \n    \n      Product.payment_option_details[]\n      Informações de Pagamento\n    \n    \n      Product.payment_option_details[].display_name\n      Nome da Forma de Pagamento\n    \n    \n      Product.payment_option_details[].plots\n      Quantidade de parcelas\n    \n    \n      Product.payment_option_details[].value\n      Valor da parcela\n    \n    \n      Product.related_categories\n      Categorias Relacionadas do Produto\n    \n    \n      Product.release_date\n      Data da Liberação do Produto\n    \n    \n      Product.virtual_product\n      Produto Virtual\n    \n    \n      Product.ProductImage[]\n      Imagens do Produto\n    \n    \n      Product.ProductImage[].http\n      URL Simples da Imagem do Produto\n    \n    \n      Product.ProductImage[].https\n      URL Segura da Imagem do Produto\n    \n    \n      Product.ProductImage[].thumbs\n      Miniatura da Imagem do Produto\n    \n    \n      Product.ProductImage[].thumbs.30\n      Miniatura de Tamanho 30px\n    \n    \n      Product.ProductImage[].thumbs.30.http\n      URL Simples da Miniatura de 30px\n    \n    \n      Product.ProductImage[].thumbs.30.https\n      URL Segura da Miniatura de 30px\n    \n    \n      Product.ProductImage[].thumbs.90\n      Miniatura de Tamanho 90px\n    \n    \n      Product.ProductImage[].thumbs.90.http\n      URL Simples da Miniatura de 90px\n    \n    \n      Product.ProductImage[].thumbs.90.https\n      URL Segura da Miniatura de 90px\n    \n    \n      Product.ProductImage[].thumbs.180\n      Miniatura de Tamanho 180px\n    \n    \n      Product.ProductImage[].thumbs.180.http\n      URL Simples da Miniatura de 180px\n    \n    \n      Product.ProductImage[].thumbs.180.https\n      URL Segura da Miniatura de 180px"
+						}
+						
+					
+				
+			
+				
+					
+						,
+						
+						"api-get-products": {
+							"id": "api-get-products",
+							"title": "Listagem de Produtos",
+							"category": "api",
+							"description": "",
+		  				"type": "get",
+							"url": "/frontend/api/#get-products",
+							"content": "Para a listagem de produtos, deverá ser realizada uma requisição via GET.\n\nPodem ser enviados alguns parâmetros nesta integração para realizar filtros na listagem de produtos, segue abaixo o dado necessário para envio:\n\n\n  \n    \n      Dados de Entrada\n      Obrig.\n      Descrição\n    \n  \n  \n    \n      id\n      Não\n      Código do Produto\n    \n    \n      name\n      Não\n      Nome do Produto\n    \n    \n      category_id\n      Não\n      Categoria do Produto\n    \n    \n      ean\n      Não\n      EAN do Produto\n    \n    \n      price\n      Não\n      Preço do Produto\n    \n    \n      brand\n      Não\n      Marca do Produto\n    \n    \n      available\n      Não\n      Dsiponibilidade do Produto\n    \n    \n      attrs\n      Não\n      Atributos do Produto\n    \n    \n      created\n      Não\n      Data de Criação do Produto\n    \n    \n      modified\n      Não\n      Data de Modificação do Produto\n    \n    \n      stock\n      Não\n      Estoque do Produto\n    \n    \n      promotion\n      Não\n      Produto Promocional\n    \n    \n      free_shipping\n      Não\n      Produto com Frete Grátis\n    \n    \n      release\n      Não\n      Produto em Lançamento\n    \n    \n      hot\n      Não\n      Produto em Destaque\n    \n    \n      quantity_sold\n      Não\n      Quantidade Vendida do Produto\n    \n    \n      rand\n      Não\n      Retornar Produtos Randômicos\n    \n    \n      sort\n      Não\n      Ordenação da Consulta\n    \n    \n      limit\n      Não\n      Quantidade Limite de Registros\n    \n    \n      page\n      Não\n      Página da Consulta\n    \n  \n\n\nNa listagem de produtos, a API retorna a resposta em JSON.\n\nAbaixo um detalhamento de cada nó do JSON de resposta:\n\nJSON de Resposta\n\n\n  \n    \n      paging\n      Dados do Produto\n    \n    \n      paging.total\n      Total de Registros\n    \n    \n      paging.page\n      Páginas corrente\n    \n    \n      paging.offset\n      Registro Inicial da Página\n    \n    \n      paging.limit\n      Limite de Registros\n    \n    \n      paging.maxLimit\n      Máximo de Registros\n    \n    \n      sort\n      Ordenação\n    \n    \n      availableFilters\n      Filtros Disponíveis\n    \n    \n      appliedFilters\n      Filtros Utilizados\n    \n    \n      Products[]\n      Lista de Produtos\n    \n    \n      Products[].Product\n      Dados do Produto\n    \n    \n      Products[].Product.ean\n      EAN do Produto\n    \n    \n      Products[].Product.id\n      Código do Produto\n    \n    \n      Products[].Product.name\n      Nome do Produto\n    \n    \n      Products[].Product.price\n      Preço do Produto\n    \n    \n      Products[].Product.promotional_price\n      Preço Promocional do Produto\n    \n    \n      Products[].Product.start_promotion\n      Data Inicial da Promoção do Produto\n    \n    \n      Products[].Product.end_promotion\n      Data Final da Promoção do Produto\n    \n    \n      Products[].Product.brand\n      Marca do Produto\n    \n    \n      Products[].Product.model\n      Modelo do Produto\n    \n    \n      Products[].Product.category_id\n      Código da Categoria do Produto\n    \n    \n      Products[].Product.available\n      Produto Disponível\n    \n    \n      Products[].Product.availability\n      Disponibilidade do Produto\n    \n    \n      Products[].Product.hot\n      Produto em Destaque\n    \n    \n      Products[].Product.release\n      Liberação do Produto\n    \n    \n      Products[].Product.additional_button\n      Botão Adicional do Produto\n    \n    \n      Products[].Product.has_variation\n      Confirmação de Produto com Variação\n    \n    \n      Products[].Product.url\n      Objeto com as URLs do Produto\n    \n    \n      Products[].Product.url.http\n      URL Simples do Produto\n    \n    \n      Products[].Product.url.https\n      URL Segura do Produto\n    \n    \n      Products[].Product.payment_option\n      Informações de Pagamento\n    \n    \n      Products[].Product.related_categories\n      Categorias Relacionadas do Produto\n    \n    \n      Products[].Product.release_date\n      Data da Liberação do Produto\n    \n    \n      Products[].Product.virtual_product\n      Produto Virtual\n    \n    \n      Products[].Product.ProductImage[]\n      Imagens do Produto\n    \n    \n      Products[].Product.ProductImage[].http\n      URL Simples da Imagem do Produto\n    \n    \n      Products[].Product.ProductImage[].https\n      URL Segura da Imagem do Produto\n    \n    \n      Products[].Product.ProductImage[].thumbs\n      Miniatura da Imagem do Produto\n    \n    \n      Products[].Product.ProductImage[].thumbs.30\n      Miniatura de Tamanho 30px\n    \n    \n      Products[].Product.ProductImage[].thumbs.30.http\n      URL Simples da Miniatura de 30px\n    \n    \n      Products[].Product.ProductImage[].thumbs.30.https\n      URL Segura da Miniatura de 30px\n    \n    \n      Products[].Product.ProductImage[].thumbs.90\n      Miniatura de Tamanho 90px\n    \n    \n      Products[].Product.ProductImage[].thumbs.90.http\n      URL Simples da Miniatura de 90px\n    \n    \n      Products[].Product.ProductImage[].thumbs.90.https\n      URL Segura da Miniatura de 90px\n    \n    \n      Products[].Product.ProductImage[].thumbs.180\n      Miniatura de Tamanho 180px\n    \n    \n      Products[].Product.ProductImage[].thumbs.180.http\n      URL Simples da Miniatura de 180px\n    \n    \n      Products[].Product.ProductImage[].thumbs.180.https\n      URL Segura da Miniatura de 180px\n    \n    \n      Products[].Product.Variant[]\n      Variações do Produto"
+						}
+						
+					
+				
+			
+				
+					
+						,
+						
+						"api-lista-categorias": {
+							"id": "api-lista-categorias",
+							"title": "Lista de Categorias",
+							"category": "api",
+							"description": "",
+		  				"type": "get",
+							"url": "/frontend/api/#get-categories",
+							"content": "Para a lista de categorias, deverá ser realizada uma requisição via GET.\n\nPodem ser enviados na URL o código da categoria desejada, onde será retornada somente a categoria desejada e as respectivas subcategorias:\n\nJSON de Resposta\n\n\n  \n    \n      Category[]\n      Lista de Categorias\n    \n    \n      Category[].Category\n      Dados da Categoria\n    \n    \n      Category[].Category.slug\n      Caminho absoluto da Categoria\n    \n    \n      Category[].Category.id\n      Código da Categoria\n    \n    \n      Category[].Category.parent_id\n      Código da Categoria Pai\n    \n    \n      Category[].Category.name\n      Nome da Categoria\n    \n    \n      Category[].Category.description\n      Descrição da Categoria (meta title)\n    \n    \n      Category[].Category.title\n      Título da categoria (meta title)\n    \n    \n      Category[].Category.link\n      Objeto com as URLs da Categoria\n    \n    \n      Category[].Category.link.http\n      URL Simples da Categoria\n    \n    \n      Category[].Category.link.https\n      URL Segura da Categoria\n    \n    \n      Category[].Category.images[]\n      Imagens da Categoria\n    \n    \n      Category[].Category.images[].http\n      URL Simples da Imagem da Categoria\n    \n    \n      Category[].Category.images[].https\n      URL Segura da Imagem da Categoria\n    \n    \n      Category[].Category.children[]\n      Lista de Subcategorias\n    \n    \n      Category[].Category.children[].Category\n      Dados da Subcategoria"
+						}
+						
+					
+				
+			
+				
+					
+						,
+						
+						"api-listar-variacoes": {
+							"id": "api-listar-variacoes",
+							"title": "Listagem de Variações do Produto",
+							"category": "api",
+							"description": "",
+		  				"type": "get",
+							"url": "/frontend/api/#get-variants",
+							"content": "Para a listagem de variações do produto, deverá ser realizada uma requisição via GET.\n\nPodem ser enviados alguns parâmetros nesta integração para realizar filtros na listagem de variações de produtos, segue abaixo o dado necessário para envio:\n\n\n  \n    \n      Dados de Entrada\n      Obrig.\n      Descrição\n    \n  \n  \n    \n      id\n      Não\n      Código do Produto\n    \n    \n      sort\n      Não\n      Ordenação da Consulta\n    \n    \n      limit\n      Não\n      Quantidade Limite de Registros\n    \n    \n      page\n      Não\n      Página da Consulta\n    \n  \n\n\nJSON de Resposta\n\n\n  \n    \n      Variant\n      Dados da Variação do Produto\n    \n    \n      Variant.ean\n      EAN da Variação do Produto\n    \n    \n      Variant.id\n      Código da Variação do Produto\n    \n    \n      Variant.product_id\n      Código do Produto\n    \n    \n      Variant.price\n      Preço da Variação do Produto\n    \n    \n      Variant.promotional_price\n      Preço Promocional da Variação do Produto\n    \n    \n      Variant.start_promotion\n      Data Inicial da Promoção da Variação do Produto\n    \n    \n      Variant.end_promotion\n      Data Final da Promoção da Variação do Produto\n    \n    \n      Variant.payment_option\n      Informações de Pagamento\n    \n    \n      Variant.illustrative_image\n      Imagem Ilustrativa da Variação do Produto\n    \n    \n      Variant.VariantImage[]\n      Imagens da Variação do Produto\n    \n    \n      Variant.VariantImage[].http\n      URL Simples da Imagem da Variação do Produto\n    \n    \n      Variant.VariantImage[].https\n      URL Segura da Imagem da Variação do Produto\n    \n    \n      Variant.VariantImage[].thumbs\n      Miniaturas da Imagem da Variação do Produto\n    \n    \n      Variant.VariantImage[].thumbs.30\n      Miniatura de Tamanho 30px\n    \n    \n      Variant.VariantImage[].thumbs.30.http\n      URL Simples da Miniatura de 30px\n    \n    \n      Variant.VariantImage[].thumbs.30.https\n      URL Segura da Miniatura de 30px\n    \n    \n      Variant.VariantImage[].thumbs.90\n      Miniatura de Tamanho 90px\n    \n    \n      Variant.VariantImage[].thumbs.90.http\n      URL Simples da Miniatura de 90px\n    \n    \n      Variant.VariantImage[].thumbs.90.https\n      URL Segura da Miniatura de 90px\n    \n    \n      Variant.VariantImage[].thumbs.180\n      Miniatura de Tamanho 180px\n    \n    \n      Variant.VariantImage[].thumbs.180.http\n      URL Simples da Miniatura de 180px\n    \n    \n      Variant.VariantImage[].thumbs.180.https\n      URL Segura da Miniatura de 180px\n    \n    \n      Variant.Sku[]\n      Sku da Variação do Produto\n    \n    \n      Variant.Sku[].type\n      Tipo da Variação do Produto\n    \n    \n      Variant.Sku[].value\n      Dados da Variação do Produto"
+						}
+						
+					
+				
+			
+				
+					
+						,
+						
+						"api-variacoes": {
+							"id": "api-variacoes",
+							"title": "Variações de Produto",
+							"category": "api",
+							"description": "",
+		  				"type": "",
+							"url": "/frontend/api/#variants",
+							"content": "Através da API de Variações de Produtos é possível identificar todas as variações contidas na loja virtual e identificar o produto relacionado à variação.\n\nEndereço para Integração\n\n\n  \n    \n      URL de Acesso\n      https://{URL_LOJA}/web_api/variants\n    \n    \n      Protocolo\n      Rest/HTTP"
+						}
+						
+					
+				
+			
+		
+			
+				
+					
+						,
 						
 						"console-tool-atualizando": {
 							"id": "console-tool-atualizando",
@@ -912,8 +1086,8 @@
         </div>
     </footer>
 
-    <script src="https://tray-desenvolvedores.github.io/vendor/jquery/jquery.min.js"></script>
-    <script src="https://tray-desenvolvedores.github.io/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="http://localhost:4000/vendor/jquery/jquery.min.js"></script>
+    <script src="http://localhost:4000/vendor/bootstrap/js/bootstrap.min.js"></script>
 	<script src="/js/main.js"></script>
     
 </body>

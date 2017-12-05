@@ -3,7 +3,7 @@
 
 title: Tray
 description: Documentação de ferramentas de desenvolvimento na plataforma
-url: https://tray-desenvolvedores.github.io
+url: http://dev.tray.com.br/
 google_analytics_key:
 permalink: pretty
 
@@ -24,6 +24,11 @@ collections:
     title: Metodos
     origem: /frontend/ 
     position: 4
+  api:
+    name: api
+    title: APIs
+    origem: /frontend/
+    position: 5
 
 
 gems:
