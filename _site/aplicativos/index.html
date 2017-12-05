@@ -5458,6 +5458,731 @@ Segue a baixo a relação de filtros disponiveis:</p>
 			
 		</section>
 	
+		<section class="doc-content">
+			<section class="left-docs">
+				<h3>
+					<a id="apicarrinho-compra">
+						Carrinho de Compra
+						
+					</a>
+				</h3>
+				
+
+				<p>Através da API de Carrinho de compra é possível incluir produtos e resgatar informações do carrinho de compra, retornando a URL deste carrinho para exibição ao cliente.</p>
+
+<h5 id="endereço-para-integração">Endereço para Integração</h5>
+
+<table>
+  <tbody>
+    <tr>
+      <td><strong>URL de Acesso</strong></td>
+      <td>https://{sualojavirtual}.commercesuite.com.br/web_api/cart</td>
+    </tr>
+    <tr>
+      <td><strong>Protocolo</strong></td>
+      <td>Rest/HTTP</td>
+    </tr>
+  </tbody>
+</table>
+
+			</section>
+
+			
+				<section class="right-code">
+					
+
+				</section>
+			
+		</section>
+	
+		<section class="doc-content">
+			<section class="left-docs">
+				<h3>
+					<a id="apisessao">
+						Sessão do Usuário
+						
+							<span class="endpoint get"></span>
+						
+					</a>
+				</h3>
+				
+
+				<p>Na API de Carrinho de Compra também será necessário resgatar a informação da sessão do usuário no carrinho. Esta informação poderá ser capturada através de um código javascript.</p>
+
+<p>Apesar da sessão do usuário já existir no dataLayer, algumas páginas possuem cache e poderão trazer as informações de forma incorreta. Para evitar este problema, caso seja necessário, disponibilizamos a sessão também no código fonte das páginas do sistema para que possa ser recuperado.</p>
+
+
+			</section>
+
+			
+				<section class="right-code">
+					<div class="language-javascript highlighter-rouge"><pre class="highlight"><code>   <span class="o">&lt;</span><span class="nx">script</span> <span class="nx">type</span><span class="o">=</span><span class="s2">"text/javascript"</span><span class="o">&gt;</span>  
+       <span class="kd">var</span> <span class="nx">dataSession</span> <span class="o">=</span>  <span class="nx">$</span><span class="p">(</span><span class="s2">"html"</span><span class="p">).</span><span class="nx">attr</span><span class="p">(</span><span class="s2">"data-session"</span><span class="p">);</span>
+   <span class="o">&lt;</span><span class="sr">/script</span><span class="err">&gt;
+</span></code></pre>
+</div>
+
+				</section>
+			
+		</section>
+	
+		<section class="doc-content">
+			<section class="left-docs">
+				<h3>
+					<a id="apiconsultar-carrinho">
+						Consultar Carrinho de Compra
+						
+							<span class="endpoint get"></span>
+						
+					</a>
+				</h3>
+				
+
+				<p>Para retornar as informações do Carrinho de Compra, basta realizar uma requisição via GET, enviando na URL o código da sessão do carrinho.</p>
+
+<p>Para a integração com esta API, deverá ser realizada uma requisição via GET, concatenando o código da sessão do usuário no final da URL.</p>
+
+<p>A consulta de informações do carrinho de compra retorna uma resposta em JSON.</p>
+
+<p>Abaixo um detalhamento de cada nó do JSON de resposta:</p>
+
+<h4 id="json-de-resposta">JSON de Resposta</h4>
+
+<table>
+  <tbody>
+    <tr>
+      <td><strong>Cart</strong></td>
+      <td>Nó principal da resposta</td>
+    </tr>
+    <tr>
+      <td><strong>Cart.session_id</strong></td>
+      <td>Código da Sessão do Carrinho</td>
+    </tr>
+    <tr>
+      <td><strong>Cart.product_id</strong></td>
+      <td>Código do Produto</td>
+    </tr>
+    <tr>
+      <td><strong>Cart.product_name</strong></td>
+      <td>Nome do Produto</td>
+    </tr>
+    <tr>
+      <td><strong>Cart.quantity</strong></td>
+      <td>Quantidade</td>
+    </tr>
+    <tr>
+      <td><strong>Cart.price</strong></td>
+      <td>Preço do Produto</td>
+    </tr>
+    <tr>
+      <td><strong>Cart.weight</strong></td>
+      <td>Peso do Produto</td>
+    </tr>
+    <tr>
+      <td><strong>Cart.date</strong></td>
+      <td>Data</td>
+    </tr>
+    <tr>
+      <td><strong>Cart.variant_id</strong></td>
+      <td>Código da Variação</td>
+    </tr>
+    <tr>
+      <td><strong>Cart.user_id</strong></td>
+      <td>ID do usuário</td>
+    </tr>
+    <tr>
+      <td><strong>Cart.user_cod</strong></td>
+      <td>Código do Usuário</td>
+    </tr>
+    <tr>
+      <td><strong>Cart.hour</strong></td>
+      <td>Hora</td>
+    </tr>
+    <tr>
+      <td><strong>Cart.product_url</strong></td>
+      <td>Objeto com as URLs do Produto</td>
+    </tr>
+    <tr>
+      <td><strong>Cart.product_url.http</strong></td>
+      <td>URL Simples do Produto</td>
+    </tr>
+    <tr>
+      <td><strong>Cart.product_url.https</strong></td>
+      <td>URL Segura do Produto</td>
+    </tr>
+    <tr>
+      <td><strong>Cart.product_image</strong></td>
+      <td>Objeto com as imagens do Produto</td>
+    </tr>
+    <tr>
+      <td><strong>Cart.product_image.http</strong></td>
+      <td>URL Simples da Imagem do produto</td>
+    </tr>
+    <tr>
+      <td><strong>Cart.product_image.https</strong></td>
+      <td>URL Segura da Imagem do produto</td>
+    </tr>
+    <tr>
+      <td><strong>Cart.product_image.thumbs</strong></td>
+      <td>Miniatura da Imagem do Produto</td>
+    </tr>
+    <tr>
+      <td><strong>Cart.product_image.thumbs.30</strong></td>
+      <td>Miniatura de Tamanho 30px</td>
+    </tr>
+    <tr>
+      <td><strong>Cart.product_image.thumbs.30.http</strong></td>
+      <td>URL Simples da Miniatura de 30px</td>
+    </tr>
+    <tr>
+      <td><strong>Cart.product_image.thumbs.30.https</strong></td>
+      <td>URL Segura da Miniatura de 30px</td>
+    </tr>
+    <tr>
+      <td><strong>Cart.product_image.thumbs.90</strong></td>
+      <td>Miniatura de Tamanho 90px</td>
+    </tr>
+    <tr>
+      <td><strong>Cart.product_image.thumbs.90.http</strong></td>
+      <td>URL Simples da Miniatura de 90px</td>
+    </tr>
+    <tr>
+      <td><strong>Cart.product_image.thumbs.90.https</strong></td>
+      <td>URL Segura da Miniatura de 90px</td>
+    </tr>
+    <tr>
+      <td><strong>Cart.product_image.thumbs.180</strong></td>
+      <td>Miniatura de Tamanho 180px</td>
+    </tr>
+    <tr>
+      <td><strong>Cart.product_image.thumbs.180.http</strong></td>
+      <td>URL Simples da Miniatura de 180px</td>
+    </tr>
+    <tr>
+      <td><strong>Cart.product_image.thumbs.180.https</strong></td>
+      <td>URL Segura da Miniatura de 180px</td>
+    </tr>
+    <tr>
+      <td><strong>Cart.email</strong></td>
+      <td>Email do Usuário</td>
+    </tr>
+    <tr>
+      <td><strong>Cart.additional_information</strong></td>
+      <td>Informações Adicionais</td>
+    </tr>
+  </tbody>
+</table>
+
+			</section>
+
+			
+				<section class="right-code">
+					<div title="Exemplo" class="language-javascript highlighter-rouge"><pre class="highlight"><code> <span class="o">&lt;</span><span class="nx">script</span> <span class="nx">type</span><span class="o">=</span><span class="s2">"text/javascript"</span><span class="o">&gt;</span> 
+
+ <span class="kd">let</span> <span class="nx">dataSession</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s2">"html"</span><span class="p">).</span><span class="nx">attr</span><span class="p">(</span><span class="s2">"data-session"</span><span class="p">);</span>
+
+ <span class="nx">fetch</span><span class="p">(</span><span class="err">`</span><span class="o">/</span><span class="nx">web_api</span><span class="o">/</span><span class="nx">cart</span><span class="o">/</span><span class="nx">$</span><span class="p">{</span><span class="nx">dataSession</span><span class="p">}</span><span class="err">`</span><span class="p">)</span>
+   <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">response</span> <span class="o">=&gt;</span> <span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">())</span>
+   <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">result</span> <span class="o">=&gt;</span> <span class="p">{</span>
+     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span><span class="p">.</span><span class="nx">Product</span><span class="p">);</span>
+   <span class="p">})</span>
+   <span class="p">.</span><span class="k">catch</span><span class="p">(</span><span class="nx">err</span> <span class="o">=&gt;</span> <span class="p">{</span>
+     <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s1">'Falha'</span><span class="p">,</span> <span class="nx">err</span><span class="p">);</span>
+   <span class="p">});</span>
+ <span class="o">&lt;</span><span class="sr">/script</span><span class="err">&gt;
+</span></code></pre>
+</div>
+
+				</section>
+			
+		</section>
+	
+		<section class="doc-content">
+			<section class="left-docs">
+				<h3>
+					<a id="apiaddcarrinho">
+						Incluir Produto no Carrinho
+						
+							<span class="endpoint post"></span>
+						
+					</a>
+				</h3>
+				
+
+				<p>Para incluir produtos no carrinho de compra, basta realizar uma requisição via POST, enviando os parâmetros com informações do produto.</p>
+
+<p>A requisição para a integração será via POST, onde segue abaixo o dado necessário para envio:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Dados de Entrada</th>
+      <th>Obrig.</th>
+      <th>Formato / Tam. Max</th>
+      <th>Descrição</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><strong>Cart</strong></td>
+      <td>Sim</td>
+      <td>Objeto</td>
+      <td>Nó principal da resposta</td>
+    </tr>
+    <tr>
+      <td><strong>Cart.session_id</strong></td>
+      <td>Sim</td>
+      <td>Texto / 32</td>
+      <td>Código da Sessão</td>
+    </tr>
+    <tr>
+      <td><strong>Cart.product_id</strong></td>
+      <td>Sim</td>
+      <td>Número</td>
+      <td>Código do Produto</td>
+    </tr>
+    <tr>
+      <td><strong>Cart.quantity</strong></td>
+      <td>Sim</td>
+      <td>Número</td>
+      <td>Quantidade</td>
+    </tr>
+    <tr>
+      <td><strong>Cart.variant_id</strong></td>
+      <td>Não</td>
+      <td>Número</td>
+      <td>Código da Variação</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Ao incluir produtos do carrinho de compra, é retorna uma resposta em JSON.</p>
+
+<h4 id="json-de-resposta">JSON de Resposta</h4>
+
+<table>
+  <tbody>
+    <tr>
+      <td><strong>message</strong></td>
+      <td>Mensagem de Retorno</td>
+    </tr>
+    <tr>
+      <td><strong>id</strong></td>
+      <td>Código do Carrinho</td>
+    </tr>
+    <tr>
+      <td><strong>session_id</strong></td>
+      <td>Código da Sessão do Carrinho</td>
+    </tr>
+    <tr>
+      <td><strong>cart_url</strong></td>
+      <td>URL do Carrinho</td>
+    </tr>
+    <tr>
+      <td><strong>code</strong></td>
+      <td>HTTP Code de Resposta</td>
+    </tr>
+  </tbody>
+</table>
+
+			</section>
+
+			
+				<section class="right-code">
+					<div title="Exemplo" class="language-javascript highlighter-rouge"><pre class="highlight"><code> <span class="o">&lt;</span><span class="nx">script</span> <span class="nx">type</span><span class="o">=</span><span class="s2">"text/javascript"</span><span class="o">&gt;</span> 
+
+ <span class="kd">let</span> <span class="nx">dataSession</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s2">"html"</span><span class="p">).</span><span class="nx">attr</span><span class="p">(</span><span class="s2">"data-session"</span><span class="p">);</span>
+ <span class="kd">let</span> <span class="nx">data</span> <span class="o">=</span> <span class="err">`</span>
+   <span class="p">{</span>
+       <span class="s2">"Cart"</span><span class="err">:</span><span class="p">{</span><span class="s2">"session_id"</span><span class="err">:</span><span class="nx">$</span><span class="p">{</span><span class="nx">dataSession</span><span class="p">},</span>
+       <span class="s2">"product_id"</span><span class="err">:</span><span class="s2">"100"</span><span class="p">,</span>
+       <span class="s2">"quantity"</span><span class="err">:</span><span class="s2">"2"</span><span class="p">,</span>
+       <span class="s2">"variant_id"</span><span class="err">:</span><span class="s2">"0"</span>
+   <span class="p">}</span><span class="s1">'
+
+
+ fetch(`/web_api/cart/`
+   {
+       method: "POST",
+       body: data
+   })
+   .then(response =&gt; response.json())
+   .then(result =&gt; {
+     console.log(result.Product);
+   })
+   .catch(err =&gt; {
+     console.error('</span><span class="nx">Falha</span><span class="err">'</span><span class="p">,</span> <span class="nx">err</span><span class="p">);</span>
+   <span class="p">});</span>
+ <span class="o">&lt;</span><span class="sr">/script</span><span class="err">&gt;
+</span></code></pre>
+</div>
+
+				</section>
+			
+		</section>
+	
+		<section class="doc-content">
+			<section class="left-docs">
+				<h3>
+					<a id="apiexcluir-produto-carrinho">
+						Excluir Produto do Carrinho
+						
+							<span class="endpoint get"></span>
+						
+					</a>
+				</h3>
+				
+
+				<p>Para excluir um produto especifico no carrinho de compra, basta realizar uma requisição utilizando o método DELETE, passando na url o session_id e o product_id do produto.</p>
+
+<p>Esta requisição exclui um produto inteiro do carrinho. Caso ele tenha uma ou mais variações, todas são excluídas do carrinho.</p>
+
+<h5 id="endereço-para-integração">Endereço para Integração</h5>
+
+<table>
+  <tbody>
+    <tr>
+      <td><strong>URL de Acesso</strong></td>
+      <td>https://{sualojavirtual}.commercesuite.com.br/web_api/carts/{session_id}/{product_id}</td>
+    </tr>
+    <tr>
+      <td><strong>Protocolo</strong></td>
+      <td>Rest/HTTP</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Ao excluir produtos do carrinho de compra, é retorna uma resposta em JSON.</p>
+
+<p>Abaixo um detalhamento de cada nó do JSON de resposta:</p>
+
+<h4 id="json-de-resposta">JSON de Resposta</h4>
+
+<table>
+  <tbody>
+    <tr>
+      <td><strong>message</strong></td>
+      <td>Mensagem de Retorno</td>
+    </tr>
+    <tr>
+      <td><strong>id</strong></td>
+      <td>Código do Carrinho</td>
+    </tr>
+    <tr>
+      <td><strong>session_id</strong></td>
+      <td>Código da Sessão do Carrinho</td>
+    </tr>
+    <tr>
+      <td><strong>cart_url</strong></td>
+      <td>URL do Carrinho</td>
+    </tr>
+    <tr>
+      <td><strong>code</strong></td>
+      <td>HTTP Code de Res</td>
+    </tr>
+  </tbody>
+</table>
+
+			</section>
+
+			
+				<section class="right-code">
+					<div title="Exemplo" class="language-javascript highlighter-rouge"><pre class="highlight"><code> <span class="o">&lt;</span><span class="nx">script</span> <span class="nx">type</span><span class="o">=</span><span class="s2">"text/javascript"</span><span class="o">&gt;</span> 
+
+ <span class="kd">let</span> <span class="nx">dataSession</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s2">"html"</span><span class="p">).</span><span class="nx">attr</span><span class="p">(</span><span class="s2">"data-session"</span><span class="p">);</span>
+ <span class="kd">let</span> <span class="nx">productID</span> <span class="o">=</span> <span class="mi">6</span>
+
+
+ <span class="nx">fetch</span><span class="p">(</span><span class="err">`</span><span class="o">/</span><span class="nx">web_api</span><span class="o">/</span><span class="nx">carts</span><span class="o">/</span><span class="nx">$</span><span class="p">{</span><span class="nx">dataSession</span><span class="p">}</span><span class="sr">/${productID}</span><span class="err">`
+</span>   <span class="p">{</span>
+       <span class="nl">method</span><span class="p">:</span> <span class="s2">"DELETE"</span><span class="p">,</span>
+   <span class="p">})</span>
+   <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">response</span> <span class="o">=&gt;</span> <span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">())</span>
+   <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">result</span> <span class="o">=&gt;</span> <span class="p">{</span>
+     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span><span class="p">.</span><span class="nx">Product</span><span class="p">);</span>
+   <span class="p">})</span>
+   <span class="p">.</span><span class="k">catch</span><span class="p">(</span><span class="nx">err</span> <span class="o">=&gt;</span> <span class="p">{</span>
+     <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s1">'Falha'</span><span class="p">,</span> <span class="nx">err</span><span class="p">);</span>
+   <span class="p">});</span>
+ <span class="o">&lt;</span><span class="sr">/script</span><span class="err">&gt;
+</span></code></pre>
+</div>
+
+				</section>
+			
+		</section>
+	
+		<section class="doc-content">
+			<section class="left-docs">
+				<h3>
+					<a id="apiexcluir-sessao">
+						Excluir Sessão do Carrinho de Compra
+						
+							<span class="endpoint delete"></span>
+						
+					</a>
+				</h3>
+				
+
+				<p>Para excluir a sessão de um carrinho de compra, basta realizar uma requisição utilizando o método DELETE, passando na url o session_id.</p>
+
+<p>Esta requisição exclui todos os produtos e variações do carrinho. Inclusive o carrinho é excluído, ele torna-se indisponível após a operação.</p>
+
+<h5 id="endereço-para-integração">Endereço para Integração</h5>
+
+<table>
+  <tbody>
+    <tr>
+      <td><strong>URL de Acesso</strong></td>
+      <td>https://{sualojavirtual}.commercesuite.com.br/web_api/carts/{session_id}</td>
+    </tr>
+    <tr>
+      <td><strong>Protocolo</strong></td>
+      <td>Rest/HTTP</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Ao excluir o carrinho de compra, é retorna uma resposta em JSON.</p>
+
+<p>Abaixo um detalhamento de cada nó do JSON de resposta:</p>
+
+<h4 id="json-de-resposta">JSON de Resposta</h4>
+
+<table>
+  <tbody>
+    <tr>
+      <td><strong>message</strong></td>
+      <td>Mensagem de Retorno</td>
+    </tr>
+    <tr>
+      <td><strong>id</strong></td>
+      <td>Código do Carrinho</td>
+    </tr>
+    <tr>
+      <td><strong>session_id</strong></td>
+      <td>Código da Sessão do Carrinho</td>
+    </tr>
+    <tr>
+      <td><strong>cart_url</strong></td>
+      <td>URL do Carrinho</td>
+    </tr>
+    <tr>
+      <td><strong>code</strong></td>
+      <td>HTTP Code de Res</td>
+    </tr>
+  </tbody>
+</table>
+
+			</section>
+
+			
+				<section class="right-code">
+					<div title="Exemplo" class="language-javascript highlighter-rouge"><pre class="highlight"><code> <span class="o">&lt;</span><span class="nx">script</span> <span class="nx">type</span><span class="o">=</span><span class="s2">"text/javascript"</span><span class="o">&gt;</span> 
+
+ <span class="kd">let</span> <span class="nx">dataSession</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s2">"html"</span><span class="p">).</span><span class="nx">attr</span><span class="p">(</span><span class="s2">"data-session"</span><span class="p">);</span>
+
+ <span class="nx">fetch</span><span class="p">(</span><span class="err">`</span><span class="o">/</span><span class="nx">web_api</span><span class="o">/</span><span class="nx">carts</span><span class="o">/</span><span class="nx">$</span><span class="p">{</span><span class="nx">dataSession</span><span class="p">}</span><span class="err">`</span>
+   <span class="p">{</span>
+       <span class="nl">method</span><span class="p">:</span> <span class="s2">"DELETE"</span><span class="p">,</span>
+   <span class="p">})</span>
+   <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">response</span> <span class="o">=&gt;</span> <span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">())</span>
+   <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">result</span> <span class="o">=&gt;</span> <span class="p">{</span>
+     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span><span class="p">.</span><span class="nx">Product</span><span class="p">);</span>
+   <span class="p">})</span>
+   <span class="p">.</span><span class="k">catch</span><span class="p">(</span><span class="nx">err</span> <span class="o">=&gt;</span> <span class="p">{</span>
+     <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s1">'Falha'</span><span class="p">,</span> <span class="nx">err</span><span class="p">);</span>
+   <span class="p">});</span>
+ <span class="o">&lt;</span><span class="sr">/script</span><span class="err">&gt;
+</span></code></pre>
+</div>
+
+				</section>
+			
+		</section>
+	
+		<section class="doc-content">
+			<section class="left-docs">
+				<h3>
+					<a id="apiexcluir-var-carrinho">
+						Excluir Variação de um Produto no Carrinho
+						
+							<span class="endpoint delete"></span>
+						
+					</a>
+				</h3>
+				
+
+				<p>Para excluir uma variação especifica do produto no carrinho de compra, basta realizar uma requisição utilizando o método DELETE, passando na url o session_id e o product_id e o variant_id do produto.</p>
+
+<p>Esta requisição exclui uma variação específica do carrinho.</p>
+
+<h5 id="endereço-para-integração">Endereço para Integração</h5>
+
+<table>
+  <tbody>
+    <tr>
+      <td><strong>URL de Acesso</strong></td>
+      <td>https://{sualojavirtual}.commercesuite.com.br/web_api/carts/{session_id}/{product_id}/{variant_id}</td>
+    </tr>
+    <tr>
+      <td><strong>Protocolo</strong></td>
+      <td>Rest/HTTP</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Ao excluir uma variação do carrinho de compra, é retorna uma resposta em JSON.</p>
+
+<p>Abaixo um detalhamento de cada nó do JSON de resposta:</p>
+
+<h4 id="json-de-resposta">JSON de Resposta</h4>
+
+<table>
+  <tbody>
+    <tr>
+      <td><strong>message</strong></td>
+      <td>Mensagem de Retorno</td>
+    </tr>
+    <tr>
+      <td><strong>id</strong></td>
+      <td>Código do Carrinho</td>
+    </tr>
+    <tr>
+      <td><strong>session_id</strong></td>
+      <td>Código da Sessão do Carrinho</td>
+    </tr>
+    <tr>
+      <td><strong>cart_url</strong></td>
+      <td>URL do Carrinho</td>
+    </tr>
+    <tr>
+      <td><strong>code</strong></td>
+      <td>HTTP Code de Resposta</td>
+    </tr>
+  </tbody>
+</table>
+
+			</section>
+
+			
+				<section class="right-code">
+					<div title="Exemplo" class="language-javascript highlighter-rouge"><pre class="highlight"><code> <span class="o">&lt;</span><span class="nx">script</span> <span class="nx">type</span><span class="o">=</span><span class="s2">"text/javascript"</span><span class="o">&gt;</span> 
+
+ <span class="kd">let</span> <span class="nx">dataSession</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s2">"html"</span><span class="p">).</span><span class="nx">attr</span><span class="p">(</span><span class="s2">"data-session"</span><span class="p">);</span>
+ <span class="kd">let</span> <span class="nx">productID</span> <span class="o">=</span> <span class="mi">6</span><span class="p">;</span>
+ <span class="kd">let</span> <span class="nx">variantID</span> <span class="o">=</span> <span class="mi">2</span>
+
+
+ <span class="nx">fetch</span><span class="p">(</span><span class="err">`</span><span class="o">/</span><span class="nx">web_api</span><span class="o">/</span><span class="nx">carts</span><span class="o">/</span><span class="nx">$</span><span class="p">{</span><span class="nx">dataSession</span><span class="p">}</span><span class="sr">/${productID}/</span><span class="nx">$</span><span class="p">{</span><span class="nx">variantID</span><span class="p">}</span><span class="err">`</span>
+   <span class="p">{</span>
+       <span class="nl">method</span><span class="p">:</span> <span class="s2">"DELETE"</span><span class="p">,</span>
+   <span class="p">})</span>
+   <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">response</span> <span class="o">=&gt;</span> <span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">())</span>
+   <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">result</span> <span class="o">=&gt;</span> <span class="p">{</span>
+     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span><span class="p">.</span><span class="nx">Product</span><span class="p">);</span>
+   <span class="p">})</span>
+   <span class="p">.</span><span class="k">catch</span><span class="p">(</span><span class="nx">err</span> <span class="o">=&gt;</span> <span class="p">{</span>
+     <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s1">'Falha'</span><span class="p">,</span> <span class="nx">err</span><span class="p">);</span>
+   <span class="p">});</span>
+ <span class="o">&lt;</span><span class="sr">/script</span><span class="err">&gt;
+</span></code></pre>
+</div>
+
+				</section>
+			
+		</section>
+	
+		<section class="doc-content">
+			<section class="left-docs">
+				<h3>
+					<a id="apiexcluir-carrinho">
+						Excluir Carrinho de Compra
+						
+							<span class="endpoint delete"></span>
+						
+					</a>
+				</h3>
+				
+
+				<p>Para excluir o carrinho de compra, basta realizar uma requisição utilizando o método DELETE.</p>
+
+<p>Esta requisição exclui o carrinho com id passado por parâmetro. A exclusão só será feita caso o id tenha a sessão também passada.</p>
+
+<h5 id="endereço-para-integração">Endereço para Integração</h5>
+
+<table>
+  <tbody>
+    <tr>
+      <td><strong>URL de Acesso</strong></td>
+      <td>https://{sualojavirtual}.commercesuite.com.br/web_ap/carts/{session_id}/id/{id}</td>
+    </tr>
+    <tr>
+      <td><strong>Protocolo</strong></td>
+      <td>Rest/HTTP</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Ao excluir o carrinho de compra, é retorna uma resposta em JSON.</p>
+
+<p>Abaixo um detalhamento de cada nó do JSON de resposta:</p>
+
+<h4 id="json-de-resposta">JSON de Resposta</h4>
+
+<table>
+  <tbody>
+    <tr>
+      <td><strong>message</strong></td>
+      <td>Mensagem de Retorno</td>
+    </tr>
+    <tr>
+      <td><strong>id</strong></td>
+      <td>Código do Carrinho</td>
+    </tr>
+    <tr>
+      <td><strong>session_id</strong></td>
+      <td>Código da Sessão do Carrinho</td>
+    </tr>
+    <tr>
+      <td><strong>cart_url</strong></td>
+      <td>URL do Carrinho</td>
+    </tr>
+    <tr>
+      <td><strong>code</strong></td>
+      <td>HTTP Code de Res</td>
+    </tr>
+  </tbody>
+</table>
+
+			</section>
+
+			
+				<section class="right-code">
+					<div title="Exemplo" class="language-javascript highlighter-rouge"><pre class="highlight"><code> <span class="o">&lt;</span><span class="nx">script</span> <span class="nx">type</span><span class="o">=</span><span class="s2">"text/javascript"</span><span class="o">&gt;</span> 
+
+ <span class="kd">let</span> <span class="nx">dataSession</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s2">"html"</span><span class="p">).</span><span class="nx">attr</span><span class="p">(</span><span class="s2">"data-session"</span><span class="p">);</span>
+ <span class="kd">let</span> <span class="nx">cartID</span> <span class="o">=</span> <span class="mi">615440</span><span class="p">;</span>
+
+ <span class="nx">fetch</span><span class="p">(</span><span class="err">`</span><span class="o">/</span><span class="nx">web_api</span><span class="o">/</span><span class="nx">carts</span><span class="o">/</span><span class="nx">$</span><span class="p">{</span><span class="nx">dataSession</span><span class="p">}</span><span class="sr">/id/</span><span class="nx">$</span><span class="p">{</span><span class="nx">cartID</span><span class="p">}</span><span class="err">`</span>
+   <span class="p">{</span>
+       <span class="nl">method</span><span class="p">:</span> <span class="s2">"DELETE"</span><span class="p">,</span>
+   <span class="p">})</span>
+   <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">response</span> <span class="o">=&gt;</span> <span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">())</span>
+   <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">result</span> <span class="o">=&gt;</span> <span class="p">{</span>
+     <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span><span class="p">.</span><span class="nx">Product</span><span class="p">);</span>
+   <span class="p">})</span>
+   <span class="p">.</span><span class="k">catch</span><span class="p">(</span><span class="nx">err</span> <span class="o">=&gt;</span> <span class="p">{</span>
+     <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s1">'Falha'</span><span class="p">,</span> <span class="nx">err</span><span class="p">);</span>
+   <span class="p">});</span>
+ <span class="o">&lt;</span><span class="sr">/script</span><span class="err">&gt;
+</span></code></pre>
+</div>
+
+				</section>
+			
+		</section>
+	
 
             </div>
         </div>

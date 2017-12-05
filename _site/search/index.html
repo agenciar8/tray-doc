@@ -120,6 +120,23 @@
 					
 						
 						
+						"api-add-carrinho": {
+							"id": "api-add-carrinho",
+							"title": "Incluir Produto no Carrinho",
+							"category": "api",
+							"description": "",
+		  				"type": "post",
+							"url": "/frontend/api/#get-cart",
+							"content": "Para incluir produtos no carrinho de compra, basta realizar uma requisição via POST, enviando os parâmetros com informações do produto.\n\nA requisição para a integração será via POST, onde segue abaixo o dado necessário para envio:\n\n\n  \n    \n      Dados de Entrada\n      Obrig.\n      Formato / Tam. Max\n      Descrição\n    \n  \n  \n    \n      Cart\n      Sim\n      Objeto\n      Nó principal da resposta\n    \n    \n      Cart.session_id\n      Sim\n      Texto / 32\n      Código da Sessão\n    \n    \n      Cart.product_id\n      Sim\n      Número\n      Código do Produto\n    \n    \n      Cart.quantity\n      Sim\n      Número\n      Quantidade\n    \n    \n      Cart.variant_id\n      Não\n      Número\n      Código da Variação\n    \n  \n\n\nAo incluir produtos do carrinho de compra, é retorna uma resposta em JSON.\n\nJSON de Resposta\n\n\n  \n    \n      message\n      Mensagem de Retorno\n    \n    \n      id\n      Código do Carrinho\n    \n    \n      session_id\n      Código da Sessão do Carrinho\n    \n    \n      cart_url\n      URL do Carrinho\n    \n    \n      code\n      HTTP Code de Resposta"
+						}
+						
+					
+				
+			
+				
+					
+						,
+						
 						"api-attrs": {
 							"id": "api-attrs",
 							"title": "Attrs",
@@ -171,6 +188,23 @@
 					
 						,
 						
+						"api-carrinho-compra": {
+							"id": "api-carrinho-compra",
+							"title": "Carrinho de Compra",
+							"category": "api",
+							"description": "",
+		  				"type": "",
+							"url": "/frontend/api/#carts",
+							"content": "Através da API de Carrinho de compra é possível incluir produtos e resgatar informações do carrinho de compra, retornando a URL deste carrinho para exibição ao cliente.\n\nEndereço para Integração\n\n\n  \n    \n      URL de Acesso\n      https://{sualojavirtual}.commercesuite.com.br/web_api/cart\n    \n    \n      Protocolo\n      Rest/HTTP"
+						}
+						
+					
+				
+			
+				
+					
+						,
+						
 						"api-categorias": {
 							"id": "api-categorias",
 							"title": "Categorias",
@@ -188,6 +222,23 @@
 					
 						,
 						
+						"api-consultar-carrinho": {
+							"id": "api-consultar-carrinho",
+							"title": "Consultar Carrinho de Compra",
+							"category": "api",
+							"description": "",
+		  				"type": "get",
+							"url": "/frontend/api/#get-cart",
+							"content": "Para retornar as informações do Carrinho de Compra, basta realizar uma requisição via GET, enviando na URL o código da sessão do carrinho.\n\nPara a integração com esta API, deverá ser realizada uma requisição via GET, concatenando o código da sessão do usuário no final da URL.\n\nA consulta de informações do carrinho de compra retorna uma resposta em JSON.\n\nAbaixo um detalhamento de cada nó do JSON de resposta:\n\nJSON de Resposta\n\n\n  \n    \n      Cart\n      Nó principal da resposta\n    \n    \n      Cart.session_id\n      Código da Sessão do Carrinho\n    \n    \n      Cart.product_id\n      Código do Produto\n    \n    \n      Cart.product_name\n      Nome do Produto\n    \n    \n      Cart.quantity\n      Quantidade\n    \n    \n      Cart.price\n      Preço do Produto\n    \n    \n      Cart.weight\n      Peso do Produto\n    \n    \n      Cart.date\n      Data\n    \n    \n      Cart.variant_id\n      Código da Variação\n    \n    \n      Cart.user_id\n      ID do usuário\n    \n    \n      Cart.user_cod\n      Código do Usuário\n    \n    \n      Cart.hour\n      Hora\n    \n    \n      Cart.product_url\n      Objeto com as URLs do Produto\n    \n    \n      Cart.product_url.http\n      URL Simples do Produto\n    \n    \n      Cart.product_url.https\n      URL Segura do Produto\n    \n    \n      Cart.product_image\n      Objeto com as imagens do Produto\n    \n    \n      Cart.product_image.http\n      URL Simples da Imagem do produto\n    \n    \n      Cart.product_image.https\n      URL Segura da Imagem do produto\n    \n    \n      Cart.product_image.thumbs\n      Miniatura da Imagem do Produto\n    \n    \n      Cart.product_image.thumbs.30\n      Miniatura de Tamanho 30px\n    \n    \n      Cart.product_image.thumbs.30.http\n      URL Simples da Miniatura de 30px\n    \n    \n      Cart.product_image.thumbs.30.https\n      URL Segura da Miniatura de 30px\n    \n    \n      Cart.product_image.thumbs.90\n      Miniatura de Tamanho 90px\n    \n    \n      Cart.product_image.thumbs.90.http\n      URL Simples da Miniatura de 90px\n    \n    \n      Cart.product_image.thumbs.90.https\n      URL Segura da Miniatura de 90px\n    \n    \n      Cart.product_image.thumbs.180\n      Miniatura de Tamanho 180px\n    \n    \n      Cart.product_image.thumbs.180.http\n      URL Simples da Miniatura de 180px\n    \n    \n      Cart.product_image.thumbs.180.https\n      URL Segura da Miniatura de 180px\n    \n    \n      Cart.email\n      Email do Usuário\n    \n    \n      Cart.additional_information\n      Informações Adicionais"
+						}
+						
+					
+				
+			
+				
+					
+						,
+						
 						"api-consultar-variacao": {
 							"id": "api-consultar-variacao",
 							"title": "Consultar Variação do Produt",
@@ -196,6 +247,74 @@
 		  				"type": "get",
 							"url": "/frontend/api/#get-variant",
 							"content": "Para retornar as informações da variação do produto, basta realizar uma requisição via GET, enviando na URL o código da variação desejada.\n\nNa consulta de variação do produto, a API retorna a resposta em JSON.\n\nAbaixo um detalhamento de cada nó do JSON de resposta:\n\nJSON de Resposta\n\n\n  \n    \n      Variant\n      Dados da Variação do Produto\n    \n    \n      Variant.ean\n      EAN da Variação do Produto\n    \n    \n      Variant.id\n      Código da Variação do Produto\n    \n    \n      Variant.product_id\n      Código do Produto\n    \n    \n      Variant.price\n      Preço da Variação do Produto\n    \n    \n      Variant.promotional_price\n      Preço Promocional da Variação do Produto\n    \n    \n      Variant.start_promotion\n      Data Inicial da Promoção da Variação do Produto\n    \n    \n      Variant.end_promotion\n      Data Final da Promoção da Variação do Produto\n    \n    \n      Variant.payment_option\n      Informações de Pagamento\n    \n    \n      Variant.illustrative_image\n      Imagem Ilustrativa da Variação do Produto\n    \n    \n      Variant.VariantImage[]\n      Imagens da Variação do Produto\n    \n    \n      Variant.VariantImage[].http\n      URL Simples da Imagem da Variação do Produto\n    \n    \n      Variant.VariantImage[].https\n      URL Segura da Imagem da Variação do Produto\n    \n    \n      Variant.VariantImage[].thumbs\n      Miniaturas da Imagem da Variação do Produto\n    \n    \n      Variant.VariantImage[].thumbs.30\n      Miniatura de Tamanho 30px\n    \n    \n      Variant.VariantImage[].thumbs.30.http\n      URL Simples da Miniatura de 30px\n    \n    \n      Variant.VariantImage[].thumbs.30.https\n      URL Segura da Miniatura de 30px\n    \n    \n      Variant.VariantImage[].thumbs.90\n      Miniatura de Tamanho 90px\n    \n    \n      Variant.VariantImage[].thumbs.90.http\n      URL Simples da Miniatura de 90px\n    \n    \n      Variant.VariantImage[].thumbs.90.https\n      URL Segura da Miniatura de 90px\n    \n    \n      Variant.VariantImage[].thumbs.180\n      Miniatura de Tamanho 180px\n    \n    \n      Variant.VariantImage[].thumbs.180.http\n      URL Simples da Miniatura de 180px\n    \n    \n      Variant.VariantImage[].thumbs.180.https\n      URL Segura da Miniatura de 180px\n    \n    \n      Variant.Sku[]\n      Sku da Variação do Produto\n    \n    \n      Variant.Sku[].type\n      Tipo da Variação do Produto\n    \n    \n      Variant.Sku[].value\n      Dados da Variação do Produto"
+						}
+						
+					
+				
+			
+				
+					
+						,
+						
+						"api-excluir-carrinho": {
+							"id": "api-excluir-carrinho",
+							"title": "Excluir Carrinho de Compra",
+							"category": "api",
+							"description": "",
+		  				"type": "delete",
+							"url": "/frontend/api/#delete-cart",
+							"content": "Para excluir o carrinho de compra, basta realizar uma requisição utilizando o método DELETE.\n\nEsta requisição exclui o carrinho com id passado por parâmetro. A exclusão só será feita caso o id tenha a sessão também passada.\n\nEndereço para Integração\n\n\n  \n    \n      URL de Acesso\n      https://{sualojavirtual}.commercesuite.com.br/web_ap/carts/{session_id}/id/{id}\n    \n    \n      Protocolo\n      Rest/HTTP\n    \n  \n\n\nAo excluir o carrinho de compra, é retorna uma resposta em JSON.\n\nAbaixo um detalhamento de cada nó do JSON de resposta:\n\nJSON de Resposta\n\n\n  \n    \n      message\n      Mensagem de Retorno\n    \n    \n      id\n      Código do Carrinho\n    \n    \n      session_id\n      Código da Sessão do Carrinho\n    \n    \n      cart_url\n      URL do Carrinho\n    \n    \n      code\n      HTTP Code de Res"
+						}
+						
+					
+				
+			
+				
+					
+						,
+						
+						"api-excluir-produto-carrinho": {
+							"id": "api-excluir-produto-carrinho",
+							"title": "Excluir Produto do Carrinho",
+							"category": "api",
+							"description": "",
+		  				"type": "get",
+							"url": "/frontend/api/#delete-cart",
+							"content": "Para excluir um produto especifico no carrinho de compra, basta realizar uma requisição utilizando o método DELETE, passando na url o session_id e o product_id do produto.\n\nEsta requisição exclui um produto inteiro do carrinho. Caso ele tenha uma ou mais variações, todas são excluídas do carrinho.\n\nEndereço para Integração\n\n\n  \n    \n      URL de Acesso\n      https://{sualojavirtual}.commercesuite.com.br/web_api/carts/{session_id}/{product_id}\n    \n    \n      Protocolo\n      Rest/HTTP\n    \n  \n\n\nAo excluir produtos do carrinho de compra, é retorna uma resposta em JSON.\n\nAbaixo um detalhamento de cada nó do JSON de resposta:\n\nJSON de Resposta\n\n\n  \n    \n      message\n      Mensagem de Retorno\n    \n    \n      id\n      Código do Carrinho\n    \n    \n      session_id\n      Código da Sessão do Carrinho\n    \n    \n      cart_url\n      URL do Carrinho\n    \n    \n      code\n      HTTP Code de Res"
+						}
+						
+					
+				
+			
+				
+					
+						,
+						
+						"api-excluir-sessao": {
+							"id": "api-excluir-sessao",
+							"title": "Excluir Sessão do Carrinho de Compra",
+							"category": "api",
+							"description": "",
+		  				"type": "delete",
+							"url": "/frontend/api/#delete-session",
+							"content": "Para excluir a sessão de um carrinho de compra, basta realizar uma requisição utilizando o método DELETE, passando na url o session_id.\n\nEsta requisição exclui todos os produtos e variações do carrinho. Inclusive o carrinho é excluído, ele torna-se indisponível após a operação.\n\nEndereço para Integração\n\n\n  \n    \n      URL de Acesso\n      https://{sualojavirtual}.commercesuite.com.br/web_api/carts/{session_id}\n    \n    \n      Protocolo\n      Rest/HTTP\n    \n  \n\n\nAo excluir o carrinho de compra, é retorna uma resposta em JSON.\n\nAbaixo um detalhamento de cada nó do JSON de resposta:\n\nJSON de Resposta\n\n\n  \n    \n      message\n      Mensagem de Retorno\n    \n    \n      id\n      Código do Carrinho\n    \n    \n      session_id\n      Código da Sessão do Carrinho\n    \n    \n      cart_url\n      URL do Carrinho\n    \n    \n      code\n      HTTP Code de Res"
+						}
+						
+					
+				
+			
+				
+					
+						,
+						
+						"api-excluir-var-carrinho": {
+							"id": "api-excluir-var-carrinho",
+							"title": "Excluir Variação de um Produto no Carrinho",
+							"category": "api",
+							"description": "",
+		  				"type": "delete",
+							"url": "/frontend/api/#ex-var-cart",
+							"content": "Para excluir uma variação especifica do produto no carrinho de compra, basta realizar uma requisição utilizando o método DELETE, passando na url o session_id e o product_id e o variant_id do produto.\n\nEsta requisição exclui uma variação específica do carrinho.\n\nEndereço para Integração\n\n\n  \n    \n      URL de Acesso\n      https://{sualojavirtual}.commercesuite.com.br/web_api/carts/{session_id}/{product_id}/{variant_id}\n    \n    \n      Protocolo\n      Rest/HTTP\n    \n  \n\n\nAo excluir uma variação do carrinho de compra, é retorna uma resposta em JSON.\n\nAbaixo um detalhamento de cada nó do JSON de resposta:\n\nJSON de Resposta\n\n\n  \n    \n      message\n      Mensagem de Retorno\n    \n    \n      id\n      Código do Carrinho\n    \n    \n      session_id\n      Código da Sessão do Carrinho\n    \n    \n      cart_url\n      URL do Carrinho\n    \n    \n      code\n      HTTP Code de Resposta"
 						}
 						
 					
@@ -264,6 +383,23 @@
 		  				"type": "get",
 							"url": "/frontend/api/#get-variants",
 							"content": "Para a listagem de variações do produto, deverá ser realizada uma requisição via GET.\n\nPodem ser enviados alguns parâmetros nesta integração para realizar filtros na listagem de variações de produtos, segue abaixo o dado necessário para envio:\n\n\n  \n    \n      Dados de Entrada\n      Obrig.\n      Descrição\n    \n  \n  \n    \n      id\n      Não\n      Código do Produto\n    \n    \n      sort\n      Não\n      Ordenação da Consulta\n    \n    \n      limit\n      Não\n      Quantidade Limite de Registros\n    \n    \n      page\n      Não\n      Página da Consulta\n    \n  \n\n\nJSON de Resposta\n\n\n  \n    \n      Variant\n      Dados da Variação do Produto\n    \n    \n      Variant.ean\n      EAN da Variação do Produto\n    \n    \n      Variant.id\n      Código da Variação do Produto\n    \n    \n      Variant.product_id\n      Código do Produto\n    \n    \n      Variant.price\n      Preço da Variação do Produto\n    \n    \n      Variant.promotional_price\n      Preço Promocional da Variação do Produto\n    \n    \n      Variant.start_promotion\n      Data Inicial da Promoção da Variação do Produto\n    \n    \n      Variant.end_promotion\n      Data Final da Promoção da Variação do Produto\n    \n    \n      Variant.payment_option\n      Informações de Pagamento\n    \n    \n      Variant.illustrative_image\n      Imagem Ilustrativa da Variação do Produto\n    \n    \n      Variant.VariantImage[]\n      Imagens da Variação do Produto\n    \n    \n      Variant.VariantImage[].http\n      URL Simples da Imagem da Variação do Produto\n    \n    \n      Variant.VariantImage[].https\n      URL Segura da Imagem da Variação do Produto\n    \n    \n      Variant.VariantImage[].thumbs\n      Miniaturas da Imagem da Variação do Produto\n    \n    \n      Variant.VariantImage[].thumbs.30\n      Miniatura de Tamanho 30px\n    \n    \n      Variant.VariantImage[].thumbs.30.http\n      URL Simples da Miniatura de 30px\n    \n    \n      Variant.VariantImage[].thumbs.30.https\n      URL Segura da Miniatura de 30px\n    \n    \n      Variant.VariantImage[].thumbs.90\n      Miniatura de Tamanho 90px\n    \n    \n      Variant.VariantImage[].thumbs.90.http\n      URL Simples da Miniatura de 90px\n    \n    \n      Variant.VariantImage[].thumbs.90.https\n      URL Segura da Miniatura de 90px\n    \n    \n      Variant.VariantImage[].thumbs.180\n      Miniatura de Tamanho 180px\n    \n    \n      Variant.VariantImage[].thumbs.180.http\n      URL Simples da Miniatura de 180px\n    \n    \n      Variant.VariantImage[].thumbs.180.https\n      URL Segura da Miniatura de 180px\n    \n    \n      Variant.Sku[]\n      Sku da Variação do Produto\n    \n    \n      Variant.Sku[].type\n      Tipo da Variação do Produto\n    \n    \n      Variant.Sku[].value\n      Dados da Variação do Produto"
+						}
+						
+					
+				
+			
+				
+					
+						,
+						
+						"api-sessao": {
+							"id": "api-sessao",
+							"title": "Sessão do Usuário",
+							"category": "api",
+							"description": "",
+		  				"type": "get",
+							"url": "/frontend/api/#sessao",
+							"content": "Na API de Carrinho de Compra também será necessário resgatar a informação da sessão do usuário no carrinho. Esta informação poderá ser capturada através de um código javascript.\n\nApesar da sessão do usuário já existir no dataLayer, algumas páginas possuem cache e poderão trazer as informações de forma incorreta. Para evitar este problema, caso seja necessário, disponibilizamos a sessão também no código fonte das páginas do sistema para que possa ser recuperado."
 						}
 						
 					
