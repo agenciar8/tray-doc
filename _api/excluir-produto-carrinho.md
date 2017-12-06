@@ -4,7 +4,7 @@ link: delete-cart
 position: 13
 origem: /frontend/ 
 session: /frontend/api/
-type: get 
+type: delete 
 right_code: |
  ~~~ javascript
   <script type="text/javascript"> 

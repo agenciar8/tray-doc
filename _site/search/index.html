@@ -11,9 +11,9 @@
     
     <title>Tray - Plataforma de E-commerce </title>
 
-    <link href="http://localhost:4000/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://dev.tray.com.br//vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-	<link rel="stylesheet" href="http://localhost:4000/css/doc.css">
+	<link rel="stylesheet" href="http://dev.tray.com.br//css/doc.css">
     <link href="/../../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link rel="manifest" href="/manifest.json">
     
@@ -67,8 +67,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-6 logo">
-                    <a href="http://localhost:4000">
-                        <img class="img-responsive logo" src="http://localhost:4000/images/logo-tray-2017-branca-svg.svg" alt="">
+                    <a href="http://dev.tray.com.br/">
+                        <img class="img-responsive logo" src="http://dev.tray.com.br//images/logo-tray-2017-branca-svg.svg" alt="">
                     </a>
                 </div>
                 <div class="col-sm-6">
@@ -276,7 +276,7 @@
 							"title": "Excluir Produto do Carrinho",
 							"category": "api",
 							"description": "",
-		  				"type": "get",
+		  				"type": "delete",
 							"url": "/frontend/api/#delete-cart",
 							"content": "Para excluir um produto especifico no carrinho de compra, basta realizar uma requisição utilizando o método DELETE, passando na url o session_id e o product_id do produto.\n\nEsta requisição exclui um produto inteiro do carrinho. Caso ele tenha uma ou mais variações, todas são excluídas do carrinho.\n\nEndereço para Integração\n\n\n  \n    \n      URL de Acesso\n      https://{sualojavirtual}.commercesuite.com.br/web_api/carts/{session_id}/{product_id}\n    \n    \n      Protocolo\n      Rest/HTTP\n    \n  \n\n\nAo excluir produtos do carrinho de compra, é retorna uma resposta em JSON.\n\nAbaixo um detalhamento de cada nó do JSON de resposta:\n\nJSON de Resposta\n\n\n  \n    \n      message\n      Mensagem de Retorno\n    \n    \n      id\n      Código do Carrinho\n    \n    \n      session_id\n      Código da Sessão do Carrinho\n    \n    \n      cart_url\n      URL do Carrinho\n    \n    \n      code\n      HTTP Code de Res"
 						}
@@ -1220,8 +1220,8 @@
         </div>
     </footer>
 
-    <script src="http://localhost:4000/vendor/jquery/jquery.min.js"></script>
-    <script src="http://localhost:4000/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="http://dev.tray.com.br//vendor/jquery/jquery.min.js"></script>
+    <script src="http://dev.tray.com.br//vendor/bootstrap/js/bootstrap.min.js"></script>
 	<script src="/js/main.js"></script>
     
 </body>
