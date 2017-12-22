@@ -9,7 +9,7 @@ right_code: |
  ~~~ javascript
   <script type="text/javascript"> 
 
-  let dataSession = $("html").attr("data-session");
+  let dataSession = document.querySelector('html').getAttribute('data-session');
   let productID = 6;
   let variantID = 2
 

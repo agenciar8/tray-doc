@@ -8,7 +8,7 @@ type: get
 right_code: |
  ~~~ javascript
     <script type="text/javascript">  
-        var dataSession =  $("html").attr("data-session");
+        let dataSession = document.querySelector('html').getAttribute('data-session');
     </script>
  ~~~
 ---

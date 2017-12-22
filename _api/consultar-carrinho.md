@@ -9,7 +9,7 @@ right_code: |
  ~~~ javascript
   <script type="text/javascript"> 
 
-  let dataSession = $("html").attr("data-session");
+  let dataSession = document.querySelector('html').getAttribute('data-session');
 
   fetch(`/web_api/cart/${dataSession}`)
     .then(response => response.json())
