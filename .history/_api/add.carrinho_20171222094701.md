@@ -1,6 +1,6 @@
 ---
 title: Incluir Produto no Carrinho
-link: add-cart
+link: get-cart
 position: 13
 origem: /frontend/ 
 session: /frontend/api/
@@ -8,17 +8,29 @@ type: post
 right_code: |
  ~~~ javascript
   <script type="text/javascript"> 
-    let dataSession = document.querySelector('html').getAttribute('data-session');
-    let dados = `{"Cart":{"session_id":"${dataSession}","product_id":"6","quantity":"1","variant_id":"0"}}`
 
-    fetch('/web_api/cart/', {
-        method: 'POST',
-        headers: new Headers({'Content-Type':'application/json'}),
-        body: dados
-    }).then(response => response.json()
-        .then(resp => console.log(resp))
-        .catch(err => console.error('Falha', err))
-    )
+  let dataSession = $("html").attr("data-session");
+  let data = `
+    {
+        "Cart":{"session_id":${dataSession},
+        "product_id":"100",
+        "quantity":"2",
+        "variant_id":"0"
+    }'
+
+
+  fetch(`/web_api/cart/`
+    {
+        method: "POST",
+        body: data
+    })
+    .then(response => response.json())
+    .then(result => {
+      console.log(result.Product);
+    })
+    .catch(err => {
+      console.error('Falha', err);
+    });
   </script>
   ~~~
   {: title="Exemplo" }
