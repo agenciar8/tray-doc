@@ -11,9 +11,9 @@
     
     <title>Tray - Plataforma de E-commerce </title>
 
-    <link href="http://dev.tray.com.br//vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://localhost:4000/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-	<link rel="stylesheet" href="http://dev.tray.com.br//css/doc.css">
+	<link rel="stylesheet" href="http://localhost:4000/css/doc.css">
     <link href="/../../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link rel="manifest" href="/manifest.json">
     
@@ -67,8 +67,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-6 logo">
-                    <a href="http://dev.tray.com.br/">
-                        <img class="img-responsive logo" src="http://dev.tray.com.br//images/logo-tray-2017-branca-svg.svg" alt="">
+                    <a href="http://localhost:4000">
+                        <img class="img-responsive logo" src="https://images.tcdn.com.br/static_inst/site/logos/tray-logo-negativo.svg" alt="">
                     </a>
                 </div>
                 <div class="col-sm-6">
@@ -124,7 +124,7 @@
 							"category": "api",
 							"description": "",
 		  				"type": "post",
-							"url": "/frontend/api/#get-cart",
+							"url": "/frontend/api/#add-cart",
 							"content": "Para incluir produtos no carrinho de compra, basta realizar uma requisição via POST, enviando os parâmetros com informações do produto.\n\nA requisição para a integração será via POST, onde segue abaixo o dado necessário para envio:\n\n\n  \n    \n      Dados de Entrada\n      Obrig.\n      Formato / Tam. Max\n      Descrição\n    \n  \n  \n    \n      Cart\n      Sim\n      Objeto\n      Nó principal da resposta\n    \n    \n      Cart.session_id\n      Sim\n      Texto / 32\n      Código da Sessão\n    \n    \n      Cart.product_id\n      Sim\n      Número\n      Código do Produto\n    \n    \n      Cart.quantity\n      Sim\n      Número\n      Quantidade\n    \n    \n      Cart.variant_id\n      Não\n      Número\n      Código da Variação\n    \n  \n\n\nAo incluir produtos do carrinho de compra, é retorna uma resposta em JSON.\n\nJSON de Resposta\n\n\n  \n    \n      message\n      Mensagem de Retorno\n    \n    \n      id\n      Código do Carrinho\n    \n    \n      session_id\n      Código da Sessão do Carrinho\n    \n    \n      cart_url\n      URL do Carrinho\n    \n    \n      code\n      HTTP Code de Resposta"
 						}
 						
@@ -1220,8 +1220,8 @@
         </div>
     </footer>
 
-    <script src="http://dev.tray.com.br//vendor/jquery/jquery.min.js"></script>
-    <script src="http://dev.tray.com.br//vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="http://localhost:4000/vendor/jquery/jquery.min.js"></script>
+    <script src="http://localhost:4000/vendor/bootstrap/js/bootstrap.min.js"></script>
 	<script src="/js/main.js"></script>
     
 </body>

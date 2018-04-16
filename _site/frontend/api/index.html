@@ -11,9 +11,9 @@
     
     <title>Tray - Plataforma de E-commerce </title>
 
-    <link href="http://dev.tray.com.br//vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://localhost:4000/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
-	<link rel="stylesheet" href="http://dev.tray.com.br//css/doc.css">
+	<link rel="stylesheet" href="http://localhost:4000/css/doc.css">
     <link href="/../../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link rel="manifest" href="/manifest.json">
     
@@ -67,8 +67,8 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-6 logo">
-                    <a href="http://dev.tray.com.br/">
-                        <img class="img-responsive logo" src="http://dev.tray.com.br//images/logo-tray-2017-branca-svg.svg" alt="">
+                    <a href="http://localhost:4000">
+                        <img class="img-responsive logo" src="https://images.tcdn.com.br/static_inst/site/logos/tray-logo-negativo.svg" alt="">
                     </a>
                 </div>
                 <div class="col-sm-6">
@@ -526,7 +526,7 @@
 						</li>
 					
 						<li>
-							<a  href="#get-cart" >
+							<a  href="#add-cart" >
 								Incluir Produto no Carrinho
 								<span class="endpoint post">post</span>
 							</a>
@@ -2656,7 +2656,7 @@
 			
 				<section class="right-code">
 					<div class="language-javascript highlighter-rouge"><pre class="highlight"><code>   <span class="o">&lt;</span><span class="nx">script</span> <span class="nx">type</span><span class="o">=</span><span class="s2">"text/javascript"</span><span class="o">&gt;</span>  
-       <span class="kd">var</span> <span class="nx">dataSession</span> <span class="o">=</span>  <span class="nx">$</span><span class="p">(</span><span class="s2">"html"</span><span class="p">).</span><span class="nx">attr</span><span class="p">(</span><span class="s2">"data-session"</span><span class="p">);</span>
+       <span class="kd">let</span> <span class="nx">dataSession</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">'html'</span><span class="p">).</span><span class="nx">getAttribute</span><span class="p">(</span><span class="s1">'data-session'</span><span class="p">);</span>
    <span class="o">&lt;</span><span class="sr">/script</span><span class="err">&gt;
 </span></code></pre>
 </div>
@@ -2823,7 +2823,7 @@
 				<section class="right-code">
 					<div title="Exemplo" class="language-javascript highlighter-rouge"><pre class="highlight"><code> <span class="o">&lt;</span><span class="nx">script</span> <span class="nx">type</span><span class="o">=</span><span class="s2">"text/javascript"</span><span class="o">&gt;</span> 
 
- <span class="kd">let</span> <span class="nx">dataSession</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s2">"html"</span><span class="p">).</span><span class="nx">attr</span><span class="p">(</span><span class="s2">"data-session"</span><span class="p">);</span>
+ <span class="kd">let</span> <span class="nx">dataSession</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">'html'</span><span class="p">).</span><span class="nx">getAttribute</span><span class="p">(</span><span class="s1">'data-session'</span><span class="p">);</span>
 
  <span class="nx">fetch</span><span class="p">(</span><span class="err">`</span><span class="o">/</span><span class="nx">web_api</span><span class="o">/</span><span class="nx">cart</span><span class="o">/</span><span class="nx">$</span><span class="p">{</span><span class="nx">dataSession</span><span class="p">}</span><span class="err">`</span><span class="p">)</span>
    <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">response</span> <span class="o">=&gt;</span> <span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">())</span>
@@ -2893,7 +2893,7 @@
 		
 	
 		
-		<section class="doc-content" id="get-cart">
+		<section class="doc-content" id="add-cart">
 			<section class="left-docs">
 				<h3>
 						Incluir Produto no Carrinho
@@ -2985,29 +2985,17 @@
 			
 				<section class="right-code">
 					<div title="Exemplo" class="language-javascript highlighter-rouge"><pre class="highlight"><code> <span class="o">&lt;</span><span class="nx">script</span> <span class="nx">type</span><span class="o">=</span><span class="s2">"text/javascript"</span><span class="o">&gt;</span> 
+   <span class="kd">let</span> <span class="nx">dataSession</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">'html'</span><span class="p">).</span><span class="nx">getAttribute</span><span class="p">(</span><span class="s1">'data-session'</span><span class="p">);</span>
+   <span class="kd">let</span> <span class="nx">dados</span> <span class="o">=</span> <span class="err">`</span><span class="p">{</span><span class="s2">"Cart"</span><span class="err">:</span><span class="p">{</span><span class="s2">"session_id"</span><span class="err">:</span><span class="s2">"${dataSession}"</span><span class="p">,</span><span class="s2">"product_id"</span><span class="err">:</span><span class="s2">"6"</span><span class="p">,</span><span class="s2">"quantity"</span><span class="err">:</span><span class="s2">"1"</span><span class="p">,</span><span class="s2">"variant_id"</span><span class="err">:</span><span class="s2">"0"</span><span class="p">}}</span><span class="err">`</span>
 
- <span class="kd">let</span> <span class="nx">dataSession</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s2">"html"</span><span class="p">).</span><span class="nx">attr</span><span class="p">(</span><span class="s2">"data-session"</span><span class="p">);</span>
- <span class="kd">let</span> <span class="nx">data</span> <span class="o">=</span> <span class="err">`</span>
-   <span class="p">{</span>
-       <span class="s2">"Cart"</span><span class="err">:</span><span class="p">{</span><span class="s2">"session_id"</span><span class="err">:</span><span class="nx">$</span><span class="p">{</span><span class="nx">dataSession</span><span class="p">},</span>
-       <span class="s2">"product_id"</span><span class="err">:</span><span class="s2">"100"</span><span class="p">,</span>
-       <span class="s2">"quantity"</span><span class="err">:</span><span class="s2">"2"</span><span class="p">,</span>
-       <span class="s2">"variant_id"</span><span class="err">:</span><span class="s2">"0"</span>
-   <span class="p">}</span><span class="s1">'
-
-
- fetch(`/web_api/cart/`
-   {
-       method: "POST",
-       body: data
-   })
-   .then(response =&gt; response.json())
-   .then(result =&gt; {
-     console.log(result.Product);
-   })
-   .catch(err =&gt; {
-     console.error('</span><span class="nx">Falha</span><span class="err">'</span><span class="p">,</span> <span class="nx">err</span><span class="p">);</span>
-   <span class="p">});</span>
+   <span class="nx">fetch</span><span class="p">(</span><span class="s1">'/web_api/cart/'</span><span class="p">,</span> <span class="p">{</span>
+       <span class="na">method</span><span class="p">:</span> <span class="s1">'POST'</span><span class="p">,</span>
+       <span class="na">headers</span><span class="p">:</span> <span class="k">new</span> <span class="nx">Headers</span><span class="p">({</span><span class="s1">'Content-Type'</span><span class="p">:</span><span class="s1">'application/json'</span><span class="p">}),</span>
+       <span class="na">body</span><span class="p">:</span> <span class="nx">dados</span>
+   <span class="p">}).</span><span class="nx">then</span><span class="p">(</span><span class="nx">response</span> <span class="o">=&gt;</span> <span class="nx">response</span><span class="p">.</span><span class="nx">json</span><span class="p">()</span>
+       <span class="p">.</span><span class="nx">then</span><span class="p">(</span><span class="nx">resp</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">resp</span><span class="p">))</span>
+       <span class="p">.</span><span class="k">catch</span><span class="p">(</span><span class="nx">err</span> <span class="o">=&gt;</span> <span class="nx">console</span><span class="p">.</span><span class="nx">error</span><span class="p">(</span><span class="s1">'Falha'</span><span class="p">,</span> <span class="nx">err</span><span class="p">))</span>
+   <span class="p">)</span>
  <span class="o">&lt;</span><span class="sr">/script</span><span class="err">&gt;
 </span></code></pre>
 </div>
@@ -3103,7 +3091,7 @@
 				<section class="right-code">
 					<div title="Exemplo" class="language-javascript highlighter-rouge"><pre class="highlight"><code> <span class="o">&lt;</span><span class="nx">script</span> <span class="nx">type</span><span class="o">=</span><span class="s2">"text/javascript"</span><span class="o">&gt;</span> 
 
- <span class="kd">let</span> <span class="nx">dataSession</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s2">"html"</span><span class="p">).</span><span class="nx">attr</span><span class="p">(</span><span class="s2">"data-session"</span><span class="p">);</span>
+ <span class="kd">let</span> <span class="nx">dataSession</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">'html'</span><span class="p">).</span><span class="nx">getAttribute</span><span class="p">(</span><span class="s1">'data-session'</span><span class="p">);</span>
  <span class="kd">let</span> <span class="nx">productID</span> <span class="o">=</span> <span class="mi">6</span>
 
 
@@ -3212,7 +3200,7 @@
 				<section class="right-code">
 					<div title="Exemplo" class="language-javascript highlighter-rouge"><pre class="highlight"><code> <span class="o">&lt;</span><span class="nx">script</span> <span class="nx">type</span><span class="o">=</span><span class="s2">"text/javascript"</span><span class="o">&gt;</span> 
 
- <span class="kd">let</span> <span class="nx">dataSession</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s2">"html"</span><span class="p">).</span><span class="nx">attr</span><span class="p">(</span><span class="s2">"data-session"</span><span class="p">);</span>
+ <span class="kd">let</span> <span class="nx">dataSession</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">'html'</span><span class="p">).</span><span class="nx">getAttribute</span><span class="p">(</span><span class="s1">'data-session'</span><span class="p">);</span>
 
  <span class="nx">fetch</span><span class="p">(</span><span class="err">`</span><span class="o">/</span><span class="nx">web_api</span><span class="o">/</span><span class="nx">carts</span><span class="o">/</span><span class="nx">$</span><span class="p">{</span><span class="nx">dataSession</span><span class="p">}</span><span class="err">`</span>
    <span class="p">{</span>
@@ -3319,7 +3307,7 @@
 				<section class="right-code">
 					<div title="Exemplo" class="language-javascript highlighter-rouge"><pre class="highlight"><code> <span class="o">&lt;</span><span class="nx">script</span> <span class="nx">type</span><span class="o">=</span><span class="s2">"text/javascript"</span><span class="o">&gt;</span> 
 
- <span class="kd">let</span> <span class="nx">dataSession</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s2">"html"</span><span class="p">).</span><span class="nx">attr</span><span class="p">(</span><span class="s2">"data-session"</span><span class="p">);</span>
+ <span class="kd">let</span> <span class="nx">dataSession</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">querySelector</span><span class="p">(</span><span class="s1">'html'</span><span class="p">).</span><span class="nx">getAttribute</span><span class="p">(</span><span class="s1">'data-session'</span><span class="p">);</span>
  <span class="kd">let</span> <span class="nx">productID</span> <span class="o">=</span> <span class="mi">6</span><span class="p">;</span>
  <span class="kd">let</span> <span class="nx">variantID</span> <span class="o">=</span> <span class="mi">2</span>
 
@@ -3508,8 +3496,8 @@
         </div>
     </footer>
 
-    <script src="http://dev.tray.com.br//vendor/jquery/jquery.min.js"></script>
-    <script src="http://dev.tray.com.br//vendor/bootstrap/js/bootstrap.min.js"></script>
+    <script src="http://localhost:4000/vendor/jquery/jquery.min.js"></script>
+    <script src="http://localhost:4000/vendor/bootstrap/js/bootstrap.min.js"></script>
 	<script src="/js/main.js"></script>
     
 </body>
