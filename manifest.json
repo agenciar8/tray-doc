@@ -4,7 +4,7 @@
     "name": "Tray Plataforma de Loja Virtual - Documenta…",
     "scope": "/",
     "display": "standalone",
-    "start_url": "http://dev.tray.com.br/",
+    "start_url": "https://agenciar8.github.io/tray-doc/",
     "short_name": "DevTray",
     "theme_color": "#0c8fcd",
     "orientation": "landscape",
