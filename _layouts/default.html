@@ -16,18 +16,6 @@
 	<link rel="stylesheet" href="{{site.url}}/css/doc.css">
     <link href="/../../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link rel="manifest" href="/manifest.json">
-    
-    <script>
-        if ('serviceWorker' in navigator) {
-          navigator.serviceWorker.register('http://dev.tray.com.br/js/ws.js')
-            .then(function () {
-              console.log('service worker registered');
-            })
-            .catch(function () {
-              console.warn('service worker failed');
-            });
-        }
-    </script>
 </head>
 
 <body id="page-top" class="index">
